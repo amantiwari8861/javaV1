@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tab{
+            color:purple;
+            text-align: center;
+            font-size: 180%;
+            width: 100%;
+            border: 5px solid goldenrod;
+        }
+        tr{
+            width: 100%;
+            background-color: yellowgreen;
+        }
+        td{
+            width: 24%;
+        }
+        tr:nth-child(2n+1)
+        {
+            color:red;
+            background-color: aqua;
+        }
+        td:nth-child(2n)
+        {
+            width: 10%;
+        }
+    </style>
+</head>
+<body id="body">
+    <script>
+        var num=parseInt(prompt("Enter the number :"));
+        document.write("<table id='tab'>");
+        document.write("<tr><td>col1</td><td>col2</td><td>col3</td><td>col4</td><td>col5</td></tr>")
+        for(var i=1;i<=10;i++)
+        {
+            document.write("<tr>");
+                document.write("<td>"+num+"</td>");
+                document.write("<td> * </td>");
+                document.write("<td>"+i+"</td>");
+                document.write("<td> = </td>");
+                document.write("<td>"+i*num+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+
+<input type="color" id="col" onchange="fxn()">
+
+<script>
+    function fxn()
+    {
+        var colr=document.getElementById('col').value;
+        document.body.style.backgroundColor=colr;
+    }
+</script>
+</body>
+</html>

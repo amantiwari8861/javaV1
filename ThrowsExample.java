@@ -1,6 +1,6 @@
 class ThrowsExample
 {
-	public static void main(String args[]) throws ArithmeticException
+	public static void main(String args[]) 
 	{
 		
 		System.out.println("hii i am  main");
@@ -9,17 +9,14 @@ class ThrowsExample
 	}
 	static void m1() throws ArithmeticException
 	{
-		try {
-			m2();	
-		} catch (ArithmeticException e) {
-			System.out.println("handled");
-		}        
+		
+		m2();     
 	}
 	static void m2() throws ArithmeticException
 	{
 		m3();
 	}
-	static void m3() throws ArithmeticException,IllegalArgumentException
+	static void m3() throws ArithmeticException
 	{
 		System.out.println(10/0);
 	}

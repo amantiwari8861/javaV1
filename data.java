@@ -12,7 +12,7 @@ class data
         System.out.println(f1+f2);
         char ch='A';
         double d=6667287.6676687;
-        byte b=25;
+        byte b=25; //1 byte
         System.out.println(ch);
         System.out.println(d);
         System.out.println(b);*/
@@ -21,7 +21,7 @@ class data
         // boolean check=true; //1 bit 
         // boolean check2=false;
         // boolean check3=(10>5)?true:false;
-        // int check3=(10>5)?1:0;
+        // int check3=(10>5)?1:0; //4 bytes
         // System.out.println(s);
         // System.out.println(ab);
     }

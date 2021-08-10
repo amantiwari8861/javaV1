@@ -1,7 +1,8 @@
 class OuterClass
 {
     private int i=50;
-    void show(){System.out.println("hii");}
+    void show(){System.out.println("hii i am outer class method");}
+
     class InnerClass
     {
         private int i2=200;
@@ -15,10 +16,10 @@ class OuterClass
 }
 class Main 
 {
-    static void show2()
-    {
-        System.out.println("hello");
-    }
+    // static void show2()
+    // {
+    //     System.out.println("hello");
+    // }
     public static void main(String[] args) {
         
         OuterClass objOuterClass=new OuterClass();
@@ -27,6 +28,6 @@ class Main
         OuterClass.InnerClass Innerobj=objOuterClass.new InnerClass();
         Innerobj.innerShow();
         // Innerobj.show(); //error
-        Main.show2();
+        // Main.show2();
     }
 }

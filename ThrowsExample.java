@@ -15,6 +15,8 @@ class ThrowsExample
 	static void m2() throws ArithmeticException
 	{
 		m3();
+
+		System.out.println(10/0);
 	}
 	static void m3() throws ArithmeticException
 	{

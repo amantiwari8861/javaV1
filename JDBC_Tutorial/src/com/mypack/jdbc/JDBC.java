@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class JDBC {
-
 	public static void main(String[] args) throws ClassNotFoundException, SQLException 
 	{
 		//JDBC = Java Database Connectivity 

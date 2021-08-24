@@ -18,7 +18,7 @@ public class ArrayListDemo {
 //		for (String string : arr) {
 //			System.out.println(string);
 //		}
-		
+		System.out.println(Name.size());
 		Name.add("Aman");
 		Name.add("Rohan");
 		Name.add("Rohan1");
@@ -28,10 +28,13 @@ public class ArrayListDemo {
 		}
         System.out.println(Name.size());
         System.out.println("----------------------------------------------------------------");
-        // Name.remove(); error no such method
+        // Name.remove(); error no such method (default)
         Name.remove(2);
         Name.remove("Rohan");
-        Name.add(1, "sujata");
+        Name.add(2, "sujata");
+        Name.add(3, "sujata1");
+        Name.add(4, "sujata2");
+        Name.add(5, "sujata3");
         for (String string : Name) {
 			System.out.println(string);
 		}

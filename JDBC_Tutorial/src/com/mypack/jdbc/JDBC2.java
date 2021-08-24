@@ -1,16 +1,14 @@
 package com.mypack.jdbc;
-
 import java.sql.*;
 import java.util.Scanner;
 
 public class JDBC2 {
 
-	public static void main(String[] args) throws Exception {
-
+	public static void main(String[] args) throws Exception 
+	{
 		System.out.println("enter the id username and password");
 		Scanner sc=new Scanner(System.in);
-		
-		
+
 		int authid=sc.nextInt();
 		String name=sc.next();
 		String pass=sc.next();

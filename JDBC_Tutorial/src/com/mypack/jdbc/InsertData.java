@@ -1,12 +1,9 @@
 package com.mypack.jdbc;
-
 import java.sql.*;
 import java.util.Scanner;
 
 public class InsertData {
-
 	public static void main(String[] args) throws Exception {
-
 		Scanner sc=new Scanner(System.in);
 		String uname[]=new String[3];
 		String pass[]=new String[3];
@@ -37,6 +34,6 @@ public class InsertData {
 		}
 		sc.close();
 		ps.close();
-		obj.close();
+		obj.close();		
 	}
 }

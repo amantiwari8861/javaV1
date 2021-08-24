@@ -6,6 +6,7 @@ class ArrayListDemo2
         
         ArrayList<String> Name=new ArrayList<String>();
         Name.add("Aman");
+        Name.add("Aaman");
 		Name.add("Rohan");
 		Name.add("Rohan1");
 		Name.add("rohan1");
@@ -20,7 +21,4 @@ class ArrayListDemo2
         }
     }
 }
-
-
-
 //iterator works on array ?

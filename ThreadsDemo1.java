@@ -19,9 +19,9 @@ class Main
         Thread objThread=new Thread(obj);
         objThread.start();
         System.out.println(objThread.isAlive());
-        objThread.sleep(1000);
+        objThread.sleep(3000);
         System.out.println(objThread.isAlive());
-        // objThread.start();
+        objThread.start();
 
     }
 }

@@ -1,3 +1,4 @@
+import java.lang.Exception;
 class UserException extends Exception
 {
     String msg;

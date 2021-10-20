@@ -4,11 +4,11 @@ class tryCatch2
         System.out.println("before try");
         try {
             //suspicious code
-            String var=null;
+            // String var=null;
             // String var="hii";
-            System.out.println(var); //null
-            // System.out.println(1/0); //infinity
-            System.out.println(" the length is :"+var.length()); // null pointer exception
+            // System.out.println(var); //null
+            System.out.println(1/0); //infinity
+            // System.out.println(" the length is :"+var.length()); // null pointer exception
             System.out.println("hello i will never execute if exception occurs above");
         }
         // finally
@@ -22,22 +22,22 @@ class tryCatch2
         //     // e.printStackTrace();// fully qualified exception details
         //     // System.out.println(e.getMessage());
         // }
-        // catch(ArithmeticException a)
+        catch(ArithmeticException a)
+        {
+            System.out.println("divided by zero condition");
+        }
+        // catch(ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsException  obj)
         // {
-        //     System.out.println("divided by zero condition");
+        //     System.out.println("3 types of exceptions can be handled ");
         // }
-        catch(ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsException  obj)
-        {
-            System.out.println("3 types of exceptions can be handled ");
-        }
-        catch(RuntimeException obj)
-        {
-            System.out.println("it can handle all runtime Exception");
-        }
-        catch(Exception e)
-        {
-            System.out.println("parent of all exception");
-        }
+        // catch(RuntimeException obj)
+        // {
+        //     System.out.println("it can handle all runtime Exception");
+        // }
+        // catch(Exception e)
+        // {
+        //     System.out.println("parent of all exception");
+        // }
         System.out.println("after try-catch");
     }
 }

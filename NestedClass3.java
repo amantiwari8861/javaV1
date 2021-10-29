@@ -4,7 +4,6 @@ class NestedClass3
     {
         System.out.println("hiii outer fxn");
     }
-
     static class InnerNestedClass2 {
     
         void innerFxn()

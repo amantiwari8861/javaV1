@@ -7,7 +7,8 @@ class Test
 	public static void main(String args[])
 	{
         // person obj=new person(); //error we can't make abstract class object
-		person p=new person(){
+		person p=new person()
+		{
             void eat()
             {
                 System.out.println("hello");

@@ -16,10 +16,10 @@ class OuterClass
 }
 class Main 
 {
-    // static void show2()
-    // {
-    //     System.out.println("hello");
-    // }
+    static void show2()
+    {
+        System.out.println("hello");
+    }
     public static void main(String[] args) {
         
         OuterClass objOuterClass=new OuterClass();
@@ -28,6 +28,7 @@ class Main
         OuterClass.InnerClass Innerobj=objOuterClass.new InnerClass();
         Innerobj.innerShow();
         // Innerobj.show(); //error
-        // Main.show2();
+        Main.show2();
+        show2();
     }
 }

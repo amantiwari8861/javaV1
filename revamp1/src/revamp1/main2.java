@@ -14,7 +14,6 @@ public class main2 {
 		
 	*/
 		System.out.println("hi");
-		System.out.p
 	}
 
 }

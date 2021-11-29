@@ -18,6 +18,3 @@ public class ShowAllUserData {
 		}
 	}
 }
-
-//dsa : 4:30
-//jquery : 5:30

@@ -7,6 +7,8 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 class GuiApp1
 {
@@ -46,16 +48,21 @@ class GuiApp1
 		p1.add(b1);
 		p2.add(b2);
 		p3.add(b3);
-		FlowLayout fl1=new FlowLayout(FlowLayout.CENTER,0,0);
+		FlowLayout fl1=new FlowLayout(FlowLayout.CENTER,50,100);
 		f1.setLayout(fl1);
+		f1.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+//		pass.setEchoChar('#');
 	}
 	void launchFrame()
 	{
 		f1.setVisible(true);
 	}
+	
 }
-
-
 public class FlowLayoutDemo {
 
 	public static void main(String[] args) {
@@ -64,3 +71,4 @@ public class FlowLayoutDemo {
 	}
 
 }
+//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

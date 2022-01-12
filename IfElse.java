@@ -4,11 +4,11 @@ public class IfElse
     {
     byte a=40,b=30;
     //if true block
-    if(a==20)
+    if(a==40)
     {
-        System.out.print("value of a is 20");
-        System.out.println("value of a is 20");
-        System.out.print("value of a is 20");
+        System.out.print("value of a is 40");
+        System.out.println("value of a is 40");
+        System.out.print("value of a is 40 ");
     }
     else
         System.out.println("value is not 20");

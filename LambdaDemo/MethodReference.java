@@ -64,7 +64,7 @@ class Employee
     
 }
 
-class MethodReference {  
+public class MethodReference {  
     
     public static void main(String[] args) { 
     	Employee e1 = new Employee(101,"Aron","Spain");

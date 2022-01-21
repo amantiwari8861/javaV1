@@ -5,7 +5,7 @@ import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.time.format.DateTimeFormatter;
 
-class Demonstrator
+class ZonedDateTimeDemo
 {
     public static void main (String[] args) {
         //ZonedDateTime is used to change the time according to zones

@@ -4,7 +4,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.LocalDateTime;
 
-class Demonstrator
+class DateAndTime
 {
     public static void main (String[] args) {
         System.out.println("*****LocalDate*****");

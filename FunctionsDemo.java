@@ -1,7 +1,6 @@
 class Emp
 {
     int id;
-    
     //no argument no return type
    void type1()
    {
@@ -34,9 +33,14 @@ class Emp
     
 }
 public class FunctionsDemo {
+
+    void fxn()
+    {
+        System.out.println("hello i am original fxn");
+    }
    public static void main(String[] args) {
        
-    Emp e1 = new Emp();
+    /* Emp e1 = new Emp();
     e1.type1();
     int empid=e1.type2();
     System.out.println("Employee ID: " + empid);
@@ -44,6 +48,7 @@ public class FunctionsDemo {
     e1.show();
     String msg=e1.type4(20);
     System.out.println(msg);
-    e1.show();
+    e1.show(); */
+    // fxn(); error
    } 
 }

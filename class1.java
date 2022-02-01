@@ -13,6 +13,10 @@ class vehicle
     {
         System.out.println("model Name is "+modelname);
     }
+    void showSpeed()
+    {
+        System.out.println("speed is "+speed);
+    }
 }
 
 public class class1 {
@@ -22,8 +26,9 @@ public static void main(String[] args) {
     Mercedese.setModelName("mercedese benz");
     bike.setModelName("hero honda bike");
     Mercedese.speed=50;
+    Mercedese.showSpeed();
     System.out.println("--------------------------");
-    System.out.println(Mercedese.modelname);
+    System.out.println(Mercedese.modelno);
     Mercedese.showModel();
     bike.showModel();
 

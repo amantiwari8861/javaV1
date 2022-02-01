@@ -10,7 +10,7 @@ class Emp
     int type2()
     {
         System.out.println("Type 2");
-        return id;//by default id is 0
+        return 50;
     }
     //with argument no return type
     void type3(int id2)
@@ -25,22 +25,19 @@ class Emp
         id = id2;
         return "the employee id is " + id;
     }
-
     void show()
     {
         System.out.println("ID: " + id+" in show");
     }
-    
 }
-public class FunctionsDemo {
-
+public class FunctionsDemo 
+{
     void fxn()
     {
         System.out.println("hello i am original fxn");
     }
    public static void main(String[] args) {
-       
-    /* Emp e1 = new Emp();
+    Emp e1 = new Emp();
     e1.type1();
     int empid=e1.type2();
     System.out.println("Employee ID: " + empid);
@@ -48,7 +45,7 @@ public class FunctionsDemo {
     e1.show();
     String msg=e1.type4(20);
     System.out.println(msg);
-    e1.show(); */
+    e1.show();
     // fxn(); error
    } 
 }

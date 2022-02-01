@@ -4,20 +4,28 @@ import java.io.IOException;
 public class FileOperations {
     public static void main(String[] args) {
 
-        // File file1 = new File("C:/users/aman_tiwari/desktop/File1.txt");
+        File file1 = new File("C:/users/aman_tiwari/desktop/File1.txt");
         // File file2 = new File("C:/users/aman_tiwari/desktop/File2.txt");
         // File file3 = new File("C:/users/aman_tiwari/desktop/File3/ab.txt");
 
         // System.out.println("the file will created here :" + file1.getAbsolutePath());
-        /*
-         * try { System.out.println(file1.createNewFile());
-         * System.out.println(file2.createNewFile());
-         * 
-         * if (file1.createNewFile()) { System.out.println("File created: " +
-         * myObj.getName()); } else { System.out.println("File already exists."); }
-         * 
-         * } catch (IOException e) { e.printStackTrace(); }
-         */
+
+        try {
+            // System.out.println(file1.createTempFile("File2c", ".txt"));
+            System.out.println(file1.createNewFile());
+            System.out.println(file1.getFreeSpace());//free space in that drive in bytes
+            // System.out.println(file2.createNewFile());
+            // if (file1.createNewFile()) {
+            //     System.out.println("File created: " +
+            //             myObj.getName());
+            // } else {
+            //     System.out.println("File already exists.");
+            // }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         // System.out.println("file name:"+file1.getName());
         // System.out.println("file exist ?:"+file1.exists());
         // System.out.println("file size in bytes ?:"+file1.length());
@@ -40,9 +48,9 @@ public class FileOperations {
         // String filelist[] = desk.list();
         // System.out.println("here is files list in desktop folder");
         // for (String file : filelist) {
-        //     System.out.println(file);
+        // System.out.println(file);
         // }
-            
+
     }
 }
 

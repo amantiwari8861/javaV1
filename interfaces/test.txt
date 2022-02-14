@@ -1,0 +1,58 @@
+Georgia Resort is a pioneer boutique resort and is known for the personalized treatment of its guests. While registering the guest for a particular date of stay, the resort has collected few details like
+
+Name of the guest
+
+Date Of Birth
+
+Country – Assumption: Guests visit only from the following countries
+
+USA, Spain, Germany, France, China
+
+Language – Guests speak only one of the below languages
+
+English, Spanish, French, Chinese, German
+
+Hobby – Need to be from the following
+
+Eat, Drink, Sports, Dance, Travel, Read, Music
+
+The Event Management team of the resort is planning for different events for the guests during their stay and needs the list of guests.
+
+ 
+
+Write a Java program using the new features learned in Java SE 8 course by following the steps given below:
+
+Create a Guest class to hold the data for the guest having name, dob, country, language, and hobby as attributes.
+
+Create another main class named EventManager
+
+In the main method of this class invoke the below-mentioned methods in step 2 and step 3
+
+Define a method called populateGuests to populate a List, containing Guest objects having different values
+
+Define another method called filterGuest for filtering the guest
+
+For example, if we want a guest from the USA then the code will be
+
+Predicate<Guest> pAmerican = g -> {
+        return Country.USA.equals( g.getCountry() );
+    }; // Assuming Country is a enum class
+lstGuest.stream().filter(pAmerican).forEach(guest -> System.out.println(guest));
+
+In a similar manner create different filters using lambda and stream, and print the guest list as per the requirement below so that the event management team can use the list for planning different events.
+
+List of guests who are from Spain and
+
+Love music and dance
+
+Love to drink and age is above 18
+
+List of guest who is from France and
+
+Love playing sports
+
+Number of guests whose age is above 70
+
+List of guests who speak Chinese and love to read
+
+ 

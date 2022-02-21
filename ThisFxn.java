@@ -7,7 +7,7 @@ class Demo
     }
     void ShowDetails(int a)
     {
-        System.out.println("i am a normal fxn"+a);
+        System.out.println("i am a normal fxn "+a);
     }
 }
 public class ThisFxn {

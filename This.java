@@ -1,18 +1,13 @@
 class one
 {
-    int var;
-    one(){
-        System.out.println("default constructor ");
-    }
-    void show()
+    int var;//instance variable
+    void show()   {        System.out.println("in show fxn var = "+var);    }
+    // one(int var2)
+    one(int var)//here var is local variable
     {
-        System.out.println("show any value "+var);
-    }
-    one(int var2)
-    {
-      //  this.var=var;
-    //   this.var=var;
-      var=var2;
+      this.var=var;
+    //   var=var2;
+    //   var=var; //here compiler is confused that local variable is assigning to instance variable or instance variable is assigning to local variable
       System.out.println("the value sent from main is "+var);
     }
 }
@@ -23,3 +18,6 @@ class Main
         obj.show();
     }
 }
+//this represents to current class object and this.var represents to instance variable of current class
+//this.var=var;
+//this is generally used for differentiating between instance variable(global) and local variable

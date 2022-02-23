@@ -8,7 +8,8 @@ class B extends A
 }
 class FinalClass {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         B obj=new B();
         System.out.println("the value of child num2 is "+obj.num2);
         System.out.println("the value of Parent num is "+obj.num);

@@ -19,5 +19,6 @@ class Main
         public static void main(String[] args)
         {
             final4 obj=new final4(); // object of class final1
+            obj.fxn
         }
 }

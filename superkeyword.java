@@ -13,6 +13,7 @@ class B extends A
     {
         System.out.println("the value of num in child is "+num);
         System.out.println("the value of num in parent is "+super.num);
+        super.Afxn();
     }
 }
 public class superkeyword {

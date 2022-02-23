@@ -4,13 +4,13 @@ class ReadOnly
     final int var;  //blank final
     ReadOnly()
     {
-        // var=10;
+        var=10;
     }
     void change()
     {
         // pi=5.677f;//error
-        var=50;//error
-        System.out.println("the value of pi = "+PI+" "+var);
+        // var=50;//error
+        System.out.println("the value of pi = "+PI+" var="+var);
     }
 }
 public class fin 

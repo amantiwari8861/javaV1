@@ -13,7 +13,7 @@ class B extends A
 {
     B()
     {
-        // super();  compiler already created a parent class object with default constructor
+        // super(); // compiler already created a parent class object with default constructor
         super(100);
         System.out.println("B class constructor ");
     }

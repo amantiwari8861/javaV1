@@ -1,12 +1,12 @@
 class finalb 
 {
     final int a=50;
-    //final int num;
+    final int num;
 
     void fxn()
     {
-        a=10;
-    //    num=50;
+        // a=10;
+       num=50;
         System.out.println("the value of a and num " +a+ " " +num);
     }
 } 

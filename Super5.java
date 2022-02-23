@@ -1,3 +1,4 @@
+//chaining of constructors
 class Parent
 {
     int num;

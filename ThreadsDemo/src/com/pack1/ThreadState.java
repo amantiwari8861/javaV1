@@ -1,3 +1,4 @@
+package com.pack1;
 class MyThread1 extends Thread
 { 
     public void run()

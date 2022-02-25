@@ -1,4 +1,6 @@
-class CurrentThreadDemo
+// package com.pack1;
+
+public class CurrentThreadDemo2
 {
 	public static void main(String args[])
 	{
@@ -8,9 +10,9 @@ class CurrentThreadDemo
 		System.out.println("after name change:"+t);
 		try
 		{
-			for(int n=10;n>0;n--)
+			for(int n=5;n>0;n--)
 			{
-				System.out.println(n);
+				System.out.println(" "+n);
 				Thread.sleep(1000);
 			}
 		}

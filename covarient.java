@@ -11,9 +11,10 @@ class Car
 }
 public class covarient {
     public static void main(String[] args) {
-        new Car().getobject().Show();
-        // Car obj;//reference variable created 
-        // obj=new Car().getobject();
-        // obj.Show();
+        Car obj;//reference variable created 
+        // obj.Show();//compile time error
+        obj=new Car().getobject();
+        obj.Show();
+        // new Car().getobject().Show();
     }
 }

@@ -1,3 +1,4 @@
+// package com.pack1;
 // Context Switching involves storing the context or state of a process
 //  so that it can be reloaded when required and execution can be resumed from the same point as earlier.
 //   This is a feature of a multitasking operating system and allows a single CPU
@@ -10,7 +11,7 @@ public class ThreadsDemo1 implements Runnable
         System.out.println("hii i am a thread");
     }
 }
-class Main 
+class Main1 
 {
     public static void main(String[] args) throws InterruptedException {
      
@@ -18,10 +19,10 @@ class Main
         // Thread objThread=new Thread(new ThreadsDemo1());
         Thread objThread=new Thread(obj);
         objThread.start();
-        System.out.println(objThread.isAlive());
+        System.out.println("is alive ?"+objThread.isAlive());
         objThread.sleep(3000);
-        System.out.println(objThread.isAlive());
-        objThread.start();
+        System.out.println("is alive ?"+objThread.isAlive());
+        // objThread.start();//we can start a thread only once
 
     }
 }

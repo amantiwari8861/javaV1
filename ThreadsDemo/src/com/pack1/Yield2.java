@@ -1,8 +1,9 @@
+package com.pack1;
 // let t4 priority is higher and its doesn't mean t4 will finish first,
 // Furthermore jvm ask OS for threads and all priorities sets in deep layer of OS,
 // you are just set a recommendation,it depends on many things!
 
-class MyThread1 implements Runnable
+class MyThread2 implements Runnable
 {
     public void run() {
         System.out.println(Thread.currentThread().getPriority());

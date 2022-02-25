@@ -1,3 +1,4 @@
+package com.pack1;
 public class Yield  {
 
     public static void main(String[] args) throws InterruptedException{

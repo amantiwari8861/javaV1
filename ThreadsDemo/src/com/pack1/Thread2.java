@@ -1,3 +1,4 @@
+// package com.pack1;
 class Thread2 extends Thread
 {
     Thread2(String ThreadName)

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class TwoD
+class matr3
 {
     public static void main(String args[])
     {

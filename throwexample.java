@@ -1,22 +1,25 @@
+import java.lang.Exception;
+
 public class throwexample {
     void check(int a,int b)
     {
-       /* if (b!=0) 
+        if (b!=0) 
         {
             System.out.println("the divide is "+(a/b));
         } 
         else {
-            System.out.println("divide by zero");
-            throw new RuntimeException("divided by zero condition !");
-        }*/
-        try {
+            System.out.println("divide kyu kiya zero se");
+            throw new ArithmeticException("divided by zero condition !");
+            // throw new RuntimeException("divided by zero condition !");
+        }
+        /* try {
             System.out.println("the divide is "+(a/b));
 
         } catch (ArithmeticException e) {
             System.out.println("divide by zero");
             throw e;
             // System.out.println("it will not execute");
-        }
+        } */
     }
     public static void main(String[] args) {
         int a=10,b=0;
@@ -27,6 +30,7 @@ public class throwexample {
         catch(Exception e)
         {
             System.out.println("handled  by main succesfully");
+            e.printStackTrace();
         }
     }
 }

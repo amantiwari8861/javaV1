@@ -10,11 +10,13 @@ public static void main(String[] args) {
     //2nd method 
     String dem1=new String("Abc"); //java heap (bad programming practice  )
     String dem2=new String("Abc"); //java heap (bad programming practice  )
-    String namez1="aman";
+    String namez1="aman";//stores at String constant pool (good programming practice)
     String namez2="aman";
     String namez3="tiwari";
+    System.out.println(dem1==dem2);// == to check the reference of the object
+    //checking if the two variables are pointing to same object in java heap
     System.out.println(namez1==namez2);
-    System.out.println(namez1==namez3);
+    // System.out.println(namez1==namez3);
     // which is more efficent for storing duplicate string values 
 }   
 }

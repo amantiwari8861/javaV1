@@ -1,4 +1,4 @@
-class immutable2 {
+class immutable {
     public static void main(String[] args) {
         String str1="Aman ";
         String str2=" Tiwari";

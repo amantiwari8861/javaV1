@@ -11,7 +11,3 @@ public static void main(String[] args) {
     System.out.println("this code will not work");
 }
 }
-// jyada problem ho to 
-// bitadin ka gargle ke lena 5 ml warm water ke sath twice 
-// d-cold total is very effective for cold 
-// mefkind forte for fever 

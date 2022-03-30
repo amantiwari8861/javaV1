@@ -16,9 +16,9 @@ class MyException
         
         String name="Aman";
         try{
-        if(name.equals("Naman"))
+        if(name.equals("NAman"))
         {
-            System.out.println("the name is "+name);
+            System.out.println("Welcome  "+name);
         }
         else
         {

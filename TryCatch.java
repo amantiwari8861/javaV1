@@ -5,10 +5,10 @@ public class TryCatch {
         try {
 
             // System.out.println(1/0);
-            System.out.println("after arithematic code");
+            // System.out.println("after arithematic code");
             // String str=null;
             // System.out.println(str.length());
-            System.out.println("after Null string code");
+            // System.out.println("after Null string code");
             int arr[]={10,20};
             System.out.println(arr[2]); //not in array
         }

@@ -9,11 +9,12 @@ public class ByteStreamCopyTest
         int bLen=b.length;
         try(FileInputStream fis=new FileInputStream(args[0]);FileOutputStream fos=new FileOutputStream(args[1]))
         {
-            System.out.println("Bytes available:"+fis.available());
+            System.out.println("Bytes available:"+fis.available());//56
             int count=0;
             int read=0;
             while ((read=fis.read(b)) !=-1) 
             {
+                System.out.println("Bytes readed from file:"+read);//56
                 if(read<bLen)
                     fos.write(b,0,read);
                 else

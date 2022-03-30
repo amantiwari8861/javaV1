@@ -7,14 +7,12 @@ throw is used to  throw an exception for a method
 class ThrowExample1
 {
     public static void main(String[] args) {
-        
-        int num=17;
-
+        int num=19;
         if(num<18)
         {
-            // throw new IllegalArgumentException("age must be greater than 18");
+            throw new IllegalArgumentException("age must be greater than 18");
             // try {
-                throw new ArithmeticException("age must be greater than 18");
+                // throw new ArithmeticException("age must be greater than 18");
             // } catch (Exception e) {
             //     System.out.println("exception handled");
             // }

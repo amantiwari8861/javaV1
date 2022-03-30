@@ -29,8 +29,7 @@ public class BufferedOutputStreamDemo {
         }
 
         // try {
-        // BufferedOutputStream bos = new BufferedOutputStream(new
-        // FileOutputStream("Hello.txt"));
+        // BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("Hello.txt"));
         // bos.write('H');
         // bos.write('e');
         // bos.write('l');

@@ -8,14 +8,14 @@ public class Throws
     }
     static void inputHandler()
     {
-        try {
+        // try {
             arithematicHandler();
-        } catch (InputMismatchException e) {
-            // e.printStackTrace();
-            System.out.println("input mismatched please give only int ");
-        }
+        // } catch (InputMismatchException e) {
+        //     // e.printStackTrace();
+        //     System.out.println("input mismatched please give only int ");
+        // }
     }
-    static void arithematicHandler()
+    static void arithematicHandler() throws InputMismatchException
     {
         try {
             operation();

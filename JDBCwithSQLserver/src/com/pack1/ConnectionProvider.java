@@ -27,7 +27,9 @@ public class ConnectionProvider {
 		//Open SQL Server Configuration Manager, and then expand SQL Server 2012 Network Configuration.
 		//Click Protocols for InstanceName, and then make sure TCP/IP is enabled in the right panel and double-click TCP/IP.
 		//On the Protocol tab, notice the value of the Listen All item.
-		//Click the IP Addresses tab: If the value of Listen All is yes, the TCP/IP port number for this instance of SQL Server 2012 is the value of the TCP Dynamic Ports item under IPAll. If the value of Listen All is no, the TCP/IP port number for this instance of SQL Server 2012 is the value of the TCP Dynamic Ports item for a specific IP address.
+		//Click the IP Addresses tab: If the value of Listen All is yes, the TCP/IP port number for this instance of
+		//SQL Server 2012 is the value of the TCP Dynamic Ports item under IPAll. If the value of Listen All is no,
+		//the TCP/IP port number for this instance of SQL Server 2012 is the value of the TCP Dynamic Ports item for a specific IP address.
 		//Make sure the TCP Port is 1433.
 		//Click OK.
 	}

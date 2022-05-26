@@ -1,19 +1,21 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class Throws 
 {
     public static void main(String[] args) 
     {
         inputHandler();
+        System.out.println("i will not work if u don't handle the exception");
     }
     static void inputHandler()
     {
-        // try {
+        try {
             arithematicHandler();
-        // } catch (InputMismatchException e) {
-        //     // e.printStackTrace();
-        //     System.out.println("input mismatched please give only int ");
-        // }
+        } catch (InputMismatchException e) {
+            // e.printStackTrace();
+            System.out.println("input mismatched please give only int ");
+        }
     }
     static void arithematicHandler() throws InputMismatchException
     {

@@ -6,6 +6,7 @@ class UserException extends Exception
     {
         this.msg=msg;
     }
+    @Override
     public String toString() { //overriding toString Method
         return ("\n\t\t ERROR!!!!!!!!   :- "+msg);
     }
@@ -16,7 +17,7 @@ class MyException
         
         String name="Aman";
         try{
-        if(name.equals("NAman"))
+        if(name.equals("nAman"))
         {
             System.out.println("Welcome  "+name);
         }

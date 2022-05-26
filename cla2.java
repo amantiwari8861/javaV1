@@ -14,5 +14,15 @@ public class cla2 {
         short s=Short.parseShort(data[5]);
         boolean bool=Boolean.parseBoolean(data[6]);
         long l=Long.parseLong(data[7]);
+
+        System.out.println("the value of num is "+num);
+        System.out.println("the value of num2 is "+num2);
+        System.out.println("the value of num3 is "+num3);
+        System.out.println("the value of ch is "+ch);
+        System.out.println("the value of b is "+b);
+        System.out.println("the value of s is "+s);
+        System.out.println("the value of bool is "+bool);
+        System.out.println("the value of l is "+l);
+
     }
 }

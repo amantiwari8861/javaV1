@@ -8,9 +8,10 @@ class ReadOnly
     }
     void change()
     {
-        // pi=5.677f;//error
+        // PI=5.677f;//error
         // var=50;//error
-        System.out.println("the value of pi = "+PI+" var="+var);
+        System.out.println("the value of pi = "+PI);
+        System.out.println(" var="+var);
     }
 }
 public class fin 

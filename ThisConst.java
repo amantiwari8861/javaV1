@@ -12,7 +12,7 @@ class Shape
     }
     Shape(int height,int width,String name){
         // this();
-        this(height,width);
+        this(height,width);// calling 2 parameterized constructor
         this.name=name;
         System.out.println("hello i am 3 parameterized constructor");
     }
@@ -22,7 +22,6 @@ class Shape
         System.out.println("the width is "+width);
         System.out.println("the name is "+name);
     }
-
 }
 public class ThisConst {
     public static void main(String[] args) {

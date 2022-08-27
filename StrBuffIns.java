@@ -10,8 +10,14 @@ class StrBuffIns
         // str.insert(2,3.14f);
         // str.insert(2,35666776l);
         // str.insert(2,3.6776555d);
-        str.insert(2,3.6776555D);
-        str.reverse();
-        System.out.println("the string is :"+str);
+        // str.insert(2,3.6776555D);
+        // str.reverse();
+        // str.delete(2, 4);
+        
+        // System.out.println("the string is :"+str);
+
+        System.out.println(String.format("hii %1.6f", 5.677778990654));
+        String s1=str.toString();
+        
     }
 }

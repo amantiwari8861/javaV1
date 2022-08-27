@@ -6,7 +6,7 @@ abstract class Vehicle
      }
     abstract void speed();
     // {
-        // System.out.println("i am a abstract fxn ");error
+    //     System.out.println("i am a abstract fxn "); //error
     // }
 }
 class Bike extends Vehicle
@@ -19,5 +19,6 @@ class Bike extends Vehicle
         Vehicle obj=new Bike();
         obj.speed();
         obj.model();
+        // Vehicle v=new Vehicle(); //error
     }
 }

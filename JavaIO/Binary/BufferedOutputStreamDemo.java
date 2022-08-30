@@ -13,6 +13,7 @@ public class BufferedOutputStreamDemo {
         // by passing second argument as true.
 
         try {
+            // FileOutputStream fout = new FileOutputStream("Hello.txt");
             FileOutputStream fout = new FileOutputStream("Hello.txt", true);
             BufferedOutputStream bout = new BufferedOutputStream(fout);
             String s = "hii i am aman i am appending in this file ";

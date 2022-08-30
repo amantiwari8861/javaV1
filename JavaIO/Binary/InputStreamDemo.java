@@ -9,9 +9,16 @@ public class InputStreamDemo {
         
         InputStream is = null;// Abstract class
         try{
-        is=new FileInputStream("ReadFile.txt");
-        // System.out.println(is.read()); //gives ASCII value of first character
-        System.out.println((char)is.read()); //reading 1 byte at a time
+            // is=new FileInputStream("ReadFile.txt");
+            // is=new FileInputStream("C:/Users/Aman_Tiwari/Desktop/Shivam.txt");
+            // is=new FileInputStream("C://Users//Aman_Tiwari//Desktop//Shivam.txt");
+            is=new FileInputStream("C:\\Users\\Aman_Tiwari\\Desktop\\Shivam.txt");
+            // System.out.println(is.read()); //gives ASCII value of first character
+            System.out.println((char)is.read()); //reading 1 byte at a time
+        }
+        catch(FileNotFoundException f)
+        {
+            System.out.println("pls check if path is valid");
         }
         catch( IOException e){
             System.out.println("File not found or IO Exception");

@@ -12,17 +12,20 @@ public class WrapperClass
 
 
         // Integer j=Integer.valueOf(20);
+        // // Integer j=20;//auto-boxing
         // System.out.println(j.getClass().getName());
-        Integer j=20;//auto-boxing
-        System.out.println("value of j object "+j);
-        int k=j;//unboxing
-        System.out.println("value of k primitive int "+k);
+        // System.out.println("value of j object "+j);
+        // int k=j;//unboxing
+        // System.out.println("value of k primitive int "+k);
+
         // ArrayList<int> arrO=new ArrayList<>();
-        // ArrayList<Integer> arr=new ArrayList<>();
-        // arr.add(20);// AUTOBOXING OCCURING HERE
-        // arr.add(30);
-        // arr.add(40);
-        // arr.remove(1);
+        ArrayList<Integer> arr=new ArrayList<>();
+        arr.add(20);// AUTOBOXING OCCURING HERE
+        arr.add(30);
+        arr.add(40);
+        System.out.println("at 1th index "+arr.get(1));
+        System.out.println(arr.get(1).getClass().getName());
+
         // System.out.println("length : "+arr.size()+" 1th index : "+arr.get(1));
         // for (int num : arr) {
         //     System.out.println(num);

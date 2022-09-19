@@ -26,7 +26,7 @@ class ZonedDateTimeDemo
         System.out.println();
         System.out.println("*****ChronoUnit*****");
         LocalDate today = LocalDate.now();
-        System.out.println("Today's date: "+today);
+        System.out.println("Today's date: "+today)
         LocalDate after = today.plus(1,ChronoUnit.MONTHS);
         System.out.println("Date after 1 month: "+after);
         

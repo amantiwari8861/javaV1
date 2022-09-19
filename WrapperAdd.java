@@ -7,16 +7,11 @@ public class WrapperAdd {
         System.out.println("the result is "+result);
 
         int num=67;
-        Integer i=Integer.valueOf(num);
+        Integer i=Integer.valueOf(num);//boxing
         System.out.println("num = "+num);
 
-        Integer i2=num;
+        Integer i2=num;//auto-boxing
 
         System.out.println(" i2= "+i2);
-
-
-
-
-
     }
 }

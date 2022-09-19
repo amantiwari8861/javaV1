@@ -1,17 +1,16 @@
 import java.util.Scanner;
-
 public class UserAdd {
     public static void main(String[] args) {
 
         int num1, num2, sum;
 
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("enter the 1st number :");
-        num1 = input.nextInt();
+        num1 = sc.nextInt();
         System.out.println("enter the 2nd number :");
-        num2 = input.nextInt();
+        num2 = sc.nextInt();
         sum=num1+num2;
         System.out.println("the sum is "+sum);
-        input.close();
+        sc.close();
     }
 }

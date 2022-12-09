@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.darwinsys</groupId>
+	<artifactId>javasrc</artifactId>
+	<version>1.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<inceptionYear>1995</inceptionYear>
+
+	<name>javasrc</name>
+	<url>http://javacook.darwinsys.com</url>
+	<description>Code Examples for the O'Reilly Java Cookbook</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+		<!-- World may not be ready for 14 yet; there are excludes for 14-dependent stuff -->
+		<javase.version>16</javase.version>
+		<maven.compiler.source>${javase.version}</maven.compiler.source>
+		<maven.compiler.target>${javase.version}</maven.compiler.target>
+		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
+		<maven.compiler.testTarget>${javase.version}</maven.compiler.testTarget>
+		<javaee.version>8.0</javaee.version>
+		<darwinsys-api.version>1.5.14</darwinsys-api.version>
+		<!-- Only used in some modules, worth defining here anyway -->
+		<darwinsys-ee.version>0.3.9</darwinsys-ee.version>
+		<junit.version>[4.13.1,)</junit.version>
+	</properties>
+
+	<modules>
+		<module>main</module>
+		<module>desktop</module>
+		<module>ee</module>
+	<!-- <module>graal</module> Only works with graal vm-->
+	<!-- <module>jlink</module> has custom build script -->
+		<module>json</module>
+		<module>restdemo</module>
+		<!-- sidebyside is NOT a Maven module - contains non-Java stuff -->
+		<module>spark</module>
+		<module>testing</module>
+		<module>unsafe</module>
+		<module>xml</module>
+	</modules>
+
+	<dependencies>
+		<!-- My own Java API potpourri -->
+		<dependency>
+			<groupId>com.darwinsys</groupId>
+			<artifactId>darwinsys-api</artifactId>
+			<version>${darwinsys-api.version}</version>
+		</dependency>
+
+		<!-- Test early and often -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version><!-- Keep in sync with Eclipse JUnit4 library -->
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>2.0.2-beta</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>2.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- log4j, now at apache with new improved coordinates -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>

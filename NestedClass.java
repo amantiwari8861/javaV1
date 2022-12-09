@@ -14,7 +14,7 @@ class OuterClass
         }
     }
 }
-class Main 
+class NestedClass 
 {
     static void show2()
     {

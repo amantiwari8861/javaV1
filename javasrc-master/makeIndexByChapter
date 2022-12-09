@@ -1,0 +1,25 @@
+#!/usr/bin/awk -f
+
+BEGIN {
+	print "== Ian Darwin's Java Cookbook: Source Code: Index By Chapter";
+	print "This is the index of files included in the https://javacook.darwinsys.com[Java Cookbook] 4th Edition."
+	print ""
+	while ((getline < "Copyright.adoc") > 0) {
+		print
+	}
+	print ""
+}
+
+/^== / {
+	sub(/^== /, "", $0)
+	print ".", $0
+}
+/^include::/ {
+	sub(/\[tag.*$/, "", $0)
+	sub(/^include::/, "* link:", $0)
+	sub(/$/, "[]", $0)
+	print $0
+}
+/^\/\/ [A-Za-z0-9\/]+\.java/ {
+	print "* link:src/main/java/" $2 "[]"
+}

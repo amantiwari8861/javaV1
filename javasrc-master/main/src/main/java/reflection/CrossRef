@@ -1,0 +1,30 @@
+#/bin/sh -f
+
+# run the CrossRef generator, postprocess the output
+
+rm -f xref.*	# clean up cruft from previous runs
+
+echo "<TITLE>Non-private Field Reference</TITLE>"	>  fields.html
+echo "<H1>Non-private Field Reference</H1>"		>> fields.html
+echo "<DL>"						>> fields.html
+echo "<TITLE>Non-private Method Reference</TITLE>"	>  methods.html
+echo "<H1>Non-private Method Reference</H1>"		>> methods.html
+echo "<P>Excludes ubiquitous methods: toString, notify, wait.">>methods.html
+echo "<DL>"						>> methods.html
+
+java -noclassgc CrossRef |
+	#tee /tmp/xref |
+	sort -fu | 
+	awk -f crossref.awk
+
+grep 'INVALID INPUT' xref.*
+
+sort -f xref.methods >> methods.html
+
+sort -f xref.fields  >> fields.html
+
+ls -l *.html
+
+mv methods.html fields.htm ~/Documents
+
+rm -f xref.*

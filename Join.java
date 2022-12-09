@@ -1,31 +1,35 @@
-// Java program to illustrate join() method in Java
-import java.lang.*;
+public class join  {
 
-public class JoinDemo implements Runnable
-{
-	public void run()
-	{
-		Thread t = Thread.currentThread();
-		System.out.println("Current thread: "+ t.getName());
-
-		// checks if current thread is alive
-		System.out.println("Is Alive? "+ t.isAlive());
-	}
-
-	public static void main(String args[]) throws Exception
-	{
-		Thread t = new Thread(new JoinDemo());
-		t.start();
-
-		// Waits for 1000ms this thread to die.
-		t.join(1000);
-
-		System.out.println("\nJoining after 1000"+" mili seconds: \n");
-		System.out.println("Current thread: " +
-									t.getName());
-
-
-		// Checks if this thread is alive
-		System.out.println("Is alive? " + t.isAlive());
-	}
-}
+    public static void main(String[] args) throws InterruptedException{
+            yclass yy = new yclass ();
+            Thread t1= new Thread(yy);
+            t1.start();
+            System.out.println("main :"+Thread.currentThread().getPriority());
+            for (int i = 0; i <5; i++) {
+                t1.join(2000); //runs t1 first the give chance to main thread
+                System.out.println("during join control => "+i +" " + Thread.currentThread().getName());
+            }
+        }
+    }
+    class yclass implements Runnable{
+    
+        public void run() {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("control in run method => " +i+" "+ Thread.currentThread().getName());
+            }
+        }
+    }
+    
+    
+    /*
+    We can prevent a thread from execution by using any of the 3 methods of Thread class:
+    
+    sleep() causes the thread to definitely stop executing for a given amount of time; if no other thread or process needs to be run, the CPU will be idle (and probably enter a power saving mode).
+    
+    yield() basically means that the thread is not doing anything particularly important and if any other threads or processes need to be run, they should. Otherwise, the current thread will continue to run.
+    
+    join() If any executing thread t1 calls join() on t2 (i.e. t2.join()) immediately t1 will enter into waiting state until t2 completes its execution.
+    */
+    
+    //thread scheduler 
+    

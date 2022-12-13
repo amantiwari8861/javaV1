@@ -23,15 +23,17 @@ public class ArraySorter implements Callable <List<Integer>> {
         List<Integer> leftList = new ArrayList<>();
         List<Integer> rightList = new ArrayList<>();
 
-        int mid = (arrayToSort.size()/ 2)+1;  //4
+        int mid =(int)Math.ceil(arrayToSort.size()/ 2.0);
+        System.out.println("mid ="+mid+" by "+Thread.currentThread().getName()+"=>");
 
         for (int i = 0; i < mid; ++i) {
             leftList.add(arrayToSort.get(i));
         }
-
+        System.out.println("\t"+leftList);
         for (int i = mid; i < arrayToSort.size(); ++i) {
             rightList.add(arrayToSort.get(i));
         }
+        System.out.println("\t"+rightList);
 
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
@@ -67,6 +69,7 @@ public class ArraySorter implements Callable <List<Integer>> {
             j++;
         }
         executorService.shutdown();
+        System.out.println("\t\t"+sortedArray);
         return sortedArray;
     }
 }

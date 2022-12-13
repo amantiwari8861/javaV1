@@ -15,7 +15,8 @@ public class Client {
         Future<List<Integer>> futureList=executorService.submit(as);
         List<Integer> sortedArray=futureList.get();
 
-        for (int i = 0; i < sortedArray.size(); ++i) {
+        for (int i = 0; i < sortedArray.size(); ++i) 
+        {
             System.out.print(sortedArray.get(i)+" ");
         }
         executorService.shutdown();

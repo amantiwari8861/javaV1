@@ -2,29 +2,37 @@ package com.p1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class JdbcTutorial {
-
 	public static void main(String[] args) {
 		
-		String mysqlUrl="jdbc:mysql://localhost:3306/stugre";
+		Connection con1=ConnectionProvider.getMysqlConnection();
+		System.out.println("succesfully got mysql connection in main ");
+
+//		Connection con2=ConnectionProvider.getSqlServerConnection();
+//		System.out.println("succesfully got sqlserver connection in main ");
 		
-		//JDBC :  type 4 driver
-		try 
-		{
-			Class.forName("com.mysql.cj.jdbc.Driver");
+		try {
+			String query="create table student3("
+					+ "id int primary key auto_increment,"
+					+ "name varchar(255),"
+					+ "mobile bigint,"
+					+ "fees float);";
+			Statement stmt = con1.createStatement();
+			 stmt.execute(query);
+
+			System.out.println("table created!");
 			
-			Connection mysqlcon = DriverManager.getConnection(mysqlUrl,"root","1234");
-			System.out.println("Connected succesfully!!");
-			
-		}
-		catch(ClassNotFoundException | SQLException e)
-		{
-			System.out.println("driver class not found! or sql exception occured ");
+		
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-	}
-
+		
+		
+		
+}
 }

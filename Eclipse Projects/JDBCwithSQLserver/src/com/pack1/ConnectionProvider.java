@@ -17,7 +17,7 @@ public class ConnectionProvider {
 	}
 	public void getSQLServerConnection() throws ClassNotFoundException, SQLException
 	{
-		String url2 = "jdbc:sqlserver://localhost:1433;databaseName=feb2022;user=sa;password=Aman@8861";
+		String url2 = "jdbc:sqlserver://localhost:1433;databaseName=feb2022;user=sa;password=Aman@8861;encrypt=true;trustServerCertificate=true;";
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		con=DriverManager.getConnection(url2);
 		System.out.println("connected to sql server");

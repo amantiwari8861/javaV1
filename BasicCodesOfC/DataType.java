@@ -24,7 +24,7 @@ public class DataType {
 
         System.out.println("String str : "+str);
 
-        System.out.println(l);
-        System.out.println("l ki value "+l+" hai");
+        // System.out.println(l);
+        // System.out.println("l ki value "+l+" hai");
     }
 }

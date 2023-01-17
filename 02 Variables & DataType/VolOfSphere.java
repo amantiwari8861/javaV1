@@ -7,6 +7,7 @@ public class VolOfSphere {
         Scanner b=new Scanner(System.in);
 
         // byte a=10,b2=20,c;
+        // c=(byte)a+(byte)b2;
         // c=(byte) (a+b2);
         // System.out.println("the sum is "+c);
 
@@ -22,12 +23,12 @@ public class VolOfSphere {
         // res=f1+f2;
         // System.out.println(" result :"+res);
         
-        // float f1,f2,res;
-        // System.out.println("enter 2 values ");
-        // f1=b.nextFloat();
-        // f2=b.nextFloat();
-        // res=(float)(f1+f2+56.8);
-        // System.out.println(" result :"+res);
+        float f1,f2,res;
+        System.out.println("enter 2 values ");
+        f1=b.nextFloat();
+        f2=b.nextFloat();
+        res=(float)(f1+f2+56.8);
+        System.out.println(" result :"+res);
 
         // double d1,d2,result;
 
@@ -41,15 +42,15 @@ public class VolOfSphere {
         // System.out.println(result);
         // System.out.println("the result is "+result);
 
-        float r,pi=3.14f,result;
+        // float r,pi=3.14f,result;
 
-        System.out.println("enter the r :");
-        r=b.nextFloat();
+        // System.out.println("enter the r :");
+        // r=b.nextFloat();
 
-        // result=(float)(4.0/3.0*pi*r*r*r);
-        result=4.0f/3.0f*pi*r*r*r;
+        // // result=(float)(4.0/3.0*pi*r*r*r);
+        // result=4.0f/3.0f*pi*r*r*r;
 
-        System.out.println("the volume is "+result);
+        // System.out.println("the volume is "+result);
 
 
 

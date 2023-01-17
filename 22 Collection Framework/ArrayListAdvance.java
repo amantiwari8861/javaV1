@@ -5,7 +5,7 @@ public class ArrayListAdvance {
 public static void main(String[] args) {
     
     // Create an ArrayList of Employee
-    ArrayList<Employee> empList = new ArrayList<Employee>();
+    ArrayList<Object> empList = new ArrayList<Object>();
     
     // Create Employee objects
     Employee e1 = new Employee();

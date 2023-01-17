@@ -6,7 +6,7 @@ public class UserInput {
         //Scanner class
         Scanner sc = new Scanner(System.in);
         //Input
-        // System.out.print("Enter a byte number : ");
+        System.out.print("Enter a byte number : ");
         byte b = sc.nextByte();
         System.out.print("Enter a short number : ");
         short s = sc.nextShort();

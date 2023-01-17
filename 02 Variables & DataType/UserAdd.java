@@ -11,6 +11,15 @@ public class UserAdd {
         num2 = sc.nextInt();
         sum=num1+num2;
         System.out.println("the sum is "+sum);
+
+        //or
+        
+        System.out.println("enter 2 numbers :");
+        num1 = sc.nextInt();
+        num2 = sc.nextInt();
+        sum=num1+num2;
+        System.out.println("the sum is "+sum);
+        
         sc.close();
     }
 }

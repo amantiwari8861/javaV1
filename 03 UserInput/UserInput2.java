@@ -13,8 +13,8 @@ class UserInput2
     long l=sc.nextLong();
     double d=sc.nextDouble();
     boolean bool=sc.nextBoolean();
-    String str=sc.next();
-    String str2=sc.nextLine();
-    char ch=sc.next().charAt(0);
+    String str=sc.next();//one word
+    String str2=sc.nextLine();// whole sentence(one line)
+    char ch=sc.next().charAt(0);//one letter
     }
 }

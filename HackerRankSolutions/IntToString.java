@@ -1,5 +1,6 @@
-import java.util.*;
-import java.security.*;
+import java.security.Permission;
+import java.util.Scanner;
+
 public class IntToString {
  public static void main(String[] args) {
 

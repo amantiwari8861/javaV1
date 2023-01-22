@@ -1,8 +1,4 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class substrings {
 
@@ -11,10 +7,10 @@ public class substrings {
         String S = in.next();
         int start = in.nextInt();
         int end = in.nextInt();
-        
-        if (S.length() >=1 && S.length()<=100 && start>=0 ) 
-        {
-           System.out.println(S.substring(start, end)); 
+
+        if (S.length() >= 1 && S.length() <= 100 && start >= 0) {
+            System.out.println(S.substring(start, end));
         }
+        in.close();
     }
 }

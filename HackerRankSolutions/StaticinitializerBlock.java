@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class StaticinitializerBlock {
 
@@ -10,6 +10,7 @@ public class StaticinitializerBlock {
         Scanner sc=new Scanner(System.in);
         B=sc.nextInt();
         H=sc.nextInt();
+        sc.close();
         if(B<=0 || H<=0)
         throw new Exception(" Breadth and height must be positive");
         if(B>=-100 && B<=100 && H>=-100 && H<=100 )

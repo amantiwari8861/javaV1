@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class DataTypes
 {
     public static void main(String []argh)

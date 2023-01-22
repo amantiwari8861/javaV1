@@ -20,8 +20,10 @@ public class IfElse {
                     System.out.println("Not Weird");
                 }
             }
+            br.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
     }
 }

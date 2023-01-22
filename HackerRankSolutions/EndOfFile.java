@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class EndOfFile {
 
@@ -10,6 +9,6 @@ public class EndOfFile {
         while (sc.hasNext()) {
             System.out.println( (i++) +" "+sc.nextLine());
         }
-        
+        sc.close();
     }
 }

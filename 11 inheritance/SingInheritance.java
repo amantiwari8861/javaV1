@@ -35,7 +35,7 @@ class Cat extends Mammal
     }
 }
 
-public class RunMammal 
+public class SingleInheritance 
 {
     public static void main(String[] args) 
     {

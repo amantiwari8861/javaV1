@@ -1,0 +1,243 @@
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.sql.*;
+
+public class Student extends HttpServlet {
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+	
+       
+      
+       try
+	{
+	Class.forName("org.apache.derby.jdbc.ClientDriver");
+        Connection conn=DriverManager.getConnection("jdbc:derby://localhost:1527/IBM_DB","ibm","ibm");
+	
+	
+	out.println("<html>");
+	out.println("<head>");
+	out.println("<title>STUDENT FORM</title>");
+	out.println("</head>");
+	out.println("<body bgcolor=yellow><center>");
+	out.println("<form name='f1'>");
+	out.println("STUDENT ENTRY FORM");
+	out.println("<table  border='1' cellspacing='3' cellpadding='2'>");
+	out.println("<tr ><td >Enter ID : <input type='text' value=' ' name='txtrno'/></td></tr> ");
+	out.println("<tr ><td >Enter Name : <input type='text' value=' ' name='txtname'/> </td></tr>");
+	out.println("<tr><td><input type ='submit' value='INSERT' name='btnInsert'/> <input type ='submit' value='SELECT' name='btn_SELECT'/> <input type ='submit' value='UPDATE' name='btn_UPDATE'/><input type ='submit' value='DELETE' name='btn_DELETE'/></td></tr>");
+	out.println("</table>");
+	out.println("</form>");
+	out.println("</center></body>");
+	out.println("</html>");
+
+
+	String r,n;
+	 r = request.getParameter("txtrno");
+         n = request.getParameter("txtname");
+	
+
+
+
+
+	
+	
+	if(request.getParameter("btnInsert")!=null)
+	{
+	
+	try{
+
+
+		
+
+		if(r!="" && n!="")
+		{
+        	PreparedStatement ps=conn.prepareStatement("insert into stud values(?,?)");
+
+        	ps.setString(1, r);
+        	ps.setString(2, n);
+       
+        	int i=ps.executeUpdate();
+        
+         	 if(i>0)
+          	{
+           	 out.println("You are sucessfully registered");
+		out.println("<html>");
+	out.println("<head>");
+	out.println("<title>STUDENT</title>");
+	out.println("</head>");
+	out.println("<body ><center>");
+	out.println("<form name='f2'>");
+	out.println("<table  border='1' cellspacing='3' cellpadding='2'>");
+	out.println("<tr><td><h3><font color='red'>Roll No</font></h3></td> <td><h3><font color='red'>Name</font></h3></td></tr>");
+	Statement stat=conn.createStatement();
+	ResultSet rs=stat.executeQuery("select * from stud order by trim(rno) ");
+	while(rs.next())
+	{
+	//System.out.print(rs.getInt(1));
+	out.println("<tr><td>" + rs.getString(1) + "</td><td>" + rs.getString(2) + "</td></tr>");
+	}
+	out.println("</table>");
+	out.println("</form>");
+	out.println("</center></body>");
+	out.println("</html>");
+		}
+         	 }//close outer if
+	else
+		{
+			out.println("Enter the rno. & Name");
+			return;	
+
+		}
+	
+        
+       	    }
+       		 catch(Exception se)
+        	{
+		out.println(se);
+            	se.printStackTrace();
+        	}
+
+
+	}//if close
+	else if(request.getParameter("btn_SELECT")!=null)
+	{
+
+  
+	out.println("<html>");
+	out.println("<head>");
+	out.println("<title>STUDENT FORM</title>");
+	out.println("</head>");
+	out.println("<body><center>");
+	out.println("<form name='f2'>");
+	out.println("<table bgcolor='pink' width='40%'  border='1' cellspacing='3' cellpadding='2'>");
+	out.println("<tr><td><h3><font color='red'>Roll No</font></h3></td> <td><h3><font color='red'>Name</font></h3></td></tr>");
+	Statement stat=conn.createStatement();
+	ResultSet rs=stat.executeQuery("select * from stud order by trim(rno) ");
+	while(rs.next())
+	{
+	//System.out.print(rs.getInt(1));
+	out.println("<tr><td>" + rs.getString(1) + "</td><td>" + rs.getString(2) + "</td></tr>");
+	}
+	out.println("</table>");
+	out.println("</form>");
+	out.println("</center></body>");
+	out.println("</html>");
+	conn.close();
+	stat.close();
+	//rs.close();
+
+	} //else if close     
+
+	else if(request.getParameter("btn_DELETE")!=null)
+	{
+
+	try{
+        	
+
+		if(r=="")
+		{
+		out.println("Enter the Roll No First to delete the Record");
+				return;
+		}
+		PreparedStatement ps=conn.prepareStatement("delete from stud where rno='"+r+"'");
+        	       
+        	int i=ps.executeUpdate();
+        
+         	 if(i>0)
+          	{
+           	 out.println("Student Record Deleted Successfully.");
+		out.println("<html>");
+	out.println("<head>");
+	out.println("<title>STUDENT FORM</title>");
+	out.println("</head>");
+	out.println("<body>");
+	out.println("<form name='f2'>");
+	out.println("<table border='1' cellspacing='3' cellpadding='2'>");
+	out.println("<tr><td>Roll No</td> <td>Name</td></tr>");
+	Statement stat=conn.createStatement();
+	ResultSet rs=stat.executeQuery("select * from stud order by rno ");
+	while(rs.next())
+	{
+	//System.out.print(rs.getInt(1));
+	out.println("<tr><td>" + rs.getString(1) + "</td><td>" + rs.getString(2) + "</td></tr>");
+	}
+	out.println("</table>");
+	out.println("</form>");
+	out.println("</body>");
+	out.println("</html>");
+         	 }
+        
+       	    }//try close
+       		 catch(Exception se)
+        	{
+		out.println(se);
+            	se.printStackTrace();
+        	}
+
+	}//eles close
+
+
+
+	else if(request.getParameter("btn_UPDATE")!=null)
+	{
+
+	try{
+        	
+
+		if(r=="")
+		{
+		out.println("Enter the Roll No First to Update the Record");
+		return;
+		}
+		PreparedStatement ps=conn.prepareStatement("update stud set name='"+n+"' where rno='"+r+"'");
+        	       
+        	int i=ps.executeUpdate();
+        
+         	 if(i>0)
+          	{
+           	 out.println("Student Record Updated Successfully.");
+		out.println("<html>");
+	out.println("<head>");
+	out.println("<title>STUDENT FORM</title>");
+	out.println("</head>");
+	out.println("<body>");
+	out.println("<form name='f2'>");
+	out.println("<table border='1' cellspacing='3' cellpadding='2'>");
+	out.println("<tr><td>Roll No</td> <td>Name</td></tr>");
+	Statement stat=conn.createStatement();
+	ResultSet rs=stat.executeQuery("select * from stud order by rno ");
+	while(rs.next())
+	{
+	//System.out.print(rs.getInt(1));
+	out.println("<tr><td>" + rs.getString(1) + "</td><td>" + rs.getString(2) + "</td></tr>");
+	}
+	out.println("</table>");
+	out.println("</form>");
+	out.println("</body>");
+	out.println("</html>");
+         	 }
+        
+       	    }//try close
+       		 catch(Exception se)
+        	{
+		out.println(se);
+            	se.printStackTrace();
+        	}
+
+	}//eles close	
+
+
+	}// try close
+	catch(Exception e)
+	{
+	
+	out.println(e);
+	}
+	
+
+  }
+}

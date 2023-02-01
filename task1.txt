@@ -1,7 +1,0 @@
-make a student class 
-with 3 instance variable and 2 methods 
-1st method should set the value of 1 variables
-2nd method should show the value of 3 variables
-1 value should be set in main method using student class object
-there will be 1 pre-defined variable value
-

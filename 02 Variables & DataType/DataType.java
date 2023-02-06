@@ -11,7 +11,7 @@ public class DataType {
         boolean bool = true;// true or false (1bit)
 
         //String class
-        String str = "Hello World 3.0";
+        String sname = "Aman Tiwari";
 
         System.out.println("byte b : "+b);
         System.out.println("short s : "+s);
@@ -22,7 +22,7 @@ public class DataType {
         System.out.println("char c : "+c);
         System.out.println("boolean bool : "+bool);
 
-        System.out.println("String str : "+str);
+        System.out.println("Student Name  : "+sname);
 
     }
 }

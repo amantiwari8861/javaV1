@@ -1,7 +1,8 @@
 import java.util.Scanner;
 import java.lang.*; //by default imported
 
-public class UserInput {
+public class UserInput 
+{
     public static void main(String[] args) {
         //Scanner class
         Scanner sc = new Scanner(System.in);
@@ -21,16 +22,7 @@ public class UserInput {
         System.out.print("Enter a boolean : ");
         boolean b1 = sc.nextBoolean();
         
-        System.out.println("Enter a string(word) : ");
-        String str = sc.next();
-        System.out.print("Enter a char : ");
-        char c = sc.next().charAt(0);
-		sc.nextLine();
-        System.out.println("Enter a string(sentence) : ");
-        String str1 = sc.nextLine();
-
-
-
+        System.out.println("The Stored data in variable is :");
         System.out.println(b);
         System.out.println(s);
         System.out.println(i);
@@ -38,22 +30,6 @@ public class UserInput {
         System.out.println(f);
         System.out.println(d);
         System.out.println(b1);
-        System.out.println(str);
-        System.out.println(c);
-        System.out.println(str1);
-        // System.out.println(" b = " + b +" (8bit -> 1byte)");
-
-        // int num=1;
-        // while (num<=10) 
-        // {
-        //     System.out.println("num = " + num);
-        //     num++;
-        // }
-
-        // do {
-        //     System.out.println("num = " + num);
-        //     num++;
-        // } while (num>=10);
-
+        
     }
 }

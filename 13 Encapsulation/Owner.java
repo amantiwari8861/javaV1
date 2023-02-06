@@ -1,17 +1,16 @@
-package office.inistitute;
-import office.teachers.Teachers;
+package office.institute;
 
-public class Institute 
+public class Owner 
 {
     Teachers t1=new Teachers();
 
-    void showTeacherDetails()
+    public void showTeacherDetails()
     {
         System.out.println("Teacher Details");
         System.out.println("Name :"+t1.name);
         System.out.println("Id :"+t1.id);
-        System.out.println("Gender :"+t1.gender);
         System.out.println("Salary :"+t1.salary);
+        // System.out.println("Bank Balance :"+t1.bankBalance);
     }
     
 }

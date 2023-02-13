@@ -1,128 +1,146 @@
-abstract class Vehicle
-{
-    Vehicle(){}
+abstract class Vehicle {
+    Vehicle() {
+    }
+
     int power;
     String color;
 
-    abstract void steer();
+    abstract void drivingMethod();
 }
 
-class Airplane extends Vehicle
-{
-    Airplane(){}
-    Airplane(int power, String color)
-    {
+class Airplane extends Vehicle {
+    Airplane() {
+    }
+
+    Airplane(int power, String color) {
         this.power = power;
         this.color = color;
     }
-    void showAirplaneInfo()
-    {
+
+    void showAirplaneInfo() {
         System.out.println("Airplane's  information: ");
-        System.out.println("Power: "+power+" KW");
-        System.out.println("Color: "+color);
+        System.out.println("Power: " + power + " KW");
+        System.out.println("Color: " + color);
     }
-    void steer()
-    {
-        System.out.println("This is airplane's steering.");
+
+    @Override
+    void drivingMethod() {
+        System.out.println("This airplane is operating by pilot.");
     }
-    void fly()
-    {
+
+    void fly() {
         System.out.println("It flies in the air.");
     }
 }
 
-class Ship extends Vehicle
-{
-    Ship(){}
-    Ship(int power, String color)
-    {
+class Ship extends Vehicle {
+    Ship() {
+    }
+
+    Ship(int power, String color) {
         this.power = power;
         this.color = color;
     }
-    void showShipInfo()
-    {
+
+    void showShipInfo() {
         System.out.println("Ship's information: ");
-        System.out.println("Power: "+power+" KW");
-        System.out.println("Color: "+color);
+        System.out.println("Power: " + power + " KW");
+        System.out.println("Color: " + color);
     }
-    void steer()
-    {
-        System.out.println("This is Ship's steering.");
+
+    @Override
+    void drivingMethod() {
+        System.out.println("This Ship is sailing by Captain.");
     }
-    void sail()
-    {
+
+    void sail() {
         System.out.println("It sails in ocean.");
     }
 }
 
-class CargoShip extends Ship
-{
-    CargoShip(){}
-    int cargoCapacity;
-    CargoShip(int power, String color)
-    {
+class CargoShip extends Ship {
+    CargoShip() {
+    }
+
+    float cargoCapacity;
+
+    CargoShip(int power, String color, float cargoCapacity) {
         this.power = power;
         this.color = color;
+        this.cargoCapacity = cargoCapacity;
     }
-    void showCargoShipInfo()
-    {
+
+    void showCargoShipInfo() {
         System.out.println("CargoShip's information: ");
-        System.out.println("Power: "+power+" KW");
-        System.out.println("Color: "+color);
+        System.out.println("Power: " + power + " KW");
+        System.out.println("Color: " + color);
+        System.out.println("Cargo Capacity: " + cargoCapacity);
     }
+
     @Override
-    void steer()
-    {
+    void drivingMethod() {
         System.out.println("This is Cargoship's steering.");
     }
+
     @Override
-    void sail()
-    {
+    void sail() {
         System.out.println("CargoShip supplies products.");
     }
 }
 
-class PassengerShip extends Ship
-{
-    PassengerShip(){}
-    int num_of_passengers;
-    PassengerShip(int power, String color)
-    {
+class PassengerShip extends Ship {
+    PassengerShip() {
+    }
+
+    int numOfPassengers;
+
+    PassengerShip(int power, String color, int numOfPassengers) {
         this.power = power;
         this.color = color;
+        this.numOfPassengers = numOfPassengers;
     }
-    void showPassengerShipInfo()
-    {
+
+    void showPassengerShipInfo() {
         System.out.println("Passenger ship's information.");
-        System.out.println("Power: "+power+" KW");
-        System.out.println("Color: "+color);
+        System.out.println("Power: " + power + " KW");
+        System.out.println("Color: " + color);
+        System.out.println("Number of Passengers: " + numOfPassengers);
     }
-    void steer()
-    {
+
+    void drivingMethod() {
         System.out.println("This is passengerShip's steering");
     }
-    void sail()
-    {
+
+    void sail() {
         System.out.println("Passenger ship carries people.");
     }
 }
 
-public class Ships
-{
+public class Ships {
     public static void main(String[] args) {
-     Airplane obj1 = new Airplane(500,"White");
-     obj1.showAirplaneInfo();
-     obj1.steer();
-     obj1.fly();
-     Ship obj2 = new Ship(1000,"Blue");
-     obj2.showShipInfo();
-     obj2.steer();
-    //  obj2.
-     Ship obj3 = new CargoShip(1100,"Red");
-     obj3.showCargoShipInfo();
-    //  obj3.
-     PassengerShip obj4 = new PassengerShip(1500,"Yellow");
-     obj4.showPassengerShipInfo();
+
+        Airplane obj1 = new Airplane(500, "White");
+        obj1.showAirplaneInfo();
+        obj1.drivingMethod();
+        obj1.fly();
+        System.out.println("------------------------------------------");
+
+        Ship obj2 = new Ship(1000, "Blue");
+        obj2.showShipInfo();
+        obj2.drivingMethod();
+        System.out.println("------------------------------------------");
+
+        CargoShip obj3 = new CargoShip(1100, "Red", 150.5f);
+        obj3.showCargoShipInfo();
+        obj3.drivingMethod();
+        obj3.sail();
+        System.out.println("------------------------------------------");
+
+        PassengerShip obj4 = new PassengerShip(1500, "Yellow", 50);
+        obj4.showPassengerShipInfo();
+        obj3.drivingMethod();
+        obj3.sail();
+        System.out.println("------------------------------------------");
 
     }
 }

@@ -13,7 +13,16 @@ interface Python
     String FOUNDER="Guido Van Rossum";
     void pythonTopics();
 }
-class Skills implements C,Java,Python
+
+class English
+{
+    void bussinessCommunication()
+    {
+        System.out.println("Good knowledge of bussiness communication");
+    }
+}
+
+class Skills extends English implements C,Java,Python
 {
     @Override
     public void cTopics() 
@@ -46,5 +55,6 @@ public class MultipleInheritance
         s.cTopics();
         s.javaTopics();
         s.pythonTopics();
+        s.bussinessCommunication();
     }
 }

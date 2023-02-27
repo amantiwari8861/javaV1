@@ -1,0 +1,50 @@
+    What is Java?
+    What are the features of Java?
+    What is the difference between JDK, JRE, and JVM?
+    What is the use of the main() method in Java?
+    What is an object in Java?
+    What is a class in Java?
+    What is the difference between an abstract class and an interface in Java?
+    What is polymorphism in Java?
+    What is inheritance in Java?
+    What is encapsulation in Java?
+    What is a package in Java?
+    What is the difference between private, protected, and public access modifiers in Java?
+    What is a constructor in Java?
+    What is a static method in Java?
+    What is a final keyword in Java?
+    What is the difference between throw and throws keywords in Java?
+    What is an exception in Java?
+    What is the difference between checked and unchecked exceptions in Java?
+    What is a try-catch block in Java?
+    What is a finally block in Java?
+    What is a multi-threading in Java?
+    What is synchronization in Java?
+    What is the difference between the wait() and sleep() methods in Java?
+    What is a deadlock in Java?
+    What is the use of the equals() method in Java?
+    What is a hashcode in Java?
+    What is the difference between the == operator and the equals() method in Java?
+    What is the use of the toString() method in Java?
+    What is a Collection in Java?
+    What is the difference between ArrayList and LinkedList in Java?
+    What is the difference between Set and List in Java?
+    What is the difference between Map and Set in Java?
+    What is the difference between Iterator and ListIterator in Java?
+    What is the difference between fail-fast and fail-safe iterators in Java?
+    What is a lambda expression in Java?
+    What is a functional interface in Java?
+    What is the Stream API in Java?
+    What is a JDBC in Java?
+    What is a Servlet in Java?
+    What is JSP in Java?
+    What is a Hibernate in Java?
+    What is Spring Framework in Java?
+    What is REST API in Java?
+    What is JSON in Java?
+    What is Maven in Java?
+    What is Gradle in Java?
+    What is the difference between the equals() and compareTo() methods in Java?
+    What is a garbage collector in Java?
+    What is the difference between heap and stack memory in Java?
+    What is the use of the finalizer method in Java?

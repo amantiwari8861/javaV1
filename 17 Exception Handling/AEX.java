@@ -16,16 +16,6 @@ class AEX
             System.out.println("Divide by zero condition pls give a valid no. 1");
             // e.printStackTrace();
         }
-        catch(RuntimeException e)
-        {
-            System.out.println("Divide by zero condition pls give a valid no. 2");
-            // e.printStackTrace();
-        }
-        catch(Exception e)
-        {
-            System.out.println("Divide by zero condition pls give a valid no. 3 ");
-            // e.printStackTrace();
-        }
         finally
         {
             System.out.println("i am finally block i will execute always "+

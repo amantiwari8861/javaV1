@@ -9,8 +9,8 @@ class StrBuff1
         // System.out.println("the name is "+name);
         StringBuffer name2=new StringBuffer();
         // name2=sc.next(); //error
-        name2.append("Hello 1");        
-        name2.append(sc.next());
+        name2.append("Hello ");        
+        name2.append(sc.nextLine());
         System.out.println("the name2 value is "+name2);
         // name2.append(sc.nextLine()); skips the input
         // name2.append(" ");

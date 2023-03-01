@@ -16,7 +16,7 @@ class ThrowsExample
 		}
 		catch(ArithmeticException a)
 		{
-			System.out.println("Handeled");
+			System.out.println("Handeled by m2");
 		}
 	}
 	static void m3() throws ArithmeticException

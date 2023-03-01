@@ -7,9 +7,14 @@ class ThrowsExample3
 {
     public static void main(String[] args) throws FileNotFoundException,IOException
     {
-        FileReader niit=new FileReader("output.txt");
-        BufferedReader br=new BufferedReader(niit);
-        System.out.println(br.readLine());
-        br.close();
+        
+            FileReader frReader=new FileReader("outut.txt");
+            BufferedReader br=new BufferedReader(frReader);
+            System.out.println(br.readLine());
+            br.close();            
+       
+        System.out.println("hiii");
+
+
     }
 }

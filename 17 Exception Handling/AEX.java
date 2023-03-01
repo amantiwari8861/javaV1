@@ -13,7 +13,7 @@ class AEX
         }
         catch(ArithmeticException e)
         {
-            System.out.println("Divide by zero condition pls give a valid no. 1");
+            System.out.println("Divide by zero condition pls give a valid no.");
             // e.printStackTrace();
         }
         finally

@@ -25,11 +25,13 @@ public class InputStreamDemo {
         }
         finally
         {
-            try{
+            try
+            {
                 if(is!=null)
                     is.close();
             }
-            catch(IOException e){
+            catch(IOException e)
+            {
                 System.out.println("IO Exception");
             }
         }

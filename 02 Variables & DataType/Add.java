@@ -1,12 +1,7 @@
-public class Add {
-    public static void main(String args[]) {
-
-        // int num1=56;
-        // System.out.println("num1");
-        // System.out.println(num1);
-        // System.out.println("num ki value "+num1);
-        // System.out.println("num ki value "+num1+" hai");
-
+public class Add 
+{
+    public static void main(String args[]) 
+    {
         int a=12,b=23,c;
         c=a+b;
 

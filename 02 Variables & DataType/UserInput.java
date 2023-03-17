@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.lang.*; //by default imported
+import java.util.Scanner;
 
 public class UserInput 
 {
@@ -30,6 +30,6 @@ public class UserInput
         System.out.println(f);
         System.out.println(d);
         System.out.println(b1);
-        
+        sc.close();
     }
 }

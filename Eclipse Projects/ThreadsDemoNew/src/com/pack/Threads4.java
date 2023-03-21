@@ -1,6 +1,4 @@
-package com.pack;
-
-import java.util.concurrent.Executor;
+// package com.pack;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -25,8 +23,8 @@ public class Threads4 {
             // Thread t=new Thread(new PrintNum(i));
             // t.start();
 //            executorService = Executors.newCachedThreadPool();
-//        	executorService=Executors.newFixedThreadPool(4);
-        	executorService=Executors.newSingleThreadExecutor();
+       	executorService=Executors.newFixedThreadPool(4);
+        	// executorService=Executors.newSingleThreadExecutor();
             executorService.execute(new PrintNum(i));
         }
         

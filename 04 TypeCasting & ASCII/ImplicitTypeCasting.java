@@ -9,16 +9,16 @@ public class ImplicitTypeCasting {
 
         // System.out.println(d);
 
-        //// ASCII -> American standard code for information interchange
-        // char ch=65;// implicit typecasting
-        // System.out.println(ch);
+        // ASCII -> American standard code for information interchange
+        char ch=65;// implicit typecasting
+        System.out.println(ch);
 
         int n='A';// implicit typecasting
         System.out.println(n);
 
 
-        // System.out.println((char)66); //explicit typecasting
-        // System.out.println((int)'B'); //explicit typecasting
+        System.out.println((char)66); //explicit typecasting
+        System.out.println((int)'B'); //explicit typecasting
 
         /* Note: 
          *      A -> 65

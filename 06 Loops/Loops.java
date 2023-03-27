@@ -6,12 +6,16 @@ public class Loops {
         
         //for while do-while for-each
 
+        // for(;;)
+        // {
+        //     System.out.println("Hello");
+        // }
         /* initialization
          * condition
          * increment/decrement
          */
-
-        // for(int i=1;i<=10;i++)
+        // int i;
+        // for(i=1;i<=10;i++)
         // {
         //     System.out.println(i+" Hello everyone!");
         // }
@@ -33,11 +37,15 @@ public class Loops {
         //     System.out.println(k);
         //     k--;
         // }
+
+        // Case 1:
         // int c=1;
         // do {
         //     System.out.println(c);
         //     c++;
         // } while (c<10);
+
+        //Case 2:
         // int c=1;
         // do 
         // {
@@ -47,12 +55,12 @@ public class Loops {
 
         int arr1[]={10,20,56,383,23,24};
 
-        // for (int i : arr1) 
-        // {
-        //     System.out.println(i);
-        // }
+        for (int i : arr1) 
+        {
+            System.out.println(i);
+        }
 
-        System.out.println(Arrays.toString(arr1));
+        // System.out.println(Arrays.toString(arr1));
 
 
 

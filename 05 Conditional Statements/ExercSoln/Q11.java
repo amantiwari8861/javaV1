@@ -16,8 +16,8 @@ public class Q11
         b=sc.nextDouble();
         c=sc.nextDouble();
 
-        posResult= (-b + Math.sqrt((b*b-4*a*c)))/2*a;
-        negResult= (-b - Math.sqrt((b*b-4*a*c)))/2*a;
+        posResult= (-b + Math.sqrt((b*b-4.0*a*c)))/(2*a);
+        negResult= (-b - Math.sqrt((b*b-4.0*a*c)))/(2*a);
 
         System.out.println("Positive Result :"+posResult);
         System.out.println("Negative Result :"+negResult);

@@ -17,11 +17,11 @@ public class Array {
         // int arr[]=new int[]{56,87,98,534,98,32};
 
         // System.out.println("the value at array's 3rd index is "+arr[3]);
-        arr[0]=56;
-        arr[1]=67;
-        arr[2]=34;
-        arr[3]=343;
-        arr[4]=344;
+        // arr[0]=56;
+        // arr[1]=67;
+        // arr[2]=34;
+        // arr[3]=343;
+        // arr[4]=344;
         
         // System.out.println("Printing through normal for loop");
         // for(int i=0;i<5;i++)
@@ -42,47 +42,25 @@ public class Array {
         //     System.out.println(e);
         // }
 
-        System.out.println("\nPrinting through Arrays.toString");
-        System.out.println(Arrays.toString(arr));
+        // System.out.println("\nPrinting through Arrays.toString");
+        // System.out.println(Arrays.toString(arr));
 
-        // Scanner sc=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
 
         //taking user defined value in fixed size array
 
-        // System.out.println("enter arr :");
-        // for(int i=0;i<arr.length;i++)
-        // {
-        //     System.out.print("Enter "+i+"th element :");
-        //     arr[i]=sc.nextInt();
-        // }
-        // System.out.println("\nPrinting through array.length in for loop");
-        // for(int i=0;i<arr.length;i++)
-        // {
-        //     System.out.println(arr[i]);
-        // }
-
-
-        //taking user defined value in user defined sized array
-
-        // int marks[];//array declartion
-
-        // System.out.println("enter no. of marks :");
-        // marks=new int[sc.nextInt()];//array memory initialization
-
-        // System.out.println("enter marks :");
-        // for(int i=0;i<marks.length;i++)
-        // {
-        //     System.out.print("Enter "+i+"th element :");
-        //     marks[i]=sc.nextInt();
-        // }
-        // marks={67,783,56,35,35,67}; //error
-        // marks=new int[]{76,86,94,24,97,36};
-
-        // System.out.println("the marks are :");
-        // for(int i=0;i<marks.length;i++)
-        // {
-        //     System.out.println(marks[i]);
-        // }
+        System.out.println("enter array elements :");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print("Enter "+i+"th element :");
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("\nPrinting through array.length in for loop");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println(arr[i]);
+        }
+        sc.close();
 
     }
 }

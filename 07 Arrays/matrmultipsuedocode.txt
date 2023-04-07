@@ -1,0 +1,48 @@
+   //logic  let r1=2,c1=3,r2=3,c2=4
+        
+        for (int i = 0; i < r1; i++)
+        {
+            for (int j = 0; j < c2; j++)
+            {
+                resultantMatr[i][j]=0;
+                for (int k = 0; k < c1; k++)
+                {
+                    resultantMatr[i][j]=resultantMatr[i][j]+ matr1[i][k]*matr2[k][j];
+                }
+            }  
+        }
+
+step 1: i=0
+        0<2 true
+        (a) j=0
+            0<4 true
+            resultantMatr[0][0] = 0
+                (i)     k=0 
+                        0 < 3 true
+
+                        resultantMatr[i][j]=resultantMatr[i][j]+ matr1[i][k]*matr2[k][j];
+                        resultantMatr[0][0]=resultantMatr[0][0]+ matr1[0][0]*matr2[0][0]
+                        resultantMatr[0][0]= 0 + 1 * 1  => 1
+
+                (ii)    k=1
+                        1<3 true
+                        
+                        resultantMatr[i][j]=resultantMatr[i][j]+ matr1[i][k]*matr2[k][j];
+                        resultantMatr[0][0]=resultantMatr[0][0]+ matr1[0][1]*matr2[1][0]
+                        resultantMatr[0][0]=  1 + 2 * 4 => 9
+
+                (iii)   k=2
+                        2<3 true
+                        
+                        resultantMatr[i][j]=resultantMatr[i][j]+ matr1[i][k]*matr2[k][j];
+                        resultantMatr[0][0]=resultantMatr[0][0]+ matr1[0][2]*matr2[2][0]
+                        resultantMatr[0][0]=   9 + 3*7 =>30
+
+                (iv)    k=3
+                        3<3 false
+
+        (b)     j=1
+                1<4 true
+
+                    (i)     k=0
+

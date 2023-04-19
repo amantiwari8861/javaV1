@@ -24,21 +24,21 @@ public class ClassDemo
     public static void main(String[] args) 
     {
         
-        Car sumitkicar=new Car();//instantiation
-        // sumitkicar.showData();
+        // Car myCar=new Car();//instantiation
+        // myCar.showData();
 
-        sumitkicar.wheels=5;
-        sumitkicar.modelno="bmw";
-        sumitkicar.speed=120.5;
-        sumitkicar.accelerate();
-        sumitkicar.showData();
+        // myCar.wheels=5;
+        // myCar.modelno="bmw";
+        // myCar.speed=120.5;
+        // myCar.accelerate();
+        // myCar.showData();
 
         Car car2=new Car();
         car2.wheels=4;
         car2.modelno="bugati";
         car2.speed=400;
-        // car2.showData();
-        // car2.showData();
-        // car2.showData();
+        car2.showData();
+        car2.showData();
+        car2.showData();
     }
 }

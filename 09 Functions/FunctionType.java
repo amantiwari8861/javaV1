@@ -39,7 +39,7 @@ public class FunctionType
         //Type 1
         c.showPurpose();
 
-        //Type 2
+        //Type 2 : no argument with return type
         float pi=c.getPie();
         System.out.println(" PI ="+pi);
 
@@ -47,7 +47,12 @@ public class FunctionType
         c.add(12.5f, 3.7f);
 
         //Type 4
-        float result=c.getPie()*c.getSquare(2.5f)*3;
+        float sq=c.getSquare(5.0f);
+        System.out.println(sq);
+
+        //vol of cylinder = pi*r*r*h
+        float r=2.5f,h=3.2f;
+        float result=c.getPie()*c.getSquare(r)*h;
         System.out.println("Volume of cylinder ="+result);
         
     }

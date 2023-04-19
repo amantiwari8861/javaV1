@@ -40,6 +40,6 @@ public class ScientificCalc {
         // System.out.println("Enter radius :");
         // double radius=sc.nextDouble();
         // System.out.println(c.volOfSphere(radius));
-
+        sc.close();
     }
 }

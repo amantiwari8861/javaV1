@@ -37,17 +37,20 @@ class Dog extends Mammal
 {
     int legs;
     float height;
+    boolean isLoyal;
     Dog()
     {
         System.out.println("Dog Class Constructor");
         legs=4;
         height=3.5f;
+        isLoyal=true;
     }
     void showDogProperty()
     {
         System.out.println("======Dog's property=======");
         System.out.println("Legs :"+legs);
         System.out.println("Height :"+height);
+        System.out.println("is Dogs loyal :"+isLoyal);
     }
 }
 class Human extends Mammal

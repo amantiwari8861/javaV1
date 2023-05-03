@@ -41,19 +41,19 @@ public class MethodOverloading
     {
        Women w=new Women();
        
-        // w.doSomething();
-        // w.doSomething("Paneer","bowl");
-        // w.doSomething(1000, 2);
-        // w.doSomething(10000, "teaching");
-        // w.doSomething(10000, 7, "Alto 800");
-        // w.doSomething(500, 12, "scooty");
-        // w.doSomething(50000.0d, 120, "bullet");
-        // w.doSomething(50000.0, 120, "bullet");
-        // w.doSomething(50000.0f, 120, "bullet");
-        // w.doSomething(1, 200);
-        // w.doSomething(3, 3000);
-        // w.doSomething(3, 3000l);
-        // w.doSomething(3, 3000L);
-        // w.doSomething(3, (long)3000);
+        w.doSomething();
+        w.doSomething("Paneer","bowl");
+        w.doSomething(1000, 2);
+        w.doSomething(10000, "teaching");
+        w.doSomething(10000, 7, "Alto 800");
+        w.doSomething(500, 12, "scooty");
+        w.doSomething(50000.0d, 120, "bullet");
+        w.doSomething(50000.0, 120, "bullet");
+        w.doSomething(50000.0f, 120, "bullet");
+        w.doSomething(1, 200);
+        w.doSomething(3, 3000);
+        w.doSomething(3, 3000l);
+        w.doSomething(3, 3000L);
+        w.doSomething(3, (long)3000);
     }
 }

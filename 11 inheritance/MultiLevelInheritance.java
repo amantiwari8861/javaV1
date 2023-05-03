@@ -6,7 +6,7 @@ class Mammal
     {
         bloodType="Warm";
         reproduceMethod="Birth";
-        System.out.println("Mammal Class Constructor");
+        System.out.println("Mammal Created");
     }
     void showMammalProperty()
     {

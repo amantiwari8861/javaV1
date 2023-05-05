@@ -28,6 +28,10 @@ class PermanentEmployee extends Employee
         System.out.println("Your salary is "+salary+" per day");
         System.out.println("Your salary is "+salary*30+" per month");
     }
+    void getHealthInsurance()
+    {
+        System.out.println("you will get 5 lac health insurance");
+    }
 }
 class Intern extends Employee
 {
@@ -40,6 +44,10 @@ class Intern extends Employee
         System.out.println("Your salary is "+salary+" per day");
         System.out.println("Your salary is "+salary*30+" per month");
     }
+    void getTravelAllowance()
+    {
+        System.out.println("travel allowence of 6000 ");
+    }
 }
 public class MethodOverriding 
 {
@@ -47,15 +55,17 @@ public class MethodOverriding
     {
         // PermanentEmployee pemp=new PermanentEmployee();
         // pemp.calculateSalary(8);
+
         // System.out.println("==============================");
         // Intern in=new Intern();
         // in.calculateSalary(8);
 
-        Employee emp;
         // emp=new Employee();
         // Employee emp2=new Employee();
         // emp.calculateSalary(8);
 
+        Employee emp=null;
+        
         Scanner sc=new Scanner(System.in);
         System.out.println("Which type op employee u are :");
         String emptype=sc.next();

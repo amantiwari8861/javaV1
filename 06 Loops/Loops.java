@@ -60,9 +60,7 @@ public class Loops {
             System.out.println(i);
         }
 
-        // System.out.println(Arrays.toString(arr1));
-
-
+        System.out.println(Arrays.toString(arr1));
 
 
     }

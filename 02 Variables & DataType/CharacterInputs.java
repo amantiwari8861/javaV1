@@ -13,10 +13,11 @@ public class CharacterInputs {
         char c = sc.next().charAt(0);
         System.out.println(c);
 		
-        // // sc.nextLine();// if character skips use this
+        sc.nextLine();// if character skips use this
         // System.out.println("Enter a string(sentence) : ");
         // String str1 = sc.nextLine();
         // System.out.println("Given Sentence :"+str1);
+        // sc.close();
     }
 }
 //H.w take a users name by keyboard and Say Thanks to him/her .

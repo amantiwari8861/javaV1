@@ -66,6 +66,6 @@ public class MatrMulti {
             System.out.println("Multi. not possible");
         }
 
-
+        sc.close();
     }
 }

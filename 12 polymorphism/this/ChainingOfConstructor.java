@@ -53,7 +53,6 @@ public class ChainingOfConstructor {
         // building=new Building(5, 50);
         // building=new Building(3, 50, "noida");
         building=new Building( 6, 10, "Delhi", true);
-
         building.showDetails();
 
     }

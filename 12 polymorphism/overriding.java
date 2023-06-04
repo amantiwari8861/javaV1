@@ -1,28 +1,33 @@
 class A
 {
-    void Afxn()  //hidden
+    void fxn()  //hidden
     {
-        System.out.println("Afxn in Parent ");
+        System.out.println("A fxn in Parent ");
     }
+    void parentFxn(){System.out.println("Parent fxn");}
 }
 class B extends A
 {
-    void Afxn()
+    void fxn()
     {
-        System.out.println("Afxn in child ");
+        System.out.println("A fxn in child ");
     }
-    // B(){ }
+    void childFxn(){System.out.println("child fxn");}
 }
 public class overriding {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // B obj=new B();
-        // obj.Afxn();
+        // obj.fxn();
+
         // A obj2=new A();
-        // obj2.Afxn();
+        // obj2.fxn();
+
         A obj=new B();
-        obj.Afxn();// child
-        A obj2=new A();
-        obj2.Afxn();//parent
+        obj.fxn();
+        obj.parentFxn();
+        // obj.childFxn();//error
+
     }
 }

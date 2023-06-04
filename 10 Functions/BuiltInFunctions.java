@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class BuiltInFunctions {
-
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
 
         // A method(function) in Java is a block of code that, when called, performs
         // specific actions mentioned in it.
@@ -48,11 +48,13 @@ public class BuiltInFunctions {
     }
 }
 
-class Calculator {
+class Calculator 
+{
     String companyName = "Casio";
     double price = 500;
 
-    double add(double num1, double num2) {
+    double add(double num1, double num2) 
+    {
         double sum = num1 + num2;
         System.out.println("Adding Method");
 

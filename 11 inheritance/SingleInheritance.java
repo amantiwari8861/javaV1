@@ -7,14 +7,12 @@ class Mammal
         bloodType="Warm";
         reproduceMethod="Birth";
         System.out.println("Mammal Class Constructor");
-
     }
     void showMammalProperty()
     {
         System.out.println("=====Mammal's Property===========");
         System.out.println("Blood Type:"+bloodType);
         System.out.println("Reproduce Method:"+reproduceMethod);
-
     }
 }
 class Cat extends Mammal

@@ -1,37 +1,27 @@
 class Shape
 {
-    void show(/*no parameters (arguments) */)
+    void show(float ch,float a)
     {
-        System.out.println("hello i am a no argument function");
-    }
-    void show(int a,char ch)
-    {
-        System.out.println("hello i am single argument function " +a);
-    }
-    void show(char ch,int a)
-    {
-        System.out.println("hello i am single argument function " +a);
-    }
-    void show(int ch,int a)
-    {
-        System.out.println("hello i am single argument function " +a);
+        System.out.println("hello i am float function ");
     }
     void show(double ch,double a)
     {
-        System.out.println("hello i am single argument function " +a);
+        System.out.println("hello i am double function ");
+    }
+    void show(short s)
+    {
+        System.out.println("Short");
+    }
+    void show(int s)
+    {
+        System.out.println("Int");
     }
 }
 public class ConstructorOverloading {
-
-    public static void main(String[] args) {
-
+    public static void main(String[] args) 
+    {
         Shape objShape=new Shape();
-
-        objShape.show();
-        objShape.show(56d,100D);
-        // Shape objShape2=new Shape();
-        // System.out.println(objShape);
-        // System.out.println(objShape2);
-        // System.out.println(objShape2 instanceof Shape);
+        // objShape.show(56.67f,100.988f);
+        objShape.show((short)12);
     }
 }

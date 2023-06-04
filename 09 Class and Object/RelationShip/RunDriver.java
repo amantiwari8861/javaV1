@@ -16,8 +16,7 @@ class Driver
 {
     void driveBus()
     {
-        //uses-a
-       Bus b=new Bus();
+       Bus b=new Bus();// utilization relationship or uses-a
        b.drive(); 
     }
     void driveBike()

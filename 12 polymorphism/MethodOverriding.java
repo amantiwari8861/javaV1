@@ -38,7 +38,7 @@ class Intern extends Employee
     @Override
     void calculateSalary(double hours)
     {
-        chargePerHour=40;
+        chargePerHour=30;
         salary=hours*chargePerHour;
         System.out.println("Intern's Salary Slip");
         System.out.println("Your salary is "+salary+" per day");

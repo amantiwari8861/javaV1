@@ -23,7 +23,7 @@
 //     }
 // }
 
-//POJO -> plain old java object or Bean File
+// POJO -> plain old java object or Bean File(for bean it must implement serializable interface )
 class Student
 {
     private int stId;
@@ -57,7 +57,11 @@ class Student
     public void setGender(char gender) {
         this.gender = gender;
     }
-
+    // @Override
+    // public String toString()
+    // {
+    //     return "harsh ka data";
+    // }
     @Override
     public String toString() {
         return "Student [stId=" + stId + ", name=" + name + ", rollNo=" + rollNo + ", gender=" + gender + "]";
@@ -65,10 +69,10 @@ class Student
 }
 
 public class Accesormutator {
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) 
+    {
         // Student s= new Student();
-        // s.stid=101;
+        // s.stid=101;//error
         // Student s2= new Student(101, "aman", 10, 'M');
         // System.out.println(s2.stid);
         // s2.showDetails();
@@ -78,6 +82,7 @@ public class Accesormutator {
         // System.out.println(s3.stId);//error
         // System.out.println(s3.getStId());
 
+        // int num=100;
         Student s4=new Student();
         s4.setStId(100);
         s4.setName("Aman");

@@ -7,10 +7,10 @@ class Mammal
 }
 class Dog extends Mammal
 {
-    // void eatingOrgan()//eatingOrgan() in Dog cannot override eatingOrgan() in Mammal
-    // {
+    void eatingOrgan()//eatingOrgan() in Dog cannot override eatingOrgan() in Mammal
+    {
 
-    // }
+    }
 }
 
 

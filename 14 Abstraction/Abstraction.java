@@ -1,8 +1,8 @@
 abstract class Vehicle
 {
-    void model()
+    void brand()
     {
-       System.out.println("Default Model of BMW");
+       System.out.println("Default Brand is BMW");
     }
     abstract void speed();
     // {
@@ -11,6 +11,7 @@ abstract class Vehicle
 }
 class Bike extends Vehicle
 {
+    @Override
     void speed()
     {
         System.out.println("max speed is 500km/h ");
@@ -28,12 +29,12 @@ public class Abstraction {
 
         // Bike b=new Bike();
         // b.speed();
-        // b.model();
+        // b.brand();
         // b.showTires();
         
         Vehicle obj=new Bike();
         obj.speed();
-        obj.model();
-        obj.showTires();
+        obj.brand();
+        // obj.showTires();
     }
 }

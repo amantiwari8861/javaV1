@@ -15,8 +15,8 @@ public class BlankFinal {
 
     public static void main(String[] args) 
     {
-        // AadharCard a=new AadharCard(1234567788L);
-        // a.showDetails();
+        AadharCard a=new AadharCard(1234567788L);
+        a.showDetails();
         
     }
 }

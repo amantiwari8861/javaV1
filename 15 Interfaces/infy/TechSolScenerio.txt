@@ -1,0 +1,56 @@
+TechSol is one of the topmost IT service companies in the world having branches all over the globe with a rich set of clients in various sectors.
+
+TechSol plans to have an employee management portal that automates various activities that include salary calculation, deductions for the services availed, attendance and leaves management, etc. The salary calculation is identified as the first step of this automation.
+
+TechSol employs both full-time and part-time employees. Full-time employees work for the company throughout the year whereas part-time employees have the provision of working for three days in a week. The salary calculation is extremely different for both categories of employees.
+
+To have a standardized behavior for salary calculation, Employee class is designed to hold an abstract method calculateSalary() that needs to be defined in FullTimeEmployee and PartTimeEmployee classes that inherit Employee class.
+
+TechSol is employee-friendly and provides many perks to its employees, one of them being - providing food to its employees at a very nominal price. This nominal food fee is deducted from their salary every month. Again, the calculation of food fee is different for both the categories of employees.
+
+To standardize this behavior, TechSol has an interface Remunerator that declares the methods to perform deductions related to food fees and other services provided by the company. And, the Employee class implements this interface.
+
+public interface Remunerator {
+	double deductFoodFee();
+}
+public abstract class Employee implements Remunerator {
+	public abstract double calculateSalary();
+}
+public class FullTimeEmployee extends Employee {
+    //field declarations 
+	public double calculateSalary() {
+		// calculating salary - full-time employeee
+	}
+ 
+	public double deductFoodFee() {
+		// deducting food fee - full-time employeee
+	}
+}
+public class PartTimeEmployee extends Employee {
+    //field declarations 
+	public double calculateSalary() {
+		// calculating salary - part time employee
+	}
+ 
+	public double deductFoodFee() {
+		// deducting food fee - part time employee
+	}
+}
+Now, TechSol wants to introduce a health insurance plan for its full-time employees alone. For this, a percentage of full-time employee’s salary has to be deducted every month and this functionality needs to be included in the Remunerator interface. 
+
+The new functionality add should not force the existing implementations to be altered for no reason but just to ensure backward compatibility.
+
+ 
+
+Here is the modified interface:
+
+public interface Remunerator {
+    double deductFoodFee();
+    double HEALTH_INSURANCE_PERCENTAGE = 5.0;
+    double deductHealthInsurancePremium();
+}
+Does this solve our problem?
+
+The health insurance plan is for full-time employees alone. But it becomes mandatory for the PartTimeEmployee class to break itself and provide implementation (dummy) for the newly added method of the Remunerator interface just to become concrete.
+
+ 

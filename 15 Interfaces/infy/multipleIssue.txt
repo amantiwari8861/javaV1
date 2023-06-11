@@ -1,0 +1,21 @@
+Java achieves multiple inheritance using interfaces. Let us consider the code given below:
+
+interface Greeting{
+    default void hello() {
+	System.out.println(" hello from A");
+    }
+}
+
+interface GreetingExtn extends Greeting{
+     default void hello() {
+	System.out.println(" hello from B");
+     }
+}
+
+public class InheritanceProblem implements Greeting, GreetingExtn{
+   public static void main(String[] args) {
+	    new InheritanceProblem().hello();
+   }
+}
+
+Which implementation of hello() method will be called when both the interfaces Greeting and GreetingExtn have default implementation?

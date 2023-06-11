@@ -1,0 +1,102 @@
+It is common to add new functionalities to the existing APIs in the real world. But that should happen without spending much effort.
+
+Let us discuss how to achieve that.
+
+Prior to Java SE 8, interfaces were expected to have abstract methods only. And, the classes implementing the interfaces had to override all those abstract methods. However, Java SE 8 has made it possible to hold method definitions in an interface using default methods which will make sure avoiding the need for breaking the existing implementations unnecessarily.
+
+ 
+
+Default methods (those have default keywords) are quite useful to include new features in an interface without altering the implementations that exist for the interface. The default methods of interfaces have definitions that need not be redefined always. And, these definitions help keep the code more manageable.
+
+For example, forEach() is a default method in the List interface whose inclusion does not force the existing implementations like ArrayList to be modified.
+
+The Remunerator interface is modified to hold a default method:
+
+public interface Remunerator {
+    public abstract double deductFoodFee();                   // Must be overridden by all implementing classes
+    public final double HEALTH_INSURANCE_PERCENTAGE = 5.0;
+    public default double deductHealthInsurancePremium() {    // Need not be overridden
+        // Default implementation which can be redefined
+    }
+}
+public class FullTimeEmployee extends Employee {
+    //field declarations
+	public double calculateSalary() {
+		// calculating salary - full-time employeee
+	}
+ 
+	public double deductFoodFee() {
+		// deducting food fee - full-time employeee
+	}
+	
+	public double deductHealthInsurancePremium() {    //  Default method getting overridden
+		return (HEALTH_INSURANCE_PERCENTAGE * employeeSalary) / 100;
+	}
+}
+public class PartTimeEmployee extends Employee {    // Default method is not getting overridden here
+    //field declarations
+	public double calculateSalary() {
+		// calculating salary - part time employee 
+	}
+ 
+	public double deductFoodFee() {
+		// deducting food fee - part time employee
+	}
+}
+
+After seeing what default methods can do, here are some observations:
+
+Default methods link down the variances between interfaces and abstract classes.
+
+They help in removing the base implementation classes. The interface provides the default implementation and the classes can choose which one to override.
+
+If there is a method in any class of the same inheritance hierarchy that matches the signature of the default method, then the interface's default method becomes irrelevant.
+
+A default method cannot override methods from java.lang.Object
+
+Default methods also help in avoiding utility classes. For example, all Collections class methods provide default methods in the Collection interface.
+
+ 
+
+The major reason for presenting default methods was to improve the Collections API to have a support for lambda expressions.
+
+The following methods are added as default methods in Java SE 8:
+
+ 
+
+Class/Interface	New Methods
+Map	getOrDefault, forEach, compute, computeIfAbsent, computeIfPresent, merge, putIfAbsent, remove, replace, replaceAll
+Iterable	forEach, spliterator
+Iterator	forEachRemaining
+Collection	removeIf, stream, parallelStream
+List	replaceAll, sort
+BitSet	stream
+
+
+Some very good examples of default methods are in Java SE 8 itself. For instance, the List interface did not have forEach() or sort() methods. Moreover, simply adding them to the interface would break the existing implementations.
+
+Java 8 has allowed these methods to have their default implementations and does not mandate the implementing classes to re-define them.
+
+ 
+
+Here is a comparison showing how a list can be sorted in previous Java versions and in Java SE 8:
+List<Employee> empList = new ArrayList<>();
+// Code to add employees to empList
+// Sorting empList using a comparator
+ 
+Collections.sort(empList, new EmployeeComparator());
+
+
+List<Employee> empList = new ArrayList<>();
+// Code to add employees to empList
+// Sorting empList using a comparator
+ 
+empList.sort(new EmployeeComparator());
+
+
+public class EmployeeComparator implements Comparator<Employee> {
+    public int compare(Employee employee1, Employee employee2) {
+        return employee1.getEmpNo().compareTo(employee1.getEmpNo());
+    }
+}
+As you can see, lists can now be sorted using their own sort() method instead of the one from the Collections class.

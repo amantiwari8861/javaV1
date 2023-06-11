@@ -3,7 +3,7 @@ interface ChartedAccountant
     public abstract double deductFoodFee();
     public static final double HEALTH_INSURANCE_PERCENTAGE = 5.0;
     public default double deductHealthInsurancePremium() { return 0.0;   }
-    public static void getHealthInsuranceCharge()
+    public static void getHealthInsuranceRate()
     {
         System.out.println("Current Health insurance charge is :"+HEALTH_INSURANCE_PERCENTAGE);
     }
@@ -23,6 +23,7 @@ interface ChartedAccountant
 }
 abstract class Employee implements ChartedAccountant 
 {
+    int empId;
     public abstract double calculateSalary();
 }
 class FullTimeEmployee extends Employee 
@@ -61,7 +62,7 @@ public class InterfaceNewFeatures
         System.out.println(charge+" charge deducted from employee salary ");
 
 
-        ChartedAccountant.getHealthInsuranceCharge();
+        ChartedAccountant.getHealthInsuranceRate();
         fEmployee.askCadetails("Manager");
     }
 }

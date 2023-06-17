@@ -1,17 +1,18 @@
-class ThrowsExample
+class ThrowsExample2
 {
 	//public static void main(String args[])  throws ArithmeticException
 	public static void main(String args[])
 	{
 		
 		System.out.println("hii i am  main");
-		try{
-		m1();
-		}
-		catch(ArithmeticException a)
-		{
-			System.out.println("error handled!");
-		}
+		// try{
+				m1();
+		// }
+		// catch(ArithmeticException a)
+		// {
+		// 	System.out.println("error handled!");
+		// }
+		System.out.println("hello there ");
 	}
 	static void m1() throws ArithmeticException
 	{

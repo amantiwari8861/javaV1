@@ -1,23 +1,25 @@
 import java.util.Scanner;
 class AEX
 {
-    public static void main(String[] args) {  
+    public static void main(String[] args) 
+    {  
+        Scanner sc=new Scanner(System.in);
         try{
             int num1,num2,result;
-            Scanner obj=new Scanner(System.in);
             System.out.println("enter 2 numbers ");
-            num1=obj.nextInt();
-            num2=obj.nextInt();
+            num1=sc.nextInt();
+            num2=sc.nextInt();
             result=num1/num2;// 10/0
             System.out.println("the result is "+result);
         }
         catch(ArithmeticException e)
         {
             System.out.println("Divide by zero condition pls give a valid no.");
-            // e.printStackTrace();
+            e.printStackTrace();
         }
         finally
         {
+            sc.close();
             System.out.println("i am finally block i will execute always "+
             "doesn't matter error will come or not");
         }

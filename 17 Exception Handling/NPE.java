@@ -1,4 +1,4 @@
-class A
+class NPE
 {
 	public static void main(String args[])
 	{

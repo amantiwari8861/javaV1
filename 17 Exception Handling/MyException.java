@@ -7,7 +7,8 @@ class UserException extends Exception
         this.msg=msg;
     }
     @Override
-    public String toString() { //overriding toString Method
+    public String toString() 
+    { //overriding toString Method
         return ("\n\t\t ERROR!!!!!!!!   :- "+msg);
     }
 }
@@ -29,7 +30,8 @@ class MyException
     }
     catch(UserException u)
     {
-        System.out.println(u);
+        // System.out.println(u);
+        u.printStackTrace();
     }
 
     }

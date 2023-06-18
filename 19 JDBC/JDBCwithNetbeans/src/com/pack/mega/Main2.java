@@ -7,11 +7,9 @@ public class Main2 {
 //        co.createTable();
 //        co.addStudent();
 //        co.updateStudent();
-//          co.deleteStudent();
+//        co.deleteStudent();
 //        co.showAllStudents();
-
-        System.out.printf("|%20s|\n","Aman");
-        System.out.printf("|%-20s|","Aman");
-
+//        System.out.printf("|%20s|\n","Aman");
+//        System.out.printf("|%-20s|","Aman");
     }
 }

@@ -1,0 +1,17 @@
+Data Structures can be defined as a way to store and organize data so that it can be used efficiently. Data structures play a very important role in any software development as they help us to store and retrieve data as fast as possible.
+
+Why do we need Data Structures?
+
+    Large amounts of data is processed by different systems and if this is not stored properly, it will lead to data loss.
+
+    It is easier to search for a particular data if it is organized in a proper format.
+
+    Data Structures help a program to minimize the usage of resources such as memory and space.
+
+There are different types of data structures like list, stack, queue, etc. Each of them are suitable for specific type of tasks.
+
+Data structures can also be categorized as linear and non-linear. 
+
+A linear data structure is the one in which elements are arranged in a sequential manner and each element is connected to its previous and next element. 
+
+A non-linear data structure is the one in which elements are not arranged in a sequential manner and each element is connected to other elements through multiple paths. 

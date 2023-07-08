@@ -6,7 +6,7 @@ public class join  {
             t1.start();
             System.out.println("main :"+Thread.currentThread().getPriority());
             for (int i = 0; i <5; i++) {
-                t1.join(2000); //runs t1 first the give chance to main thread
+                t1.join(); //runs t1 first then give chance to main thread
                 System.out.println("during join control => "+i +" " + Thread.currentThread().getName());
             }
         }

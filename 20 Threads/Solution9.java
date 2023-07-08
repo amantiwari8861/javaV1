@@ -9,10 +9,9 @@ public static void main(String[] args) throws InterruptedException{
         for (int i = 0; i <10; i++) {
             // t1.join(); //runs t1 first the give chance to main thread
             // t1.sleep(3000); //time in miliseconds
-            // Thread.yield();
+            Thread.yield();
             System.out.println("during yield control => "+i +" " + Thread.currentThread().getName());
         }
-        t1.start();
     }
 }
 

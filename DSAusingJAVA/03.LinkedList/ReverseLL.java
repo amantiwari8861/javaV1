@@ -23,8 +23,6 @@ class Node {
         return this.next;
     }
 }
-
-
 class LinkedList {
 
     private Node head;
@@ -63,7 +61,8 @@ class LinkedList {
         }
     }
 
-      public void display() {
+      public void display() 
+      {
         Node temp = this.head;
 
         while (temp != null) {
@@ -137,33 +136,51 @@ class LinkedList {
             }
         }
     }
+    public void reverseSameList()
+    {
+        Node previous=null,current,next=null;
+        current=head;
+
+        while (current != null) 
+        {
+            next=current.getNext();
+            current.setNext(previous);
+            previous=current;
+            current=next;
+        }
+        head=previous;
+    }
 }
 
-
-class Tester {
-
+class ReverseLL 
+{
     public static void main(String args[]) {
-
         LinkedList linkedList = new LinkedList();
-        LinkedList reversedLinkedList = new LinkedList();
+        // LinkedList reversedLinkedList = new LinkedList();
             
         linkedList.addAtEnd("Data");
         linkedList.addAtEnd("Structures");
         linkedList.addAtEnd("and");
         linkedList.addAtEnd("Algorithms");
             
-        System.out.println("Initial List");
+        // System.out.println("Initial List");
+        // linkedList.display();
+
+        // System.out.println();
+            
+        // reverseList(linkedList.getHead(), reversedLinkedList);
+        // System.out.println("Reversed List");
+        // reversedLinkedList.display();
+
+        linkedList.reverseSameList();
         linkedList.display();
 
-        System.out.println();
-            
-        reverseList(linkedList.getHead(), reversedLinkedList);
-        System.out.println("Reversed List");
-        reversedLinkedList.display();
     }
-
-    public static void reverseList(Node head, LinkedList reversedLinkedList) {
-        //Implement your code here    
+    public static void reverseList(Node head, LinkedList reversedLinkedList) 
+    {
+        
+        
+    
     }
+    
 }
-

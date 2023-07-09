@@ -135,6 +135,6 @@ class InsertLast{
 }
 // Problem Statement
 
-// Given a linked list, find and return the position of a given element in the linked list. If the element is not present, return 0. Implement the logic inside findPosition() method of the Tester class.
+// Given a linked list, find and return the position of a given element in the linked list. If the element is not present, return 0. Implement the logic inside findPosition(data) method of the Tester class.
 
 // Note: The position starts from 1.

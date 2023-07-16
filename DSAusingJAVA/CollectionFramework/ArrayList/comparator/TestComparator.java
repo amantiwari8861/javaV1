@@ -23,7 +23,8 @@ public class TestComparator {
         int choice=sc.nextInt();
         if (choice==1) 
         {
-            Collections.sort(movies, new SortByName());
+            // Collections.sort(movies, new SortByName());
+            Collections.sort(movies,(e1,e2) -> ((Movie)e2).getName().compareTo(((Movie)e1).getName()));
         }
         else if(choice==2)
         {

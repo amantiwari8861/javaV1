@@ -13,7 +13,5 @@ public class LinkedListDemo {
 
         System.out.println(students);
 
-
-
     }
 }

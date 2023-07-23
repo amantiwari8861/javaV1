@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -7,6 +8,13 @@ public class HashMapDemo {
 
     public static void main(String[] args) 
     {
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(1, "One");
+        hashtable.put(2, "Two");
+        // hashtable.put(3, null); // NullPointerException since null values are not allowed
+
+        System.out.println(hashtable);
+
         Map<String,Object> aadharCard=new HashMap<>();
         aadharCard.put("name", "Aman");
         aadharCard.put("aadharNo", 452352367L);

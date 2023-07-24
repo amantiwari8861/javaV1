@@ -24,9 +24,9 @@ class AddStudent implements Runnable
 class Method1 
 {
     public static void main(String[] args) {
-        
-        // List<String> students=Collections.synchronizedList(new ArrayList<>());
-        CopyOnWriteArrayList<String> students= new CopyOnWriteArrayList<String>();
+        Iterator<String>  itr;
+        List<String> students=Collections.synchronizedList(new ArrayList<>());
+        // CopyOnWriteArrayList<String> students= new CopyOnWriteArrayList<String>();
 
         Thread t1=new Thread(new AddStudent(students,"Aman"));
         t1.start();
@@ -35,21 +35,22 @@ class Method1
         Thread t3=new Thread(new AddStudent(students,"Dev"));
         t3.start();
 
-        // synchronized(Thread.currentThread())
-        // {
-        //     Iterator<String>  st=students.iterator();
-        //     while (st.hasNext()) 
-        //     {
-        //         System.out.println(st.next());
-        //     }
-        //     System.out.println(students);
-        // }
-        Iterator<String>  st=students.iterator();
-        while (st.hasNext()) 
+        synchronized(students)
         {
-            System.out.println(st.next());
-            // st.remove();  //Error
+            itr=students.iterator();
+            while (itr.hasNext()) 
+            {
+                System.out.println(itr.next());
+            }
+            System.out.println(students);
         }
+        System.out.println(students);
+        // Iterator<String>  st=students.iterator();
+        // while (st.hasNext()) 
+        // {
+        //     System.out.println(st.next());
+        //     // st.remove();  //Error
+        // }
         // System.out.println(students);
     }
 }

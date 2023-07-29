@@ -1,13 +1,13 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node 
+class Node<T>
 {
-    int value;
-    Node left;
-    Node right;
+    T value;
+    Node<T> left;
+    Node<T> right;
 
-    Node(int value) 
+    Node(T value) 
     {
         this.value = value;
         right = null;
@@ -15,18 +15,18 @@ class Node
     }
 }
 
-class BinaryTree 
+class BinaryTree<T>
 {
-    Node root;
+    Node<T> root;
 
-    private Node addRecursive(Node current, int value) {
+    private Node<T> addRecursive(Node<T> current, T value) {
         if (current == null) {
-            return new Node(value);
+            return new Node<>(value);
         }
 
-        if (value < current.value) {
+        if (value.compareTo(current.value)) {
             current.left = addRecursive(current.left, value);
-        } else if (value > current.value) {
+        } else if (value.compareTo current.value) {
             current.right = addRecursive(current.right, value);
         } else {
             // value already exists
@@ -36,11 +36,11 @@ class BinaryTree
         return current;
     }
 
-    public void add(int value) {
+    public void add(T value) {
         root = addRecursive(root, value);
     }
 
-    public void traversePreOrder(Node node) 
+    public void traversePreOrder(Node<T> node) 
     {
         //6 4 3 5 8 7 9
         if (node != null) {
@@ -50,7 +50,7 @@ class BinaryTree
         }
     }
 
-    public void traverseInOrder(Node node) 
+    public void traverseInOrder(Node<T> node) 
     {
         //3 4 5 6 7 8 9
         if (node != null) {
@@ -60,7 +60,7 @@ class BinaryTree
         }
     }
 
-    public void traversePostOrder(Node node) 
+    public void traversePostOrder(Node<T> node) 
     {
         //3 5 4 7 9 8 6
         if (node != null) {
@@ -76,12 +76,12 @@ class BinaryTree
             return;
         }
 
-        Queue<Node> nodes = new LinkedList<>();
+        Queue<Node<T>> nodes = new LinkedList<>();
         nodes.add(root);
 
         while (!nodes.isEmpty()) {
 
-            Node node = nodes.remove();
+            Node<T> node = nodes.remove();
 
             System.out.print(" " + node.value);
 
@@ -95,27 +95,28 @@ class BinaryTree
         }
     }
 
-    private boolean containsNodeRecursive(Node current, int value) {
+    private boolean containsNodeRecursive(Node<T> current, T value) 
+    {
         if (current == null) {
             return false;
         }
         if (value == current.value) {
             return true;
         }
-        return value < current.value
+        return value.compareTo(current.value)
                 ? containsNodeRecursive(current.left, value)
                 : containsNodeRecursive(current.right, value);
     }
 
-    public boolean containsNode(int value) {
+    public boolean containsNode(T value) {
         return containsNodeRecursive(root, value);
     }
 
-    public void delete(int value) {
+    public void delete(T value) {
         root = deleteRecursive(root, value);
     }
 
-    private Node deleteRecursive(Node current, int value) {
+    private Node<T> deleteRecursive(Node<T> current, T value) {
         if (current == null) {
             return null;
         }
@@ -133,12 +134,13 @@ class BinaryTree
                 return current.right;
             }
             // both child (then find smallest)
-            int smallestValue = findSmallestValue(current.right);
+            T smallestValue = findSmallestValue(current.right);
             current.value = smallestValue;
             current.right = deleteRecursive(current.right, smallestValue);
             return current;
         }
-        if (value < current.value) {
+        if (value.compareTo(current.value))
+        {
             current.left = deleteRecursive(current.left, value);
             return current;
         }
@@ -146,16 +148,17 @@ class BinaryTree
         return current;
     }
 
-    private int findSmallestValue(Node root) {
+    private T findSmallestValue(Node<T> root) {
         return root.left == null ? root.value : findSmallestValue(root.left);
     }
 }
 
-public class BinaryTreeMain {
+public class BinaryTreeMain2
+{
 
     public static void main(String[] args) {
 
-        BinaryTree bt = new BinaryTree();
+        BinaryTree<Integer> bt = new BinaryTree<>();
 
         bt.add(6);
         bt.add(4);

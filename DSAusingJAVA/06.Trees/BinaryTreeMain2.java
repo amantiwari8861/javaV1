@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node<T>
+class Node<T extends Comparable<T>>
 {
     T value;
     Node<T> left;
@@ -15,20 +15,25 @@ class Node<T>
     }
 }
 
-class BinaryTree<T>
+class BinaryTree<T extends Comparable<T>>
 {
     Node<T> root;
 
-    private Node<T> addRecursive(Node<T> current, T value) {
+    private Node<T> addRecursive(Node<T> current, T value) 
+    {
         if (current == null) {
             return new Node<>(value);
         }
 
-        if (value.compareTo(current.value)) {
+        if (value.compareTo(current.value)==-1) 
+        {
             current.left = addRecursive(current.left, value);
-        } else if (value.compareTo current.value) {
+        } 
+        else if (value.compareTo(current.value)==1) 
+        {
             current.right = addRecursive(current.right, value);
-        } else {
+        } 
+        else {
             // value already exists
             return current;
         }
@@ -103,7 +108,7 @@ class BinaryTree<T>
         if (value == current.value) {
             return true;
         }
-        return value.compareTo(current.value)
+        return value.compareTo(current.value)==-1
                 ? containsNodeRecursive(current.left, value)
                 : containsNodeRecursive(current.right, value);
     }
@@ -139,7 +144,7 @@ class BinaryTree<T>
             current.right = deleteRecursive(current.right, smallestValue);
             return current;
         }
-        if (value.compareTo(current.value))
+        if (value.compareTo(current.value)==-1)
         {
             current.left = deleteRecursive(current.left, value);
             return current;
@@ -155,18 +160,46 @@ class BinaryTree<T>
 
 public class BinaryTreeMain2
 {
-
     public static void main(String[] args) {
 
-        BinaryTree<Integer> bt = new BinaryTree<>();
+        // BinaryTree<Integer> bt = new BinaryTree<>();
+        // bt.add(6);
+        // bt.add(4);
+        // bt.add(8);
+        // bt.add(3);
+        // bt.add(5);
+        // bt.add(7);
+        // bt.add(9);
+        // bt.traversePreOrder(bt.root);
 
-        bt.add(6);
-        bt.add(4);
-        bt.add(8);
-        bt.add(3);
-        bt.add(5);
-        bt.add(7);
-        bt.add(9);
+        // BinaryTree<Character> bt = new BinaryTree<>();
+        // bt.add('A');
+        // bt.add('B');
+        // bt.add('C');
+        // bt.add('D');
+        // bt.add('E');
+        // bt.add('F');
+        // bt.add('G');
+        // System.out.print("\nPreOrder :");
+        // bt.traversePreOrder(bt.root);
+        // System.out.print("\nInOrder :");
+        // bt.traverseInOrder(bt.root);
+        // System.out.print("\nPostOrder :");
+        // bt.traversePostOrder(bt.root);
+        
+        BinaryTree<Character> bt = new BinaryTree<>();
+        bt.add('D');
+        bt.add('B');
+        bt.add('F');
+        bt.add('A');
+        bt.add('C');
+        bt.add('E');
+        bt.add('G');
+        System.out.print("\nPreOrder :");
         bt.traversePreOrder(bt.root);
+        System.out.print("\nInOrder :");
+        bt.traverseInOrder(bt.root);
+        System.out.print("\nPostOrder :");
+        bt.traversePostOrder(bt.root);
     }
 }

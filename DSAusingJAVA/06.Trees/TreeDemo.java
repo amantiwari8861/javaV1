@@ -29,22 +29,31 @@ class Node
 }
 class BinaryTree
 {
-    Node root;
-    private void addLeftNode()
+    private Node root;
+    BinaryTree()
     {
-        
+        root=null;
     }
-    private void addRightNode()
+    public Node addLeftNode(Node node,String data)
     {
-        
+        Node newNode=new Node(data);
+        node.setLeftNode(newNode);
+        return newNode;
     }
-    public void add(String data)
+    public Node addRightNode(Node node,String data)
+    {
+        Node newNode=new Node(data);
+        node.setRightNode(newNode);
+        return newNode;
+    }
+    public void add(Node node,String data)
     {
         Node newNode=new Node(data);
         if(root==null)
         {
             root=newNode;
         }
+        
     }
     public void preOrder(Node node)
     {
@@ -68,6 +77,10 @@ class BinaryTree
         
     }
     
+    public Node getRoot()
+    {
+        return root;
+    }
 
 }
 
@@ -78,7 +91,9 @@ public class TreeDemo
     public static void main(String[] args) 
     {
         BinaryTree bt=new BinaryTree();
-        bt.add("A");
-        bt.preOrder(bt.root);
+        Node root=bt.getRoot();
+        bt.add(root,"A");
+        bt.addLeftNode(root,"B");
+        bt.addRightNode(root,"C");
     }
 }

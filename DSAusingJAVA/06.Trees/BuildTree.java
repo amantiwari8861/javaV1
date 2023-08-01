@@ -15,16 +15,15 @@ class NormalTree<T extends Comparable<T>> {
     Scanner sc = new Scanner(System.in);
     Node<T> root;
 
+    @SuppressWarnings("unchecked")
     Node<T> getNodeData()
     {
+        Node newNode = null;
         System.out.println("Enter node data:");
         String input = sc.nextLine();
         try {
-            Node newNode = null;
-            Boolean isConverted=null;
             try {
                 Byte b = Byte.valueOf(input);
-                isConverted=true;
                 newNode = new Node<>(b);
             } catch (NumberFormatException e) {}
 
@@ -96,19 +95,19 @@ class NormalTree<T extends Comparable<T>> {
                 // Successfully parsed, print the data and its class.
                 System.out.println(newNode.data + ":" + newNode.data.getClass());
             }
-            return newNode;
-
-        } catch (Exception nf) 
+        } 
+        catch (Exception nf) 
         {
             System.out.println("pls enter valid data ");
             nf.printStackTrace();
             getNodeData();
         }
-        getNodeData();
+        return newNode;
     }
-
     void buildTree() 
     {
+        Node<T> newNode=getNodeData();
+        System.out.println(newNode.data+":"+newNode.data.getClass());
     }
 }
 

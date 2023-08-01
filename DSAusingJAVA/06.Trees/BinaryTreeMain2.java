@@ -24,34 +24,48 @@ class BinaryTree<T extends Comparable<T>>
         if (current == null) {
             return new Node<>(value);
         }
-
-        if (value.compareTo(current.value)==-1) 
+        // System.out.println(current.value+" : "+value+" "+value.compareTo(current.value));
+        if (value.compareTo(current.value)<0) 
         {
+            System.out.println("Added left node "+current.value+" : "+value);
             current.left = addRecursive(current.left, value);
         } 
-        else if (value.compareTo(current.value)==1) 
+        else if (value.compareTo(current.value)>0) 
         {
+            System.out.println("Added Right node "+current.value+" : "+value);
             current.right = addRecursive(current.right, value);
         } 
-        else {
+        else 
+        {
             // value already exists
+            System.out.println("Added current node "+current.value+" : "+value);
             return current;
         }
 
         return current;
     }
 
-    public void add(T value) {
+    public void add(T value) 
+    {
         root = addRecursive(root, value);
     }
 
     public void traversePreOrder(Node<T> node) 
     {
         //6 4 3 5 8 7 9
-        if (node != null) {
+        if (node != null) 
+        {
             System.out.print(" " + node.value);
             traversePreOrder(node.left);
             traversePreOrder(node.right);
+        }
+        else
+        {
+            if (node == null) 
+            {
+                System.out.println("\ngot null ");
+            }
+            return;
         }
     }
 
@@ -126,16 +140,20 @@ class BinaryTree<T extends Comparable<T>>
             return null;
         }
 
-        if (value == current.value) {
-            // no child
-            if (current.left == null && current.right == null) {
+        if (value == current.value) 
+        {
+            // no child or leaf node
+            if (current.left == null && current.right == null) 
+            {
                 return null;
             }
             // one child
-            if (current.right == null) {
+            if (current.right == null) 
+            {
                 return current.left;
             }
-            if (current.left == null) {
+            if (current.left == null) 
+            {
                 return current.right;
             }
             // both child (then find smallest)
@@ -144,7 +162,7 @@ class BinaryTree<T extends Comparable<T>>
             current.right = deleteRecursive(current.right, smallestValue);
             return current;
         }
-        if (value.compareTo(current.value)==-1)
+        if (value.compareTo(current.value)==1)
         {
             current.left = deleteRecursive(current.left, value);
             return current;
@@ -153,7 +171,8 @@ class BinaryTree<T extends Comparable<T>>
         return current;
     }
 
-    private T findSmallestValue(Node<T> root) {
+    private T findSmallestValue(Node<T> root) 
+    {
         return root.left == null ? root.value : findSmallestValue(root.left);
     }
 }
@@ -172,34 +191,37 @@ public class BinaryTreeMain2
         // bt.add(9);
         // bt.traversePreOrder(bt.root);
 
-        // BinaryTree<Character> bt = new BinaryTree<>();
-        // bt.add('A');
-        // bt.add('B');
-        // bt.add('C');
-        // bt.add('D');
-        // bt.add('E');
-        // bt.add('F');
-        // bt.add('G');
+        // BinaryTree<Character> bt2 = new BinaryTree<>();
+        // bt2.add('A');
+        // bt2.add('B');
+        // bt2.add('C');
+        // bt2.add('D');
+        // bt2.add('E');
+        // bt2.add('F');
+        // bt2.add('G');
         // System.out.print("\nPreOrder :");
-        // bt.traversePreOrder(bt.root);
+        // bt2.traversePreOrder(bt2.root);
         // System.out.print("\nInOrder :");
-        // bt.traverseInOrder(bt.root);
+        // bt2.traverseInOrder(bt2.root);
         // System.out.print("\nPostOrder :");
-        // bt.traversePostOrder(bt.root);
+        // bt2.traversePostOrder(bt2.root);
         
-        BinaryTree<Character> bt = new BinaryTree<>();
-        bt.add('D');
-        bt.add('B');
-        bt.add('F');
-        bt.add('A');
-        bt.add('C');
-        bt.add('E');
-        bt.add('G');
+        BinaryTree<Character> bt3 = new BinaryTree<>();
+        bt3.add('D');
+        // bt3.add('D');
+        // bt3.add('D');
+        bt3.add('B');
+        bt3.add('F');
+        bt3.add('A');
+        bt3.add('C');
+        bt3.add('E');
+        bt3.add('G');
         System.out.print("\nPreOrder :");
-        bt.traversePreOrder(bt.root);
+        bt3.traversePreOrder(bt3.root);
         System.out.print("\nInOrder :");
-        bt.traverseInOrder(bt.root);
+        bt3.traverseInOrder(bt3.root);
         System.out.print("\nPostOrder :");
-        bt.traversePostOrder(bt.root);
+        bt3.traversePostOrder(bt3.root);
+
     }
 }

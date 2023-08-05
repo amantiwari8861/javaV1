@@ -49,7 +49,7 @@ class BinaryTree<T extends Comparable<T>>
     {
         root = addRecursive(root, value);
     }
-
+    //DFS -> Depth First Search
     public void traversePreOrder(Node<T> node) 
     {
         //6 4 3 5 8 7 9
@@ -68,7 +68,6 @@ class BinaryTree<T extends Comparable<T>>
             return;
         }
     }
-
     public void traverseInOrder(Node<T> node) 
     {
         //3 4 5 6 7 8 9
@@ -78,7 +77,6 @@ class BinaryTree<T extends Comparable<T>>
             traverseInOrder(node.right);
         }
     }
-
     public void traversePostOrder(Node<T> node) 
     {
         //3 5 4 7 9 8 6
@@ -88,8 +86,8 @@ class BinaryTree<T extends Comparable<T>>
             System.out.print(" " + node.value);
         }
     }
-
-    public void traverseLevelOrder() // BFS
+    //BFS -> Breadth First Search
+    public void traverseLevelOrder()
     {
         if (root == null) {
             return;

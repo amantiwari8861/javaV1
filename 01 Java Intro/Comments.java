@@ -5,7 +5,10 @@ public class Comments
         // single line comment
         System.out.print("Hello World 3");
 
-        /* multiple line comment */
+        /*  multiple 
+            line 
+            comment 
+        */
 
         /*
             System.out.println("Hello World 4");
@@ -15,8 +18,8 @@ public class Comments
         */
 
         /*
-         * Documented comment
-         *  
+         * Documented
+         * Comment
          *
          */
     }

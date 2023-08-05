@@ -20,8 +20,11 @@ public class EscapeSequence
         // System.out.print("Aman\t");
         // System.out.print("Sir\n");
 
-        // System.out.printf("Hii i am %d printf ",56);
+        // System.out.printf("Hii i am %d printf \n",56);
 
-        // System.out.println(" \" Aman's \" ");
+        // System.out.println(" it is \" Aman's \" Home");
+        // System.out.println(" \ ");//error
+        // System.out.println(" \\ ");
+        System.out.println("Aman\b ");//after \b space is required
     }
 }

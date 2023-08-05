@@ -1,7 +1,7 @@
 // jdk -> java development kit 
 
 //if a class is declared as public then FileName and classname must be same
- class Aman
+class Aman
 {
     public static void main(String[] abcd) 
     {

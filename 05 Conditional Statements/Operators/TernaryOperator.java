@@ -7,7 +7,7 @@ public class TernaryOperator {
         //syntax : (codition)?(runs if true) : (runs if false)
 
         int num1,num2,max;
-        num1=200;num2=40;
+        num1=20;num2=40;
 
         max= (num1>num2) ? num1 : num2 ;
 

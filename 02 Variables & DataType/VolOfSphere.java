@@ -9,8 +9,8 @@ public class VolOfSphere {
         r=sc.nextFloat();//let r=2.5
 
         // result=4/3*pi*r*r*r;// here result is wrong 49.0625
-        result=4.0f/3.0f*pi*r*r*r;
-        // result=(float)(4.0/3.0*pi*r*r*r);
+        // result=4.0f/3.0f*pi*r*r*r;
+        result=(float)(4.0/3.0*pi*r*r*r);
 
         System.out.println("the volume is "+result);
         sc.close();

@@ -34,7 +34,7 @@ public class ImplicitTypeCasting {
          *      0 -> 48
          *      1 -> 49
          *      . -> .
-         *      9 -> 56
+         *      9 -> 57
          */
     }
 }

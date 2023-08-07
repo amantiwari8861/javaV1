@@ -9,7 +9,7 @@ public class BitwiseOperator {
         // System.out.println(Integer.toBinaryString(num));
         // System.out.println(Integer.parseInt("10011", 2));
 
-        int num2=16;
+        // int num2=16;
 
         // int result=num&num2;
         // 1.	Bitwise and( &  ) -> (19 & 16) 
@@ -38,10 +38,10 @@ public class BitwiseOperator {
 
         //left shift (<<)
 
-        // System.out.println(3<<1);
-        // System.out.println(3<<2);
-        // System.out.println(3<<3);
-        // System.out.println(3<<4);
+        System.out.println(3<<1);
+        System.out.println(3<<2);
+        System.out.println(3<<3);
+        System.out.println(3<<4);
 
 
         //right shift

@@ -31,6 +31,10 @@ class DecisionStructure {
         // {
         // System.out.println("Congrats for first time vote!");
         // }
+        // else if(age<18 && age>=0)
+        // {
+        // System.out.println("Kids go home and eat chocolate");
+        // }
         // else
         // {
         // System.out.println("not ready to vote");
@@ -39,37 +43,32 @@ class DecisionStructure {
         // System.out.println("enter ur marks");
         // int marks = sc.nextInt();
 
-        // if (marks >= 90 && marks <= 100)
+        // if (marks >= 90 && marks <= 100) 
         // {
-        // System.out.println("Got Admission in DU");
-        // if (marks == 100)
+        //     System.out.println("Got Admission in DU");
+        //     if (marks == 100) 
+        //     {
+        //         System.out.println("Scholarship of 1 Lac by Aman");
+        //     } 
+        //     else if (marks >= 95) 
+        //     {
+        //         System.out.println("got 50k scholarship");
+        //     } 
+        //     else 
+        //     {
+        //         System.out.println("Better luck next time!");
+        //     }
+        // } 
+        // else if (marks >= 80 && marks <= 90) 
         // {
-        // System.out.println("Scholarship of 1 Lac by Aman");
-        // }
-        // else if(marks>95)
-        // {
-        // System.out.println("got 50k scholarship");
-        // }
-        // else
-        // {
-        // System.out.println("Better luck next time!");
-        // }
-        // }
-        // else if (marks >= 80 && marks <= 90)
-        // {
-        // System.out.println("Got Admission in LPU");
-        // }
-        // else if (marks >= 70 && marks <= 80)
-        // {
-        // System.out.println("Got Admission in IPU");
-        // }
-        // else if (marks >= 50 && marks < 70)
-        // {
-        // System.out.println("Got Admission in Other university");
-        // }
-        // else
-        // {
-        // System.out.println("Sell Tea!");
+        //     System.out.println("Got Admission in LPU");
+        // } 
+        // else if (marks >= 70 && marks <= 80) {
+        //     System.out.println("Got Admission in IPU");
+        // } else if (marks >= 50 && marks < 70) {
+        //     System.out.println("Got Admission in Other university");
+        // } else {
+        //     System.out.println("Sell Tea!");
         // }
 
         // System.out.println("Enter day number");
@@ -77,41 +76,42 @@ class DecisionStructure {
 
         // switch (choice)
         // {
-        // case 1:
-        // System.out.println("Monday");
-        // break;
-        // case 2:
-        // System.out.println("Tuesday");
-        // break;
-        // case 3:
-        // System.out.println("Wednesday");
-        // break;
-        // default:System.out.println("Invalid day");
-        // break;
+        //     case 1:
+        //         System.out.println("Monday");
+        //         break;
+        //     case 2:
+        //         System.out.println("Tuesday");
+        //         break;
+        //     case 3:
+        //         System.out.println("Wednesday");
+        //         break;
+        //     default:System.out.println("Invalid day");
+        //     break;
         // }
 
         // System.out.println("Enter character");
         // char op = sc.next().charAt(0);
         // switch (op)
         // {
-        // case '+':
-        // System.out.println("u pressed + character");
-        // break;
-        // case '-':
-        // System.out.println("u pressed - character");
-        // break;
-        // case '*':
-        // System.out.println("u pressed * character");
-        // break;
-        // default:System.out.println("invalid character");
-        // break;
+        //     case '+':
+        //         System.out.println("u pressed + character");
+        //         break;
+        //     case '-':
+        //         System.out.println("u pressed - character");
+        //         break;
+        //     case '*':
+        //         System.out.println("u pressed * character");
+        //         break;
+        //     default:System.out.println("invalid character");
+        //     break;
         // }
 
         System.out.println("Enter day");
         String day = sc.next();
 
         String choice = day.toLowerCase();
-        switch (choice) {
+        switch (choice) 
+        {
             case "first":
                 System.out.println("monday");
                 break;

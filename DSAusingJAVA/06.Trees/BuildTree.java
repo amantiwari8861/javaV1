@@ -222,7 +222,7 @@ class NormalTree<T extends Comparable<T>> {
                 return current.rightNode;
             }
             // both child (then find smallest)
-            T smallestValue = findSmallestValue(current.rightNode);
+            T smallestValue = findSmallestValue(current.rightNode);//we are doing it with succesor but u can also do this with predecessor
             current.data = smallestValue;
             current.rightNode = deleteRecursive(current.rightNode, smallestValue);
             return current;
@@ -242,3 +242,34 @@ public class BuildTree {
         tree.printTreeData();
     }
 }
+
+
+/*
+ * In the above diagram, inorder successor of 8 is 10, inorder successor of 10 is 12 and inorder successor of 14 is 20.
+
+ Deleting a node with two subtrees (children) in a binary tree involves a few steps to maintain the binary tree's properties. Here's a general approach to deleting such a node:
+
+Find the node you want to delete.
+
+Identify its inorder successor (or predecessor, which is the node with the largest value in its left subtree).
+
+Replace the node you want to delete with its inorder successor (or predecessor). This step involves updating the links between nodes.
+
+Remove the original node (which now has been replaced by its successor/predecessor). This may involve reassigning links in the parent node.
+
+Here's a more detailed explanation:
+
+Let's say you have a binary search tree (BST) and you want to delete a node with two children.
+
+Find the node you want to delete.
+
+Identify its inorder successor (or predecessor). The inorder successor is the smallest node in the right subtree of the node you want to delete. It is the leftmost node in the right subtree. The inorder predecessor is the largest node in the left subtree of the node you want to delete. It is the rightmost node in the left subtree.
+
+Replace the node you want to delete with its inorder successor (or predecessor). This involves copying the value of the successor/predecessor into the node you want to delete. Then, delete the successor/predecessor node from its current location. If you're using pointers, update the parent's link to point to the successor/predecessor.
+
+Remove the original node. This could mean setting the parent's link to null (if the node to delete is a leaf) or updating the parent's link to point to the only child (if the node has only one child).
+
+Remember, when deleting nodes from a binary search tree, you need to ensure that the resulting tree maintains the binary search tree properties: all nodes in the left subtree are less than the parent node, and all nodes in the right subtree are greater than the parent node.
+
+It's important to consider different cases (e.g., deleting a root node, deleting nodes with one child, etc.) and handle them appropriately during the deletion process.
+ */

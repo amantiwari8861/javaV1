@@ -1,4 +1,4 @@
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class Loops {
 
@@ -33,14 +33,16 @@ public class Loops {
         // }
 
         // int k=10;
-        // while (k>0) {
+        // while (k>0) 
+        // {
         //     System.out.println(k);
         //     k--;
         // }
 
         // Case 1:
         // int c=1;
-        // do {
+        // do 
+        // {
         //     System.out.println(c);
         //     c++;
         // } while (c<10);
@@ -60,7 +62,7 @@ public class Loops {
             System.out.println(i);
         }
 
-        System.out.println(Arrays.toString(arr1));
+        // System.out.println(Arrays.toString(arr1));
 
 
     }

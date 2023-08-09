@@ -2,12 +2,11 @@ public class NestedFor {
 
     public static void main(String[] args)
     {
-        for (int i = 0; i < 5; i++) 
+        for (int i = 0; i < 3; i++) 
         {
-            System.out.println("i="+i);
-            for (int j = 0; j < 8; j++) 
+            for (int j = 0; j <6; j++) 
             {
-                System.out.print(" \t "+"j="+j);
+                System.out.print("\ti= "+i+" j= "+j);
             }
             System.out.println();
         }

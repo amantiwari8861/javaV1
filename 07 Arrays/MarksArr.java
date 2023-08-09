@@ -11,6 +11,7 @@ public class MarksArr {
         System.out.println("enter no. of marks :");
         // int len=sc.nextInt();//long way
         // marks=new int[len];//long way
+        //or
         marks=new int[sc.nextInt()];//array memory initialization (shortcut)
 
         System.out.println("enter marks :");
@@ -23,11 +24,12 @@ public class MarksArr {
         // marks={67,783,56,35,35,67}; //error
         // marks=new int[]{76,86,94,24,97,36};
         System.out.println("Your percentage is "+total/marks.length+" %");
-        System.out.print("the marks are :");
+        System.out.print("the marks are :[ ");
         for(int i=0;i<marks.length;i++)
         {
             System.out.print(marks[i]+" ,");
         }
-
+        System.out.println("\b]");
+        sc.close();
     }
 }

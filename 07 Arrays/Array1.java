@@ -24,5 +24,6 @@ class Array1
         {
             System.out.println((i+1)+"."+shirts[i]);
         }
+        sc.close();
     }
 }

@@ -2,11 +2,11 @@ import java.util.*;
 
 class Edge 
 {
-    int first, second;
-    Edge(int first, int second) 
+    int vertexValue, weight;
+    Edge(int vertexValue, int weight) 
     {
-        this.first = first;
-        this.second = second;
+        this.vertexValue = vertexValue;
+        this.weight = weight;
     }
 }
 class Graph 
@@ -31,30 +31,30 @@ class Graph
 
 	void shortestPath(int src) 
     {
-		PriorityQueue<Edge> pq = new PriorityQueue<>(Vertices, Comparator.comparingInt(o -> o.first));
+		PriorityQueue<Edge> pq = new PriorityQueue<>(Vertices,Comparator.comparingInt(o -> o.vertexValue));
 		int[] dist = new int[Vertices];
 		Arrays.fill(dist, Integer.MAX_VALUE);
 
 		pq.add(new Edge(0, src));
-		dist[src] = 0;
+		dist[src] = 0;//setting distance of first node from first node
 
 		while (!pq.isEmpty()) {
-			int u = pq.poll().second;
+			int u = pq.poll().weight;
 
-			for (Edge v : allVertices.get(u)) {
-				if (dist[v.first] > dist[u] + v.second) {
-					dist[v.first] = dist[u] + v.second;
-					pq.add(new Edge(dist[v.first], v.first));
+			for (Edge v : allVertices.get(u)) 
+			{
+				if (dist[v.vertexValue] > dist[u] + v.weight) {
+					dist[v.vertexValue] = dist[u] + v.weight;
+					pq.add(new Edge(dist[v.vertexValue], v.vertexValue));
 				}
 			}
 		}
-
 		System.out.println("Vertex Distance from Source");
 		for (int i = 0; i < Vertices; i++) {
 			System.out.println(i + "\t\t" + dist[i]);
 		}
 	}
-    
+
 }
 public class Dijkstra 
 {

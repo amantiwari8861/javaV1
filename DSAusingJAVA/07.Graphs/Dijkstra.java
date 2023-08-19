@@ -1,56 +1,55 @@
 import java.util.*;
 
-class Edge 
+class Pair 
 {
-    int vertexValue, weight;
-    Edge(int vertexValue, int weight) 
+    int destn, weight;
+    Pair(int destn, int weight) 
     {
-        this.vertexValue = vertexValue;
+        this.destn = destn;
         this.weight = weight;
     }
 }
 class Graph 
 {
-	private int Vertices;
-	private List<List<Edge>> allVertices;
-
+	private int vertices;
+	private List<List<Pair>> allVertices;
     //memory initialization of nested arraylist
-	Graph(int Vertices) 
+	Graph(int vertices) 
     {
-		this.Vertices = Vertices;
+		this.vertices = vertices;
 		allVertices = new ArrayList<>();//memory initialization of outer arraylist
-		for (int i = 0; i < Vertices; i++) 
+		for (int i = 0; i < vertices; i++) 
 			allVertices.add(new ArrayList<>());//memory initialization of all 9 indexes in outer arraylist
 	}
 
 	void addEdge(int u, int v, int w) 
     {
-		allVertices.get(u).add(new Edge(v, w));
-		allVertices.get(v).add(new Edge(u, w));
+		allVertices.get(u).add(new Pair(v, w));
+		allVertices.get(v).add(new Pair(u, w));
 	}
 
 	void shortestPath(int src) 
     {
-		PriorityQueue<Edge> pq = new PriorityQueue<>(Vertices,Comparator.comparingInt(o -> o.vertexValue));
-		int[] dist = new int[Vertices];
+		PriorityQueue<Pair> pq = new PriorityQueue<>(vertices,Comparator.comparingInt(o -> o.destn));
+		int[] dist = new int[vertices];
 		Arrays.fill(dist, Integer.MAX_VALUE);
 
-		pq.add(new Edge(0, src));
+		pq.add(new Pair(src, 0));
 		dist[src] = 0;//setting distance of first node from first node
 
 		while (!pq.isEmpty()) {
 			int u = pq.poll().weight;
 
-			for (Edge v : allVertices.get(u)) 
+			for (Pair v : allVertices.get(u)) 
 			{
-				if (dist[v.vertexValue] > dist[u] + v.weight) {
-					dist[v.vertexValue] = dist[u] + v.weight;
-					pq.add(new Edge(dist[v.vertexValue], v.vertexValue));
+				if (dist[v.destn] > dist[u] + v.weight) {
+					dist[v.destn] = dist[u] + v.weight;
+					pq.add(new Pair(dist[v.destn], v.destn));
 				}
 			}
 		}
 		System.out.println("Vertex Distance from Source");
-		for (int i = 0; i < Vertices; i++) {
+		for (int i = 0; i < vertices; i++) {
 			System.out.println(i + "\t\t" + dist[i]);
 		}
 	}
@@ -59,8 +58,8 @@ class Graph
 public class Dijkstra 
 {
     public static void main(String[] args) {
-        int Vertices = 9;
-		Graph g = new Graph(Vertices);
+        int vertices = 9;
+		Graph g = new Graph(vertices);
 
 		g.addEdge(0, 1, 4);
 		g.addEdge(0, 7, 8);

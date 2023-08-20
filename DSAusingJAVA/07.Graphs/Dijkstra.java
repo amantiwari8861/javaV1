@@ -89,55 +89,69 @@ class Graph
 		{
 			List<Pair> src=allVertices.get(i);
 			System.out.print("Source ("+i+") :");
-			src.forEach(pr->{
-				System.out.print("    ("+pr.destn+","+pr.weight+")");
-			});
+			if(src!=null)
+			{
+				src.forEach(pr->{
+					System.out.print("    ("+pr.destn+","+pr.weight+")");
+				});
+			}
 			System.out.println();
 		}
 	}
-	void deleteVertex(int vertexToDelete) {
-        if (vertexToDelete < 0 || vertexToDelete >= vertices) {
+	void deleteVertex(int vertexToDelete) 
+	{
+        if (vertexToDelete < 0 || vertexToDelete >= vertices) 
+		{
             System.out.println("Invalid vertex index.");
             return;
         }
 
         // Remove the vertex and its edges
-        allVertices.remove(vertexToDelete);
-        for (List<Pair> adjList : allVertices) {
-            adjList.removeIf(pair -> pair.destn == vertexToDelete);
+		allVertices.set(vertexToDelete, null);
+        for (List<Pair> adjList : allVertices) 
+		{
+			if(adjList!=null)
+			{
+				adjList.removeIf(pair -> pair.destn == vertexToDelete);
+			}
         }
 
-        vertices--; // Update the number of vertices
     }   // Depth-First Search (DFS)
-    void dfs(int startVertex) {
+    void dfs(int startVertex) 
+	{
         boolean[] visited = new boolean[vertices];
         dfsUtil(startVertex, visited);
     }
-
-    private void dfsUtil(int vertex, boolean[] visited) {
+    private void dfsUtil(int vertex, boolean[] visited) 
+	{
         visited[vertex] = true;
         System.out.print(vertex + " ");
 
-        for (Pair v : allVertices.get(vertex)) {
-            if (!visited[v.destn]) {
+        for (Pair v : allVertices.get(vertex)) 
+		{
+            if (!visited[v.destn]) 
+			{
                 dfsUtil(v.destn, visited);
             }
         }
     }
-
     // Breadth-First Search (BFS)
-    void bfs(int startVertex) {
+    void bfs(int startVertex) 
+	{
         boolean[] visited = new boolean[vertices];
         Queue<Integer> queue = new LinkedList<>();
         visited[startVertex] = true;
         queue.add(startVertex);
 
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty()) 
+		{
             int vertex = queue.poll();
             System.out.print(vertex + " ");
 
-            for (Pair v : allVertices.get(vertex)) {
-                if (!visited[v.destn]) {
+            for (Pair v : allVertices.get(vertex)) 
+			{
+                if (!visited[v.destn]) 
+				{
                     visited[v.destn] = true;
                     queue.add(v.destn);
                 }
@@ -166,10 +180,11 @@ public class Dijkstra
 		g.addEdge(6, 8, 6);
 		g.addEdge(7, 8, 7);
 
-		g.shortestPath(0);
+		// g.shortestPath(0);
 		// g.deleteVertex(3);
 		g.showAdjancyList();
-		g.bfs(0);
-		g.bfs(0);
+		// g.bfs(0);
+		// System.out.println();
+		g.dfs(0);
     }
 }

@@ -1,3 +1,10 @@
+import java.util.HashMap;
+
+class Graph
+{
+    HashMap<String,List<Vertex>> allVertices;
+}
+
 public class DelhiMetro 
 {    
     public static void main(String[] args) 

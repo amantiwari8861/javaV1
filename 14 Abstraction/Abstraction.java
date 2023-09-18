@@ -14,7 +14,7 @@ class Bike extends Vehicle
     @Override
     void speed()
     {
-        System.out.println("max speed is 500km/h ");
+        System.out.println("max speed is 400km/h ");
     }
     void showTires()
     {

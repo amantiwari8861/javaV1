@@ -64,5 +64,9 @@ public class InterfaceNewFeatures
 
         ChartedAccountant.getHealthInsuranceRate();
         fEmployee.askCadetails("Manager");
+
+        PartTimeEmployee p=new PartTimeEmployee();
+        System.out.println(p.deductFoodFee());
+        System.out.println(p.deductHealthInsurancePremium());
     }
 }

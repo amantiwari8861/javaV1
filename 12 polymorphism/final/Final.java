@@ -1,22 +1,22 @@
-class Bank
+class RBI
 {
     final float PI=3.14f;
     final int id;
-    Bank()
+    RBI()
     {
-        // id=200;
+        id=200;
     }
     void change()
     {
         // PI=5.17f;
-        id=56;
+        // id=56;
     }
     final void show()
     {
         System.out.println("Hello");
     }
 }
-final class SBI extends Bank
+final class SBI extends RBI
 {
     void show()
     {

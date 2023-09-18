@@ -30,7 +30,7 @@ class Strfxn1
         //  System.out.println(any.contains(" "));//true
         //  System.out.println(any.contains("A"));//true
         // single quote('') is for character and double quote("") for String
-        String name3="Aman";
+        // String name3="Aman";
         // System.out.println(name3.equals("Aman")); //true
         // System.out.println(name3.equals("AMAN"));//false
         // System.out.println(name3.equalsIgnoreCase("AmAN"));//true
@@ -51,12 +51,12 @@ class Strfxn1
         // System.out.println(name3.endsWith("u"));//false
         // System.out.println(name3.endsWith("n"));//true
         
-        String str="hello my name_is  aman";
+        // String str="hello my name_is  aman";
         // System.out.println(str.endsWith("aman"));//true
         // System.out.println(str.endsWith("Aman"));//false
         
-        System.out.println(str.substring(6));
-        System.out.println(str.substring(6, 13));
+        // System.out.println(str.substring(6));
+        // System.out.println(str.substring(6, 13));
         
     }
 }

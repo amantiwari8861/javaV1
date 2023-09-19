@@ -13,8 +13,8 @@ public class BufferedOutputStreamDemo {
         // by passing second argument as true.
 
         try {
-            // FileOutputStream fout = new FileOutputStream("Hello.txt");
-            FileOutputStream fout = new FileOutputStream("Hello.txt", true);
+            // FileOutputStream fout = new FileOutputStream("Hello.txt");//to replace old data in file
+            FileOutputStream fout = new FileOutputStream("Hello.txt",true);//to append in data at file
             BufferedOutputStream bout = new BufferedOutputStream(fout);
             String s = "hii i am aman i am appending in this file ";
             byte b[] = s.getBytes();

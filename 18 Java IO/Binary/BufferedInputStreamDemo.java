@@ -8,11 +8,12 @@ public class BufferedInputStreamDemo {
         
         //Buffer means the collection of bytes that are read from the stream
         try{
-            FileInputStream fis=new FileInputStream("Hello.txt");
-            BufferedInputStream bis = new BufferedInputStream(fis);
-            // BufferedInputStream bis = new BufferedInputStream(new FileInputStream("Hello.txt"));
+            // FileInputStream fis=new FileInputStream("Hello.txt");
+            // BufferedInputStream bis = new BufferedInputStream(fis);
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream("Hello.txt"));
             System.out.println("The contents of the file are: ");
-            System.out.println((char)bis.read()); //h
+            // System.out.println(bis.read()); //readd 104(h) and moves curser ahead
+            // System.out.println((char)bis.read()); //i
             byte b[]=bis.readAllBytes();
             String s=new String(b);
             System.out.println(s);

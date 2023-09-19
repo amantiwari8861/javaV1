@@ -1,7 +1,7 @@
 import java.io.Serializable;
 
-public class Animal implements Serializable{
-
+public class Animal implements Serializable
+{
     private char gender;
     private String name;
 

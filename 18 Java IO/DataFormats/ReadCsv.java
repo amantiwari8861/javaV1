@@ -7,7 +7,7 @@ public class ReadCsv {
 
         try {
             
-            BufferedReader bis=new BufferedReader(new FileReader("C:\\Users\\admin\\Desktop\\Data.csv"));
+            BufferedReader bis=new BufferedReader(new FileReader("Data.csv"));
             // System.out.println(bis.readLine());
             // System.out.println(bis.readLine());
             

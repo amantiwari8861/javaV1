@@ -21,6 +21,13 @@ public class Student
         this.gender = gender;
         this.mobileNo = mobileNo;
     }
+    public Student( String name, float fees, String[] skills, char gender, long mobileNo) {
+        this.name = name;
+        this.fees = fees;
+        this.skills = skills;
+        this.gender = gender;
+        this.mobileNo = mobileNo;
+    }
     public int getRollNo() {
         return rollNo;
     }

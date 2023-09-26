@@ -15,19 +15,18 @@ import util.ConnectionProvider;
 public class StudentDaoImpl implements StudentDao
 {
     boolean isTableCreated;
-    public StudentDaoImpl()
-    {
+    public StudentDaoImpl(){
         if (!isTableCreated) {
             createtable();
         }
     }
-    private void createtable()
-    {
+    private void createtable(){
         try {
             Connection con=ConnectionProvider.getMySqlConnection();
             Statement st=con.createStatement();
             st.execute("create table if not exists Students(rollno int primary key auto_increment,name varchar(255),fees float,skills varchar(255),gender char(1),mobileno bigint);");
             System.out.println("table created succesfully!!");
+            isTableCreated=true;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,21 +53,45 @@ public class StudentDaoImpl implements StudentDao
     }
 
     @Override
-    public boolean updateStudent(Student newStudent) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateStudent'");
-    }
+    public boolean updateStudent(Student newStudent){
+        try 
+        {
+            Connection con=ConnectionProvider.getMySqlConnection();
+            PreparedStatement ps=con.prepareStatement("update students set name=?,fees=?,skills=?,gender=?,mobileno=? where rollno=?; ");
+            ps.setString(1, newStudent.getName());
+            ps.setFloat(2, newStudent.getFees());
+            ps.setString(3,Arrays.toString(newStudent.getSkills()));
+            ps.setString(4,String.valueOf(newStudent.getGender()));
+            ps.setLong(5, newStudent.getMobileNo());
+            ps.setInt(6, newStudent.getRollNo());
+            System.out.println(ps);
+            return ps.executeUpdate()>0?true:false;
+        } 
+        catch (Exception e) 
+        {
+            e.printStackTrace();
+        }
+        return false;
+   }
 
     @Override
-    public boolean deleteStudentByRollNo(int rollNo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteStudentByRollNo'");
+    public boolean deleteStudentByRollNo(int rollNo) 
+    {
+        try {
+            Connection con=ConnectionProvider.getMySqlConnection();
+            PreparedStatement ps=con.prepareStatement("delete from students where rollno=?;");
+            ps.setInt(1, rollNo);
+            return ps.executeUpdate()>0?true:false;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     @Override
     public Student getStudentByRollNo(int rollNo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getStudentByRollNo'");
+        return null;
     }
 
     @Override
@@ -87,7 +110,9 @@ public class StudentDaoImpl implements StudentDao
                 student.setFees(rs.getFloat("fees"));
                 student.setGender(rs.getString("gender").charAt(0));
                 student.setMobileNo(rs.getLong("mobileno"));
+
                 String arr[]=rs.getString("skills").substring(1, rs.getString("skills").length()-1).split(",");
+                
                 student.setSkills(arr);
                 allStudents.add(student);
             }
@@ -97,6 +122,11 @@ public class StudentDaoImpl implements StudentDao
         }
 
         return null;
+    }
+    @Override
+    public boolean deleteStudentByName(String name) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudentByName'");
     }
     
 }

@@ -11,5 +11,5 @@ public interface StudentDao {
     boolean deleteStudentByRollNo(int rollNo);
     Student getStudentByRollNo(int rollNo);
     List<Student> getAllStudents();
-    
+    boolean deleteStudentByName(String name);    
 }

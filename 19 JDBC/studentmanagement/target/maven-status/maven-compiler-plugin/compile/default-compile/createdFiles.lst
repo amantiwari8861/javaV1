@@ -1,0 +1,5 @@
+com\omega\dao\impl\StudentDaoImpl.class
+com\omega\App.class
+com\omega\entities\Student.class
+com\omega\util\ConnectionProvider.class
+com\omega\dao\StudentDao.class

@@ -19,12 +19,14 @@ public class Threads4 {
 
     public static void main(String[] args) {
     	ExecutorService executorService=null;
+//            executorService = Executors.newCachedThreadPool();
+       	executorService=Executors.newFixedThreadPool(4);
+
+        	// executorService=Executors.newSingleThreadExecutor();
         for (int i = 1; i <= 100; i++) {
             // Thread t=new Thread(new PrintNum(i));
             // t.start();
-//            executorService = Executors.newCachedThreadPool();
-       	executorService=Executors.newFixedThreadPool(4);
-        	// executorService=Executors.newSingleThreadExecutor();
+
             executorService.execute(new PrintNum(i));
         }
         

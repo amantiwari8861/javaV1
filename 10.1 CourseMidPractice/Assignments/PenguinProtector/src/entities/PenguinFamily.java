@@ -10,8 +10,8 @@ public class PenguinFamily {
     private Penguin parents[];
     private ArrayList<Egg> eggs;
     private ArrayList<Chick> chicks;
-    public int noOfEggs, noOfChicks,noOfChicksAlive;
-    
+    private int noOfEggs, noOfChicks, noOfChicksAlive, noOfChicksKilled;
+    private int eggsHatchedPerFamily;
 
     public PenguinFamily() {
         parents = new Penguin[2];
@@ -20,40 +20,11 @@ public class PenguinFamily {
         pnnn = GenerateThreedigitUniqueNo.generate();
         eggs = new ArrayList<>();
         chicks = new ArrayList<>();
-        noOfEggs = 0;noOfChicks = 0;
-        noOfChicksAlive=0;
-    }
-
-    public String getPnnn() {
-        return pnnn;
-    }
-
-    public Penguin[] getParents() {
-        return parents;
-    }
-
-    public ArrayList<Egg> getEggs() {
-        return eggs;
-    }
-
-    public ArrayList<Chick> getChicks() {
-        return chicks;
-    }
-
-    public void setPnnn(String pnnn) {
-        this.pnnn = pnnn;
-    }
-
-    public void setParents(Penguin[] parents) {
-        this.parents = parents;
-    }
-
-    public void setEggs(ArrayList<Egg> eggs) {
-        this.eggs = eggs;
-    }
-
-    public void setChicks(ArrayList<Chick> chicks) {
-        this.chicks = chicks;
+        noOfEggs = 0;
+        noOfChicks = 0;
+        noOfChicksAlive = 0;
+        eggsHatchedPerFamily = 0;
+        noOfChicksKilled = 0;
     }
 
     public int layEggs() {
@@ -63,66 +34,149 @@ public class PenguinFamily {
             eggs.add(egg);
             noOfEggs++;
         }
-        // System.out.println("laid(" + eggNos + "/" + noOfEggs + ") eggs by " + pnnn + "(" + eggs + ")");
+        System.out.println("laid(" + eggNos + "/" + noOfEggs + ") eggs by " + pnnn + "(" + eggs + ")");
         return eggNos;
     }
 
-    public int ageOfChickAndEggAfterOneMonth() 
-    {
-        int eggsHatchedPerFamily=0;
-        noOfChicks=0;
-        if (eggs != null) 
-        {
-            for (Egg egg : eggs) 
-            {
+    public void incrementEggAge() {
+        if (eggs != null) {
+            for (Egg egg : eggs) {
                 egg.setEggAge(egg.getEggAge() + 1);
             }
         }
-        if (chicks != null) 
-        {
+    }
+
+    public void incrementChickAge() {
+        if (chicks != null) {
             for (Chick chick : chicks) {
-                if(chick.getIsChickAlive())
-                {
+                if (chick.getIsChickAlive()) {
                     chick.setChickAge(chick.getChickAge() + 1);
-                    // System.out.println(chick+" age incremented.....");
+                    System.out.println(chick + " age incremented.....");
                 }
             }
             // System.out.println(chicks.size());
         }
+    }
+
+    public int hatchEgg() {
         if (eggs != null) {
             for (Egg egg : eggs) {
                 if (egg.getEggAge() == 1 && !egg.getIsEaten()) {
                     double probability = Math.random();
                     if (probability <= 0.7) {
-                        Chick ck=new Chick(0, true);
+                        Chick ck = new Chick(0, true);
                         chicks.add(ck);
                         eggsHatchedPerFamily++;
                         noOfChicks++;
-                        // System.out.println("hatched :"+egg+" of family "+pnnn+"got"+ck);
+                        System.out.println("hatched :" + egg + " of family " + pnnn + "got" + ck);
+                    } else {
+                        System.out.println("Not hatched :" + egg + " of family " + pnnn);
                     }
-                    // else
-                    // {
-                    //     System.out.println("Not hatched :"+egg+" of family "+pnnn);
-                    // }
                 }
             }
             eggs.removeIf(e -> e.getEggAge() == 1);
         }
         return eggsHatchedPerFamily;
     }
-    public int checkAliveChicks()
-    {
-        chicks.forEach(c->{
-            if (c.getIsChickAlive()) {
-                noOfChicksAlive++;
-            }
-        });
-        return noOfChicksAlive;
+
+    public String getPnnn() {
+        return pnnn;
     }
+
+    public void setPnnn(String pnnn) {
+        this.pnnn = pnnn;
+    }
+
+    public Penguin[] getParents() {
+        return parents;
+    }
+
+    public void setParents(Penguin[] parents) {
+        this.parents = parents;
+    }
+
+    public ArrayList<Egg> getEggs() {
+        return eggs;
+    }
+
+    public void setEggs(ArrayList<Egg> eggs) {
+        this.eggs = eggs;
+    }
+
+    public ArrayList<Chick> getChicks() {
+        return chicks;
+    }
+
+    public void setChicks(ArrayList<Chick> chicks) {
+        this.chicks = chicks;
+    }
+
+    public int getNoOfEggs() {
+        return eggs.size();
+    }
+
+    public void setNoOfEggs(int noOfEggs) {
+        this.noOfEggs = noOfEggs;
+    }
+
+    public int getNoOfChicks() {
+        if (chicks != null) {
+            return chicks.size();
+        }
+        return 0;
+    }
+
+    public void setNoOfChicks(int noOfChicks) {
+        this.noOfChicks = noOfChicks;
+    }
+
+    public int getNoOfChicksAlive() {
+        if (chicks != null) {
+            System.out.println(chicks+" : "+pnnn);
+            for (int i = 0; i < chicks.size(); i++) {
+                if (chicks.get(i).getIsChickAlive()) 
+                {
+                    noOfChicksAlive++;
+                    System.out.println("CAL:"+noOfChicksAlive);
+                }
+            }
+            return noOfChicksAlive;
+        }
+        return 0;
+    }
+
+    public void setNoOfChicksAlive(int noOfChicksAlive) {
+        this.noOfChicksAlive = noOfChicksAlive;
+    }
+
+    public int getEggsHatchedPerFamily() {
+        return eggsHatchedPerFamily;
+    }
+
+    public void setEggsHatchedPerFamily(int eggsHatchedPerFamily) {
+        this.eggsHatchedPerFamily = eggsHatchedPerFamily;
+    }
+
+    public int getNoOfChicksKilled() {
+        if (chicks != null) {
+            for (Chick ck : chicks) {
+                if (!ck.getIsChickAlive()) {
+                    noOfChicksKilled++;
+                }
+            }
+        }
+        return noOfChicksKilled;
+    }
+
+    public void setNoOfChicksKilled(int noOfChicksKilled) {
+        this.noOfChicksKilled = noOfChicksKilled;
+    }
+
     @Override
     public String toString() {
         return "PenguinFamily [pnnn=" + pnnn + ", parents=" + Arrays.toString(parents) + ", eggs=" + eggs + ", chicks="
-                + chicks + "]";
+                + chicks + ", noOfEggs=" + noOfEggs + ", noOfChicks=" + noOfChicks + ", noOfChicksAlive="
+                + noOfChicksAlive + ", eggsHatchedPerFamily=" + eggsHatchedPerFamily + "]";
     }
 
 }

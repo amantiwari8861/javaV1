@@ -4,7 +4,10 @@ public class Egg
 {
     private Integer eggAge;
     private Boolean isEaten;
-    public Egg() {}
+    public Egg() {
+        eggAge=0;
+        isEaten=false;
+    }
     public Egg(Integer eggAge, Boolean isEaten) 
     {
         this.eggAge = eggAge;
@@ -28,9 +31,4 @@ public class Egg
     public void setIsEaten(Boolean isEaten) {
         this.isEaten = isEaten;
     }
-    @Override
-    public String toString() 
-    {
-        return "Egg [eggAge=" + eggAge + ", isEaten=" + isEaten + "]";
-    } 
 }

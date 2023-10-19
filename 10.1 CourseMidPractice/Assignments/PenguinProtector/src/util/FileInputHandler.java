@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import simulation.BeanInitializer;
-
 public class FileInputHandler 
 {
     private final String FILE_NAME="src//filedata//colony.txt";
@@ -14,7 +12,7 @@ public class FileInputHandler
     {
         readDataFromFile();
     }
-    private void readDataFromFile()
+    public String[] readDataFromFile()
     {
         Scanner console=null;
         try  
@@ -28,7 +26,7 @@ public class FileInputHandler
             }
             // System.out.println(Arrays.toString(fileInp));
             // String fileInp[]=console.nextLine().split(",");
-            new BeanInitializer(Integer.parseInt(fileInp[0]),Integer.parseInt(fileInp[1]),Integer.parseInt(fileInp[2]),Integer.parseInt(fileInp[3]));
+            return fileInp;
         } 
         catch(NumberFormatException ne)
         {
@@ -52,6 +50,7 @@ public class FileInputHandler
                 }
             }
         }
+        return null;
     }
     
 }

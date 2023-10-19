@@ -4,7 +4,10 @@ public class Chick
 {
     private Integer chickAge;
     private Boolean isChickAlive;
-    public Chick() {}
+    public Chick() {
+        chickAge=0;
+        isChickAlive=true;
+    }
     public Chick(Integer chickAge, Boolean isChickAlive) 
     {
         this.chickAge = chickAge;
@@ -27,9 +30,9 @@ public class Chick
     public void setIsChickAlive(Boolean isChickAlive) {
         this.isChickAlive = isChickAlive;
     }
-    @Override
-    public String toString() 
-    {
-        return "Chick [chickAge=" + chickAge + ", isChickAlive=" + isChickAlive + "]";
-    }
+    // @Override
+    // public String toString() 
+    // {
+    //     return "Chick [chickAge=" + chickAge + ", isChickAlive=" + isChickAlive + "]";
+    // }
 }

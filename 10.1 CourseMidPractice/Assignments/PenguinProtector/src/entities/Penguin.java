@@ -6,7 +6,8 @@ public class Penguin
     private Boolean isAlive;
     public Penguin() {
     }
-    public Penguin(Boolean isMale, Boolean isAlive) {
+    public Penguin(Boolean isMale, Boolean isAlive) 
+    {
         this.isMale = isMale;
         this.isAlive = isAlive;
     }

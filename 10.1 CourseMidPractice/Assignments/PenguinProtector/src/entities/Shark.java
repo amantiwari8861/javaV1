@@ -1,6 +1,4 @@
 package entities;
 
-public class Shark extends Predator
-{
-    
+public class Shark extends Predator {
 }

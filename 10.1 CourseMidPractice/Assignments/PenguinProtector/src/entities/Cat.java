@@ -38,12 +38,12 @@ public class Cat extends Predator {
 
     public void killChick(PenguinFamily pFamily, Chick c) {
         ArrayList<Chick> chicks = pFamily.getChicks();
-        System.out.println(chicks);
+        // System.out.println(chicks);
         if (chicks != null) {
             for (int i = 0; i < chicks.size(); i++) {
                 if (chicks.get(i) == c) {
                     chicks.get(i).setIsChickAlive(false);
-                    System.out.println("Killed "+chicks.get(i)+" by cat ");
+                    // System.out.println("Killed "+chicks.get(i)+" by cat ");
                     noOfChicksKilled++;
                 }
             }

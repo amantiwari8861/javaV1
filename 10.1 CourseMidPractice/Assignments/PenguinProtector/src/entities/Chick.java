@@ -30,9 +30,9 @@ public class Chick
     public void setIsChickAlive(Boolean isChickAlive) {
         this.isChickAlive = isChickAlive;
     }
-    // @Override
-    // public String toString() 
-    // {
-    //     return "Chick [chickAge=" + chickAge + ", isChickAlive=" + isChickAlive + "]";
-    // }
+    @Override
+    public String toString() 
+    {
+        return "Chick [chickAge=" + chickAge + ", isChickAlive=" + isChickAlive + "]";
+    }
 }

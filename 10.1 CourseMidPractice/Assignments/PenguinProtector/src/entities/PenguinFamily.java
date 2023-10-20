@@ -10,7 +10,7 @@ public class PenguinFamily {
     private Penguin parents[];
     private ArrayList<Egg> eggs;
     private ArrayList<Chick> chicks;
-    private int noOfEggs, noOfChicks, noOfChicksAlive, noOfChicksKilled;
+    private int noOfEggs, noOfChicks, noOfChicksAlive, noOfChicksKilled,newChicks;
     private int eggsHatchedPerFamily;
 
     public PenguinFamily() {
@@ -24,7 +24,7 @@ public class PenguinFamily {
         noOfChicks = 0;
         noOfChicksAlive = 0;
         eggsHatchedPerFamily = 0;
-        noOfChicksKilled = 0;
+        noOfChicksKilled = 0;newChicks=0;
     }
 
     public int layEggs() {
@@ -34,7 +34,7 @@ public class PenguinFamily {
             eggs.add(egg);
             noOfEggs++;
         }
-        System.out.println("laid(" + eggNos + "/" + noOfEggs + ") eggs by " + pnnn + "(" + eggs + ")");
+        // System.out.println("laid(" + eggNos + "/" + noOfEggs + ") eggs by " + pnnn + "(" + eggs + ")");
         return eggNos;
     }
 
@@ -51,7 +51,7 @@ public class PenguinFamily {
             for (Chick chick : chicks) {
                 if (chick.getIsChickAlive()) {
                     chick.setChickAge(chick.getChickAge() + 1);
-                    System.out.println(chick + " age incremented.....");
+                    // System.out.println(chick + " age incremented.....");
                 }
             }
             // System.out.println(chicks.size());
@@ -59,6 +59,8 @@ public class PenguinFamily {
     }
 
     public int hatchEgg() {
+        newChicks=0;
+        eggsHatchedPerFamily=0;
         if (eggs != null) {
             for (Egg egg : eggs) {
                 if (egg.getEggAge() == 1 && !egg.getIsEaten()) {
@@ -68,10 +70,12 @@ public class PenguinFamily {
                         chicks.add(ck);
                         eggsHatchedPerFamily++;
                         noOfChicks++;
-                        System.out.println("hatched :" + egg + " of family " + pnnn + "got" + ck);
-                    } else {
-                        System.out.println("Not hatched :" + egg + " of family " + pnnn);
-                    }
+                        newChicks++;
+                        // System.out.println("hatched :" + egg + " of family " + pnnn + "got" + ck);
+                    } 
+                    // else {
+                    //     System.out.println("Not hatched :" + egg + " of family " + pnnn);
+                    // }
                 }
             }
             eggs.removeIf(e -> e.getEggAge() == 1);
@@ -120,10 +124,8 @@ public class PenguinFamily {
     }
 
     public int getNoOfChicks() {
-        if (chicks != null) {
-            return chicks.size();
-        }
-        return 0;
+        
+            return newChicks;
     }
 
     public void setNoOfChicks(int noOfChicks) {
@@ -132,12 +134,10 @@ public class PenguinFamily {
 
     public int getNoOfChicksAlive() {
         if (chicks != null) {
-            System.out.println(chicks+" : "+pnnn);
             for (int i = 0; i < chicks.size(); i++) {
                 if (chicks.get(i).getIsChickAlive()) 
                 {
                     noOfChicksAlive++;
-                    System.out.println("CAL:"+noOfChicksAlive);
                 }
             }
             return noOfChicksAlive;

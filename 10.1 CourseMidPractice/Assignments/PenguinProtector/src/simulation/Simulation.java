@@ -1,6 +1,5 @@
 package simulation;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import entities.Cat;
@@ -31,8 +30,7 @@ public class Simulation {
     int noOfChicksKilled;
     int noOfEggsKilled;
     int newChicks;
-    ArrayList<Integer> temp;
-
+    int previous;
     public Simulation() 
     {
         noOfAlivePenguins=noOfCompleteFamily=liveChicksCount=noOfEggsLaid=noOfEggsHatched=noOfChicksKilled=noOfEggsKilled=newChicks=0;
@@ -43,7 +41,6 @@ public class Simulation {
 
     public void initialize(Integer pfNo, Integer fNo, Integer cNo, Integer sNo) {
         // System.out.println(pfNo+":"+fNo+":"+cNo+":"+sNo);
-        temp=new ArrayList<>();
         pFamilies = new PenguinFamily[pfNo];
         foxes = new Fox[fNo];
         cats = new Cat[cNo];
@@ -204,7 +201,7 @@ public class Simulation {
             if (m == 12)
                 m = 0;
             if (m == 6) {
-                // printFinalStat();
+                printFinalStat();
                 colonySurvivalStat();
                 System.out.println("Writing survival rates into colonyFinal.txt");
                 break;
@@ -217,7 +214,7 @@ public class Simulation {
     public void calculateStat() {
         int newEggs = 0, noOfMalePenguinsKilled = 0, noOfFeMalePenguinsKilled = 0, noOfFoxesKilled = 0, noOfCatsKilled = 0, uneatenEggCount = 0,noOfAliveFox = 0, noOfAliveCat = 0;
         noOfCompleteFamily=0;noOfAlivePenguins=0;
-        noOfChicksKilled=0;noOfEggsKilled=0;newChicks=0;
+        noOfEggsKilled=0;newChicks=0;
         for (PenguinFamily pf : pFamilies) 
         {
             Penguin[] parents = pf.getParents();
@@ -227,25 +224,9 @@ public class Simulation {
             if (!parents[1].getIsMale() && !parents[1].getIsAlive()) {
                 noOfFeMalePenguinsKilled++;
             }
-            // if (pf.getChicks() != null) {
-            //     for (Chick ck : pf.getChicks()) {
-            //         if (ck.getIsChickAlive()) 
-            //         {
-            //             System.out.println(ck);
-            //             liveChicksCount++;
-            //             // newChicks++; problem
-            //         }
-            //         // if (!ck.getIsChickAlive()) {
-            //         //     noOfChicksKilled++;
-            //         // }
-            //     }
-            // }
-            // System.out.println("alive chicks "+pf.getNoOfChicksAlive());
             newChicks+=pf.getNoOfChicks();
-            noOfChicksKilled+=pf.getNoOfChicksKilled();
-            // temp.add(pf.getNoOfChicksAlive());
-            liveChicksCount=pf.getNoOfChicksAlive();
-            System.out.println("Alive:"+liveChicksCount);
+            // noOfChicksKilled+=pf.getNoOfChicksKilled();
+            // liveChicksCount+=pf.getNoOfChicksAlive();
             if (pf.getEggs() != null) {
                 newEggs += pf.getEggs().size();
                 for (Egg egg : pf.getEggs()) {
@@ -271,7 +252,6 @@ public class Simulation {
                 }
             
             }
-            // System.out.println(pf.getChicks());
         }
         for (Fox fox : foxes) {
             if (!fox.getIsAlive())
@@ -286,7 +266,18 @@ public class Simulation {
                 noOfAliveCat++;
             }
         }
-        temp.forEach(e->liveChicksCount+=e);
+        // noOfChicksKilled=0;
+        int temp=0;
+        for (int i = 0; i < foxes.length; i++) {
+            temp+=foxes[i].getNoOfChicksKilled();
+        }
+        for (int i = 0; i < cats.length; i++) {
+            temp+=cats[i].getNoOfChicksKilled();
+        }
+        temp=noOfEggsHatched-temp;
+        liveChicksCount=temp;
+        noOfChicksKilled=noOfEggsHatched-liveChicksCount-noOfChicksKilled;
+        
         System.out.println(" + new chicks:" + newChicks);
         System.out.println(" + new eggs:" + newEggs);
         System.out.println(
@@ -297,12 +288,12 @@ public class Simulation {
         System.out.println(" - cat killed:" + noOfCatsKilled);
         System.out.println(" End of month status:");
         System.out.println("  complete family:" + noOfCompleteFamily);
-        System.out.println("  live chicks count:" + (liveChicksCount));
+        System.out.println("  live chicks count:" + liveChicksCount);
+        System.out.println("  live chicks count:" + temp);
         System.out.println("  uneaten egg count:" + uneatenEggCount);
         System.out.println("  fox count:" + noOfAliveFox);
         System.out.println("  cat count:" + noOfAliveCat);
         System.out.println("  shark count:" + sharks.length);
-        printFinalStat();
     }
 
     public void printFinalStat() {
@@ -311,7 +302,6 @@ public class Simulation {
         System.out.println(" live penguin:"+noOfAlivePenguins);
         System.out.println(" live chicks:"+liveChicksCount);
         System.out.println("\nSimulation is done.");
-
     }
 
     public void colonySurvivalStat() 
@@ -322,11 +312,11 @@ public class Simulation {
         double chickSurvivalRate =Math.round((((double) liveChicksCount / noOfEggsHatched) * 100)*100)/100.0;
         double overallColonySurvival =Math.round((((double) (noOfAlivePenguins + liveChicksCount) / pFamilies.length*2))*100)/100.0;
 
-        System.out.println(" * family group survival rate: "+familyGroupSurvivalRate);
-        System.out.println(" * penguin survival rate: "+penguinSurvivalRate);
-        System.out.println(" * eggs survival rate: "+eggSurvivalRate);
-        System.out.println(" * chick survival rate: "+chickSurvivalRate);
-        System.out.println(" * colony survival: "+overallColonySurvival);
+        System.out.println(" * family group survival rate: "+familyGroupSurvivalRate+"%");
+        System.out.println(" * penguin survival rate: "+penguinSurvivalRate+"%");
+        System.out.println(" * eggs survival rate: "+eggSurvivalRate+"%");
+        System.out.println(" * chick survival rate: "+chickSurvivalRate+"%");
+        System.out.println(" * colony survival: "+overallColonySurvival+"%");
         new FileOutputHandler().writDataIntoFile(familyGroupSurvivalRate,penguinSurvivalRate,eggSurvivalRate,chickSurvivalRate,overallColonySurvival);
     }
 }

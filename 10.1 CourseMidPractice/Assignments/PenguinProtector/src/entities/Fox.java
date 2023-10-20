@@ -58,7 +58,7 @@ public class Fox extends Predator {
                 if (chicks.get(i) == c) {
                     chicks.get(i).setIsChickAlive(false);
                     noOfChicksKilled++;
-                    System.out.println("Killed "+chicks.get(i)+" by fox ");
+                    // System.out.println("Killed "+chicks.get(i)+" by fox ");
                 }
             }
         }
@@ -70,7 +70,7 @@ public class Fox extends Predator {
             for (int i = 0; i < eggs.size(); i++) {
                 if (eggs.get(i) == e) {
                     eggs.get(i).setIsEaten(true);
-                    System.out.println("Killed "+eggs.get(i)+" by fox ");
+                    // System.out.println("Killed "+eggs.get(i)+" by fox ");
                     noOfEggsKilled++;
                 }
             }

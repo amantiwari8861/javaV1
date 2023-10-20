@@ -25,9 +25,10 @@ public class Pawpatrol
                 if (Math.random() <= successProbability) {
                     fox2.setIsAlive(false);
                     // System.out.println("Fox killed!");
-                } else {
-                    // System.out.println("Fox survived.");
                 }
+                //  else {
+                    // System.out.println("Fox survived.");
+                // }
             }
         }
     }
@@ -38,9 +39,10 @@ public class Pawpatrol
                 if (Math.random() <= successProbability) {
                     cat2.setIsAlive(false);
                     // System.out.println("cat killed!");
-                } else {
+                } 
+                // else {
                     // System.out.println("cat survived.");
-                }
+                // }
             }
         }
     }

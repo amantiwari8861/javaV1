@@ -31,4 +31,9 @@ public class Egg
     public void setIsEaten(Boolean isEaten) {
         this.isEaten = isEaten;
     }
+    @Override
+    public String toString() {
+        return "Egg [eggAge=" + eggAge + ", isEaten=" + isEaten + "]";
+    }
+
 }

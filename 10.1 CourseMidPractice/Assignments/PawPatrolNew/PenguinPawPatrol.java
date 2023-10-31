@@ -5,7 +5,7 @@ public class PenguinPawPatrol {
     int monthNo;
     int patrolDogs;
     boolean isAcceptable = false;
-    Scanner sc = new Scanner(System.in);
+    Scanner sc;
     PenguinFamily pFamilies[];
     Fox foxes[];
     Cat cats[];
@@ -15,18 +15,19 @@ public class PenguinPawPatrol {
     int liveChicksCount;
     int noOfEggsLaid;
     int noOfEggsHatched;
-    int noOfChicksKilled;
     int newChicks;
-    int previous;
 
     public PenguinPawPatrol() {
-        noOfCompleteFamily = liveChicksCount = noOfEggsLaid = noOfEggsHatched = noOfChicksKilled  = newChicks = 0;
-        try {
+        sc= new Scanner(System.in);
+        noOfCompleteFamily = liveChicksCount = noOfEggsLaid = noOfEggsHatched = newChicks = 0;
+        try 
+        {
             String[] fileInp = new FileInputHandler().readDataFromFile();
-            initialize(Integer.parseInt(fileInp[0]), Integer.parseInt(fileInp[1]), Integer.parseInt(fileInp[2]),
-                    Integer.parseInt(fileInp[3]));
-        } catch (NullPointerException e) {
-            System.out.println("unable to initialize data from file colony.txts!!");
+            initialize(Integer.parseInt(fileInp[0]), Integer.parseInt(fileInp[1]), Integer.parseInt(fileInp[2]),Integer.parseInt(fileInp[3]));
+        } 
+        catch (NullPointerException e) 
+        {
+            System.out.println("unable to initialize data from file colony.txt!!");
             System.exit(1);
         }
     }
@@ -52,13 +53,9 @@ public class PenguinPawPatrol {
     }
 
     public void simulate(int monthNo) {
-        int noOfMalePenguinsKilledPerMonth = 0, noOfFemalePenguinsKilledPerMonth = 0, uneatenEggCount = 0,
-                totalNoOfAliveFox = 0, totalNoOfAliveCat = 0;
-        int noOfCatsKilledPerMonth = 0, noOfFoxesKilledPerMonth = 0, newEggsPerMonth = 0;
-        noOfCompleteFamily = 0;
         this.monthNo = monthNo;
-        noOfAlivePenguins = 0;
-        newChicks = 0;
+        int noOfMalePenguinsKilledPerMonth = 0, noOfFemalePenguinsKilledPerMonth = 0, uneatenEggCount = 0,totalNoOfAliveFox = 0, totalNoOfAliveCat = 0, noOfCatsKilledPerMonth = 0, noOfFoxesKilledPerMonth = 0, newEggsPerMonth = 0, totalChicksKilled = 0, numberOfChicksEatenPerMonth = 0, noOfEggsEatenPerMonth = 0; noOfCompleteFamily = 0;
+        noOfAlivePenguins = newChicks = 0;
 
         // total alive foxes
         for (Fox fox : foxes) {
@@ -77,11 +74,7 @@ public class PenguinPawPatrol {
             pFamily.incrementChickAge();
             noOfEggsHatched += pFamily.hatchEgg();
         }
-        // lay eggs
-        int numberOfChicksEatenPerMonth = 0, noOfEggsEatenPerMonth = 0;
-        // System.out.println("Month:"+monthNo+" : "+noOfMalePenguinsKilledPerMonth+" :
-        // "+noOfFemalePenguinsKilledPerMonth+" : "+numberOfChicksEatenPerMonth+" :
-        // "+noOfEggsEatenPerMonth);
+        // lay eggs and hunting by fox,cat and shark
         for (PenguinFamily pFamily : pFamilies) {
             if (monthNo >= 8 && monthNo <= 12 || monthNo == 1 || monthNo == 2) {
                 Penguin[] parents = pFamily.getParents();
@@ -104,26 +97,16 @@ public class PenguinPawPatrol {
             noOfFemalePenguinsKilledPerMonth += countEaten[1];
             numberOfChicksEatenPerMonth += countEaten[2];
             noOfEggsEatenPerMonth += countEaten[3];
-
             countEaten = huntingByCat(pFamily);
             noOfMalePenguinsKilledPerMonth += countEaten[0];
             noOfFemalePenguinsKilledPerMonth += countEaten[1];
             numberOfChicksEatenPerMonth += countEaten[2];
-
             countEaten = huntingByShark(pFamily);
             noOfMalePenguinsKilledPerMonth += countEaten[0];
             noOfFemalePenguinsKilledPerMonth += countEaten[1];
         }
 
-        // System.out.println("Total Killed Male(" + noOfMalePenguinsKilledPerMonth + ")
-        // per month");
-        // System.out.println("Total Killed Female(" + noOfFemalePenguinsKilledPerMonth
-        // + ") per month");
-        // System.out.println("Total Killed Chick(" + numberOfChicksEatenPerMonth + ")
-        // per month");
-        // System.out.println("Total Killed Egg(" + noOfEggsEatenPerMonth + ") per
-        // month");
-
+        // hunting by patrol dogs
         if (patrolDogs > 0) {
             PawpatrolDog pd = new PawpatrolDog(patrolDogs);
             if (totalNoOfAliveCat > noOfCatsKilledPerMonth)
@@ -162,16 +145,14 @@ public class PenguinPawPatrol {
             }
         }
 
-        int temp = 0;
+        // chicks alived
         for (int i = 0; i < foxes.length; i++) {
-            temp += foxes[i].getNoOfChicksKilled();
+            totalChicksKilled += foxes[i].getNoOfChicksKilled();
         }
         for (int i = 0; i < cats.length; i++) {
-            temp += cats[i].getNoOfChicksKilled();
+            totalChicksKilled += cats[i].getNoOfChicksKilled();
         }
-        temp = noOfEggsHatched - temp;
-        liveChicksCount = temp;
-        noOfChicksKilled = noOfEggsHatched - liveChicksCount - noOfChicksKilled;
+        liveChicksCount = noOfEggsHatched - totalChicksKilled;
 
         System.out.println(" + new chicks:" + newChicks);
         System.out.println(" + new eggs:" + newEggsPerMonth);
@@ -189,6 +170,33 @@ public class PenguinPawPatrol {
         System.out.println("  fox count:" + totalNoOfAliveFox);
         System.out.println("  cat count:" + totalNoOfAliveCat);
         System.out.println("  shark count:" + sharks.length);
+    }
+
+    public void printFinalStat() {
+        System.out.println("End of simulation summary:");
+        System.out.println(" complete family:" + noOfCompleteFamily);
+        System.out.println(" live penguin:" + noOfAlivePenguins);
+        System.out.println(" live chicks:" + liveChicksCount);
+        System.out.println("\nSimulation is done.");
+    }
+
+    public void colonySurvivalStat() {
+        double familyGroupSurvivalRate = Math.round((((double) noOfCompleteFamily / pFamilies.length) * 100) * 100)
+                / 100.0;
+        double penguinSurvivalRate = Math.round((((double) noOfAlivePenguins / pFamilies.length * 2) * 100) * 100)
+                / 100.0;
+        double eggSurvivalRate = Math.round((((double) noOfEggsHatched / noOfEggsLaid) * 100) * 100) / 100.0;
+        double chickSurvivalRate = Math.round((((double) liveChicksCount / noOfEggsHatched) * 100) * 100) / 100.0;
+        double overallColonySurvival = Math
+                .round((((double) (noOfAlivePenguins + liveChicksCount) / pFamilies.length * 2)) * 100) / 100.0;
+
+        System.out.println(" * family group survival rate: " + familyGroupSurvivalRate + "%");
+        System.out.println(" * penguin survival rate: " + penguinSurvivalRate + "%");
+        System.out.println(" * eggs survival rate: " + eggSurvivalRate + "%");
+        System.out.println(" * chick survival rate: " + chickSurvivalRate + "%");
+        System.out.println(" * colony survival: " + overallColonySurvival + "%");
+        new FileOutputHandler().writDataIntoFile(familyGroupSurvivalRate, penguinSurvivalRate, eggSurvivalRate,
+                chickSurvivalRate, overallColonySurvival);
     }
 
     public int[] huntingByFox(PenguinFamily family) {
@@ -332,31 +340,6 @@ public class PenguinPawPatrol {
             m++;
 
         } while (!ch.equals("\n"));
-    }
-
-    public void printFinalStat() {
-        System.out.println("End of simulation summary:");
-        System.out.println(" complete family:" + noOfCompleteFamily);
-        System.out.println(" live penguin:" + noOfAlivePenguins);
-        System.out.println(" live chicks:" + liveChicksCount);
-        System.out.println("\nSimulation is done.");
-    }
-
-    public void colonySurvivalStat() {
-        double familyGroupSurvivalRate = Math.round((((double) noOfCompleteFamily / pFamilies.length) * 100) * 100)/ 100.0;
-        double penguinSurvivalRate = Math.round((((double) noOfAlivePenguins / pFamilies.length * 2) * 100) * 100)/ 100.0;
-        double eggSurvivalRate = Math.round((((double) noOfEggsHatched / noOfEggsLaid) * 100) * 100) / 100.0;
-        double chickSurvivalRate = Math.round((((double) liveChicksCount / noOfEggsHatched) * 100) * 100) / 100.0;
-        double overallColonySurvival = Math
-                .round((((double) (noOfAlivePenguins + liveChicksCount) / pFamilies.length * 2)) * 100) / 100.0;
-
-        System.out.println(" * family group survival rate: " + familyGroupSurvivalRate + "%");
-        System.out.println(" * penguin survival rate: " + penguinSurvivalRate + "%");
-        System.out.println(" * eggs survival rate: " + eggSurvivalRate + "%");
-        System.out.println(" * chick survival rate: " + chickSurvivalRate + "%");
-        System.out.println(" * colony survival: " + overallColonySurvival + "%");
-        new FileOutputHandler().writDataIntoFile(familyGroupSurvivalRate, penguinSurvivalRate, eggSurvivalRate,
-                chickSurvivalRate, overallColonySurvival);
     }
 
     public static void main(String[] args) throws Exception {

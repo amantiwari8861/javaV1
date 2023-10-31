@@ -50,7 +50,6 @@ public class PenguinFamily {
                     // System.out.println(chick + " age incremented.....");
                 }
             }
-            // System.out.println(chicks.size());
         }
     }
 

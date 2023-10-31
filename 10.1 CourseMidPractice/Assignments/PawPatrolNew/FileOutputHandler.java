@@ -24,7 +24,7 @@ public class FileOutputHandler {
             try {
                 writer.close();
             } catch (Exception e) {
-                System.out.println("Error:");
+                System.out.println("Error:"+e.getMessage());
             }
         }
     }

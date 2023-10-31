@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Fox extends Predator {
     private Integer noOfChicksKilled;

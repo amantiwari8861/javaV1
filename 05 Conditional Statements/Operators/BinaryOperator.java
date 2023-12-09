@@ -4,13 +4,13 @@ public class BinaryOperator {
      
         //Arithmatic Operator eg. +,-,*,/,% (Mod)
 
-        // double num1=10,num2=3,result;
+        // double num1=27.2,num2=4,result;
 
-        // // result=num1+num2;
-        // // result=num1-num2;
-        // // result=num1*num2;
-        // result=num1/num2;
-        // // result=num1%num2; //for remainder (shesh)
+        // // // result=num1+num2;
+        // // // result=num1-num2;
+        // // // result=num1*num2;
+        // // result=num1/num2;
+        // result=num1%num2; //for remainder (shesh)
 
         // System.out.println("Result is "+result);
 
@@ -19,12 +19,12 @@ public class BinaryOperator {
         // int n1=13,n2=13,res;
         // boolean result;
 
-        // // res=n1<n2;// error : boolean cannot be converted to int
-        // // result=n1<n2;
-        // // result=n1>n2;
-        // // result=n1<=n2;  //same as ≤ in math
-        // // result=n1>=n2;
-        // // result=n1==n2;
+        // res=n1<n2;// error : boolean cannot be converted to int
+        // result=n1<n2;
+        // result=n1>n2;
+        // result=n1<=n2;  //same as ≤ in math
+        // result=n1>=n2;
+        // result=n1==n2;
         // result=n1!=n2;
 
         // System.out.println(result);
@@ -42,6 +42,11 @@ public class BinaryOperator {
         v1+=5;
 
         System.out.println(v1);
+
+
+        int num=50;
+        num*=10;
+        System.out.println("Num= "+num);
 
     }
 }

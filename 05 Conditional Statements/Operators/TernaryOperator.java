@@ -9,7 +9,7 @@ public class TernaryOperator {
         int num1,num2,max;
         num1=20;num2=40;
 
-        max= (num1>num2) ? num1 : num2 ;
+        max= (num1>num2) ? 1 : 0 ;
 
         System.out.println(max);
 

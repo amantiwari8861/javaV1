@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-class DecisionStructure {
-    public static void main(String args[]) {
+class DecisionStructure 
+{
+    public static void main(String args[]) 
+    {
         Scanner sc = new Scanner(System.in);
 
         // int age;
@@ -106,25 +108,25 @@ class DecisionStructure {
         //     break;
         // }
 
-        System.out.println("Enter day");
-        String day = sc.next();
+        // System.out.println("Enter day");
+        // String day = sc.next();
 
-        String choice = day.toLowerCase();
-        switch (choice) 
-        {
-            case "first":
-                System.out.println("monday");
-                break;
-            case "second":
-                System.out.println("tuesday");
-                break;
-            case "third":
-                System.out.println("wednesday");
-                break;
-            default:
-                System.out.println("invalid day");
-                break;
-        }
+        // String choice = day.toLowerCase();
+        // switch (choice) 
+        // {
+        //     case "first":
+        //         System.out.println("monday");
+        //         break;
+        //     case "second":
+        //         System.out.println("tuesday");
+        //         break;
+        //     case "third":
+        //         System.out.println("wednesday");
+        //         break;
+        //     default:
+        //         System.out.println("invalid day");
+        //         break;
+        // }
         sc.close();
     }
 }

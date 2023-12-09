@@ -8,7 +8,7 @@ public class Loops {
 
         // for(;;)
         // {
-        //     System.out.println("Hello");
+        //     System.out.println("Hello Everyone!");
         // }
         /* initialization
          * condition
@@ -23,6 +23,11 @@ public class Loops {
         // for(int i=10;i>0;i--)
         // {
         //     System.out.println(i);
+        // }
+
+        // while (true) 
+        // {
+        //     System.out.println("Hello Everyone!!");
         // }
 
         // int j=1; //initialization
@@ -48,19 +53,19 @@ public class Loops {
         // } while (c<10);
 
         //Case 2:
-        // int c=1;
-        // do 
-        // {
-        //     System.out.println(c);
-        //     c++;
-        // } while (c==10);
-
-        int arr1[]={10,20,56,383,23,24};
-
-        for (int i : arr1) 
+        int c=1;
+        do 
         {
-            System.out.println(i);
-        }
+            System.out.println(c);
+            c++;
+        } while (c==10);
+
+        // int arr1[]={10,20,56,383,23,24};
+
+        // for (int i : arr1) 
+        // {
+        //     System.out.println(i);
+        // }
 
         // System.out.println(Arrays.toString(arr1));
 

@@ -6,20 +6,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WebScrapper {
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         String output = getUrlContents("https://www.guru99.com/java-interview-questions-answers.html");
-        // System.out.println(output);
+        System.out.println(output);
 
         // output.matches("<h3>[]{,}</h3>");
         Pattern pattern = Pattern.compile("<h3>(\\S+)</h3>");
-      //Matching the compiled pattern in the String
-      Matcher matcher = pattern.matcher(output);
-      if (matcher.find()) {
-         String result = matcher.group();
-         System.out.println(result);
-      }
-
+        // Matching the compiled pattern in the String
+        Matcher matcher = pattern.matcher(output);
+        if (matcher.find()) {
+            String result = matcher.group();
+            System.out.println(result);
+        }
 
     }
 

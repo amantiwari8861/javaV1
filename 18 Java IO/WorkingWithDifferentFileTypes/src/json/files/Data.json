@@ -1,0 +1,14 @@
+{
+  "students": [
+    {
+      "name": "John Doe",
+      "rollNo": 101,
+      "grade": "A"
+    },
+    {
+      "name": "Jane Doe",
+      "rollNo": 102,
+      "grade": "B"
+    }
+  ]
+}

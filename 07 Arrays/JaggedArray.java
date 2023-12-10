@@ -12,18 +12,18 @@ public class JaggedArray {
         // };
         //jagged array (every row's length is changed)
         
-        int covidCases[][],country,state;
+        int covidCases[][],noOfCountries,noOfStates;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter no. of Country ");
-        country=sc.nextInt();
-        covidCases=new int[country][];
+        noOfCountries=sc.nextInt();
+        covidCases=new int[noOfCountries][];
 
-        for (int i = 0; i < country; i++) 
+        for (int i = 0; i < noOfCountries; i++) 
         {
             System.out.println("Enter states of "+(i+1)+" Country :");
-            state=sc.nextInt();
-            covidCases[i]=new int[state];//3
-            for (int j = 0; j < state; j++) 
+            noOfStates=sc.nextInt();
+            covidCases[i]=new int[noOfStates];//3
+            for (int j = 0; j < noOfStates; j++) 
             {
                 System.out.print("Enter Cases in "+(j+1)+" state :");
                 covidCases[i][j]=sc.nextInt();
@@ -36,10 +36,19 @@ public class JaggedArray {
         {
             for (int j = 0; j < covidCases[i].length; j++) //2
             {
-                System.out.print(covidCases[i][j]+"  ");
+                // System.out.print(covidCases[i][j]+"  ");
+                System.out.printf("  %4d",covidCases[i][j]);
             }
             System.out.println();
         }
         sc.close();
     }
 }
+
+// 1
+// 2345
+
+//    1
+// 2345
+//  456
+//   35

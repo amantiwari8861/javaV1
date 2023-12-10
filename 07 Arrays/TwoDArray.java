@@ -32,21 +32,22 @@ public class TwoDArray {
         }
 
         System.out.println("The data are ");
-        // for (int i = 0; i < covidCases.length; i++)  //3
-        // {
-        //     System.out.println(country[i]+":");
-        //     for (int j = 0; j < covidCases[i].length; j++) //4
-        //     {
-        //         System.out.println("\t"+states[i][j]+":"+covidCases[i][j]);
-        //     }
-        // }
-        for (int i = 0; i < covidCases.length; i++) 
+        for (int i = 0; i < covidCases.length; i++)  //3
         {
-            for (int j = 0; j < covidCases[i].length; j++) 
+            System.out.println(country[i]+":");
+            for (int j = 0; j < covidCases[i].length; j++) //4
             {
-                System.out.print(covidCases[i][j]+" ");
+                System.out.println("\t"+states[i][j]+":"+covidCases[i][j]);
             }
-            System.out.println();
         }
+        // for (int i = 0; i < covidCases.length; i++) 
+        // {
+        //     for (int j = 0; j < covidCases[i].length; j++) 
+        //     {
+        //         System.out.print(covidCases[i][j]+" ");
+        //     }
+        //     System.out.println();
+        // }
+        sc.close();
     }
 }

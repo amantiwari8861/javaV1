@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="BasicMultithreading/Lecture4/Concurrency1/src/|BasicMultithreading/ExecutorServices/src/|ForkJoinFramework/ForkJoinMax/src/|LifeGameSimulation/src/|BasicMultithreading/Lecture8/|MineProject/src/|BasicMultithreading/Lecture3/Concurrency1/src/|ForkJoinFramework/ForkJoinSimple2/src/|Parallel/MergeSort/src/|ForkJoinFramework/ForkJoinSimple1/src/|BasicMultithreading/FutureCallable/src/|BasicMultithreading/Lecture7/Concurrency1/src/|BasicMultithreading/Lecture2/Concurrency1/src/|PhilosopherProblem/src/|ParallelSum/src/|BasicMultithreading/Lecture6/Concurrency1/src/|BasicMultithreading/Lecture1/Concurrency1/src/|StudentLibraryProject/src/|ForkJoinFramework/ForkJoinMerge/src/|BasicMultithreading/Lecture5/Concurrency1/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="BasicMultithreading/ExecutorServices/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/FutureCallable/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture1/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture2/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture3/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture4/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture5/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture6/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture7/Concurrency1/src"/>
+	<classpathentry kind="src" path="BasicMultithreading/Lecture8"/>
+	<classpathentry kind="src" path="ForkJoinFramework/ForkJoinMax/src"/>
+	<classpathentry kind="src" path="ForkJoinFramework/ForkJoinMerge/src"/>
+	<classpathentry kind="src" path="ForkJoinFramework/ForkJoinSimple1/src"/>
+	<classpathentry kind="src" path="ForkJoinFramework/ForkJoinSimple2/src"/>
+	<classpathentry kind="src" path="LifeGameSimulation/src"/>
+	<classpathentry kind="src" path="MineProject/src"/>
+	<classpathentry kind="src" path="Parallel/MergeSort/src"/>
+	<classpathentry kind="src" path="ParallelSum/src"/>
+	<classpathentry kind="src" path="PhilosopherProblem/src"/>
+	<classpathentry kind="src" path="StudentLibraryProject/src"/>
+	<classpathentry kind="output" path="BasicMultithreading/ExecutorServices/bin"/>
+</classpath>

@@ -3,8 +3,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-//***************************************
- class TicTacToeMain {
+class TicTacToeMain {
 
 	public static void main(String[] args) {
 
@@ -12,7 +11,6 @@ import javax.swing.*;
 		
 	}
 }
-//***************************************
 
 class TicTacToe implements ActionListener{
 

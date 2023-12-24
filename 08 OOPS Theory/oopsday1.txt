@@ -1,0 +1,19 @@
+Car -> blueprint(attributes,behaviour)   -> class(variables and methods) 
+    -> material (objects) -> object or instance
+    -> Constructor
+
+Data = state = attribute = variable = field
+behaviour = function = method 
+object = instance = real world entity(any person or object)
+
+Q. can we make 2 or more cars from same blueprint ?
+Ans. Yes
+
+Q. if we make 2 cars from same blueprint then both 
+   cars data and behaviour will be same ?
+Ans. Yes 
+
+Note : Every object has it's unique identity 
+	in cars the unique no. is generally chasis no,regstration no. 
+
+UIDAI(Unique Identification Authority of India) -> aadhar card (to uniquely identify the persons)

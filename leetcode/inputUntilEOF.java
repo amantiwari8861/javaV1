@@ -10,6 +10,6 @@ public class inputUntilEOF {
         while (sc.hasNext()) {
             System.out.println( (i++) +" "+sc.nextLine());
         }
-        
+        sc.close();
     }
 }

@@ -11,23 +11,23 @@ public class App {
         //XML -> DOM or JAXB
         //JSON -> Jackson or Gson
 
-        CsvReader csvLib=new CsvReader("src/csv/files/data.csv");
-        csvLib.read();
-        csvLib.printData();
-        csvLib.close();
-        ExcelReader excelReader=null;
-        System.out.println("Reading xls ");
-        excelReader=new ExcelReader("src\\msoffice\\files\\Data.xls");
-        excelReader.read();
-        excelReader.printData();
-        excelReader.close();
+        // CsvReader csvLib=new CsvReader("src/csv/files/data.csv");
+        // csvLib.read();
+        // csvLib.printData();
+        // csvLib.close();
+        // ExcelReader excelReader=null;
+        // System.out.println("Reading xls ");
+        // excelReader=new ExcelReader("src\\msoffice\\files\\Data.xls");
+        // excelReader.read();
+        // excelReader.printData();
+        // excelReader.close();
         System.out.println("Reading xlsx ");
         excelReader=new ExcelReader("src\\msoffice\\files\\Data.xlsx");
         excelReader.read();
         excelReader.printData();
         excelReader.close();
-        MsWordReader reader = new MsWordReader("src\\msoffice\\files\\Data.docx");
-        reader.readDocx();
+        // MsWordReader reader = new MsWordReader("src\\msoffice\\files\\Data.docx");
+        // reader.readDocx();
         // JsonReader reader = new JsonReader("src\\json\\files\\Data.json");
         // reader.read();
         // reader.printData();

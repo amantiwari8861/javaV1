@@ -1,5 +1,0 @@
-<include-demo>
-
-<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="people.xml"/>
-
-</include-demo>

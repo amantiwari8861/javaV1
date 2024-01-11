@@ -1,5 +1,0 @@
-This is a simple text file for text-file reading demos.
-
-Line 3
-Line 4
-Line 5

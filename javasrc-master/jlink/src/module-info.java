@@ -1,3 +1,0 @@
-module demo {
-	exports demo;
-}

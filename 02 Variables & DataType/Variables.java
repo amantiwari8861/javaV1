@@ -11,6 +11,7 @@ public class Variables {
 
         int num,num2=56,num3=90,var1=98;
 
+        // System.out.println(num); //error
         System.out.println("num2 = "+num2+" num3="+num3+" var1="+var1);
 
     }

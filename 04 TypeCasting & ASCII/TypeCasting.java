@@ -12,7 +12,7 @@ public class TypeCasting
         // System.out.println("the result is " + result);
 
         // try removing f after 10.5 or 78.6 ( lossy conversion from double to float)
-        float f1 = 10.5f, f2 = 78.67F, res;
+        float f1 = 10.5f, f2 = 78.67f, res;
         res = f1 + f2;
         System.out.println(" result :" + res);
 

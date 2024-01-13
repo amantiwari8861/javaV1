@@ -92,6 +92,28 @@ public class Institute
     }
     void deleteStudentDetails()
     {
-        
+        System.out.println("Enter student id to be deleted :");
+        int id=sc.nextInt();
+        boolean isFound=false;
+
+        for (int i = 0; i < noOfStudents; i++) 
+        {
+            Student tempStudent=students[i];
+            if (tempStudent.stId==id)
+            {
+                for (int j = i; j < noOfStudents-1; j++) 
+                {
+                    students[j]=students[j+1];
+                }
+                students[noOfStudents]=null;
+                noOfStudents--;
+                isFound=true;
+                System.out.println("Student Record Deleted!!");
+            }
+        }
+        if(!isFound)
+        {
+            System.out.println("Student Record Not Found!!");
+        }
     }
 }

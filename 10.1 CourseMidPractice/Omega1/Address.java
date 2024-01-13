@@ -18,7 +18,6 @@ public class Address
     }
     void inputAddress(Scanner sc)
     {
-        System.out.println("\n********Enter ur Address *******");
         System.out.print("Enter city:");
         city=sc.nextLine();
         System.out.print("Enter State:");

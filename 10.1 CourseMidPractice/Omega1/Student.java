@@ -42,9 +42,9 @@ public class Student
         System.out.print("Enter Student AadharNo :");
         aadharNo=sc.nextLong();
         sc.nextLine();
-        System.out.print("Enter Local Address :");
+        System.out.print("\n********Enter ur Local Address ***************");
         localAddress.inputAddress(sc);        
-        System.out.print("Enter Permanent Address :");
+        System.out.print("\n********Enter ur Permanent Address **************");
         permanentAddress.inputAddress(sc);
         
     }

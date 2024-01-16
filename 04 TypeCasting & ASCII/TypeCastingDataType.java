@@ -3,8 +3,8 @@ public class TypeCastingDataType {
     public static void main(String[] args) {
 
         // int b=67;
-        // byte b2=b;
-        // // byte b2=(byte)b;
+        // // byte b2=b;
+        // byte b2=(byte)b; //explicit
         // System.out.println(b2);
 
         // int b4;byte b3;
@@ -28,11 +28,10 @@ public class TypeCastingDataType {
         // float f=(float)d;
         // System.out.println(f);
 
-        // int num=65;
+        int num=65;
         // char ch=num;
-        // char ch=(char)num;
-
-        // System.out.println(ch);
+        char ch=(char)num;
+        System.out.println(ch);
 
         // int A=65;
         // char ch2=(char)(A+26-1);
@@ -45,7 +44,7 @@ public class TypeCastingDataType {
 
         // System.out.println((char)'e');
         // System.out.println((int)'e');
-        System.out.println((char)(65+13));
+        // System.out.println((char)(65+13));
 
         /*
          * Note:

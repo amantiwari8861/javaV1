@@ -19,7 +19,7 @@ public class InstituteHandler {
             System.out.print("\t\tEnter ur choice :");
             choice = sc.nextInt();
 
-            switch (choice) {
+             switch (choice) {
                 case 1:
                     institute.enrollStudent();
                     break;

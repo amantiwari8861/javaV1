@@ -3,21 +3,22 @@ import java.util.Scanner;
 
 public class Array {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
        
+        //Array : array is a homogeneous collection of data .which is stored at contigious memory locations
         // int num;//1 block is created in memory
         // int arr[5]; //error (not valid in java)
         // new int[5];// creates 5 block of type integer but it isn't reusable without a variable name 
         //new is used to allocate the memory at runtime
         // int arr[];
         // arr=new int[5];
-        // or 
+        // // or 
         // int arr2[]=new int[5];
         // int []arr3=new int[5];
         // int[] arr4=new int[5];
 
         // int arr5[]={10,20,45,34,35,67,98};
-        // // // //or
+        // // or
         // int arr6[];
         // arr6=new int[]{10,2,45,7,7,8,8,98};
         // //or

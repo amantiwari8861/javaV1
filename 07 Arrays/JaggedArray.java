@@ -20,7 +20,7 @@ public class JaggedArray {
 
         for (int i = 0; i < noOfCountries; i++) 
         {
-            System.out.println("Enter states of "+(i+1)+" Country :");
+            System.out.println("Enter states of "+(i+1)+"th Country :");
             noOfStates=sc.nextInt();
             covidCases[i]=new int[noOfStates];//3
             for (int j = 0; j < noOfStates; j++) 
@@ -36,7 +36,7 @@ public class JaggedArray {
         {
             for (int j = 0; j < covidCases[i].length; j++) //2
             {
-                // System.out.print(covidCases[i][j]+"  ");
+                System.out.print(covidCases[i][j]+"  ");
                 System.out.printf("  %4d",covidCases[i][j]);
             }
             System.out.println();
@@ -46,9 +46,11 @@ public class JaggedArray {
 }
 
 // 1
-// 2345
+// 12
+// 123
+// 1234
 
 //    1
-// 2345
-//  456
-//   35
+//   12
+//  123
+// 1234

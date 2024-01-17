@@ -6,7 +6,7 @@ class Array1
         Scanner sc=new Scanner(System.in);
         int total;
         String shirts[];
-        System.out.println("enter the no of Shirts :");
+        System.out.print("enter the no of Shirts :");
         total=sc.nextInt();//5
 
         shirts=new String[total];// array size will be 5

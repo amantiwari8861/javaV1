@@ -35,6 +35,9 @@ The value of n = -1
  
 
 7. Write a Java program to accept the height of a person in centimeter and categorize the person according to their height. 
+let Dwarf: Less than 150 cm
+Medium: 150 cm to 180 cm
+Tall: Greater than 180 cm
 Test Data : 135
 Expected Output :
 The person is Dwarf.
@@ -61,7 +64,7 @@ Expected Output :
 The candidate is not eligible for admission.
  
 
-11. Write a Java program to calculate the root of a Quadratic Equation. 
+11. Write a Java program to calculate the root of a Quadratic Equation and find out that it is real,imaginary or complex. 
 Test Data : 1 5 7
 Expected Output :
 Root are imaginary;
@@ -130,20 +133,22 @@ Expected Output :
 You can booked your profit amount : 200
  
 
-19. Write a program in Java to calculate and print the Electricity bill of a given customer. The customer id, customer name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow : 
+19. Write a program in Java to calculate and print the Electricity bill of a given customer. 
+The customer id, customer name and unit consumed by the user should be taken from the keyboard
+and display the total amount to pay to the customer. The charge are as follow : 
 
-Unit	Charge/unit
-upto 199	@3.20
-200 and above but less than 400	@5.50
-400 and above but less than 600	@8.80
-600 and above	@9.00
-If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/-
+Unit	                                Charge/unit
+upto 199	                            @3.20
+200 and above but less than 400	        @5.50
+400 and above but less than 600	        @8.80
+600 and above	                        @9.00
+If bill exceeds Rs.1000 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 200/-
 
 Test Data :
 1001
 800
 Expected Output :
-Customer IDNO :1001
+Customer ID NO :1001
 unit Consumed :800
 Amount Charges @Rs. 2.00 per unit : 1600.00
 Surchage Amount : 240.00
@@ -172,7 +177,7 @@ Expected Output :
 Thursday
  
 
-22. Write a program in Java to read any digit, display in the word. 
+22. Write a program in Java to read any digit, display in the word(only till 10 digits). 
 Test Data :
 4
 Expected Output :

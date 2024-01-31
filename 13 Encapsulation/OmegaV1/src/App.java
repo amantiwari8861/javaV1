@@ -13,8 +13,8 @@ public class App
         //to compile : javac -d . Filename.java
         //to run : java package.ClassName
 
-        Handler h=new Handler();
-        h.teachStuByTeacher();
+        // Handler h=new Handler();
+        // h.teachStuByTeacher();
         // System.out.println(Math.sqrt(3));
 
         //Access Modifiers :
@@ -22,6 +22,6 @@ public class App
         //  2.private
         //  3.protected
         //there is also a non access modifier called default in which no keyword is required to use this
-
+        
     }
 }

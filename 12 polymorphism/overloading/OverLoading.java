@@ -50,7 +50,7 @@ public class OverLoading {
         //Poly -> Many 
         //Morphs -> forms
 
-        Teacher t=new Teacher();
+        // Teacher t=new Teacher();
         // t.doSomething();
         // t.doSomething("Java");
         // t.doSomething("Java",50);
@@ -58,11 +58,10 @@ public class OverLoading {
         // t.doSomething("Sugandha","java",15000);
         // t.doSomething("Python");
         // t.doSomething(50000.56);
-        t.doSomething((byte)15);
-        t.doSomething(15000);
-        t.doSomething(15000.0);
-        t.doSomething(15000.0f);
-        
+        // t.doSomething((byte)15);
+        // t.doSomething(15000);
+        // t.doSomething(15000.0);
+        // t.doSomething(15000.0f);
         // System.out.println(10);
         // System.err.println("Aman");
         // System.out.println(33.45);

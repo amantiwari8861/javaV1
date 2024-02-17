@@ -34,7 +34,6 @@ class Child extends Parent
     {
         System.out.println("jii");
     }
-
     void show()
     {
         System.out.println("show method in child");
@@ -43,7 +42,7 @@ class Child extends Parent
     void childFxn()
     {
         super.show();
-        super.grandParentFxn();
+        // super.grandParentFxn();
         System.out.println("Child Fxn "+num+" parent num :"+super.num);
     }
 }
@@ -52,9 +51,9 @@ public class Super {
     public static void main(String[] args) {
         
         Child objChild=new Child();
-        // objChild.show();
+        objChild.show();
         objChild.childFxn();
-        objChild.grandParentFxn();
+        // objChild.grandParentFxn();
         //child  can only call it's immidiate parent's  overridden method
 
     }

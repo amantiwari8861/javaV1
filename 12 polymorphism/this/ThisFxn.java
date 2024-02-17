@@ -3,7 +3,8 @@ class Demo
     Demo(){
         int a=10,b=20;
         int c=a+b;
-        this.ShowDetails(c);
+        // this.ShowDetails(c);
+        ShowDetails(c);
     }
     void ShowDetails(int a)
     {

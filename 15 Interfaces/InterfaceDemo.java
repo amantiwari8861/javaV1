@@ -30,6 +30,7 @@ public class InterfaceDemo
     public static void main(String[] args) 
     {
         // RBI b=new RBI();//can't instantiated
+
         // SBI s=new SBI();
         // s.showInterestRate();
 

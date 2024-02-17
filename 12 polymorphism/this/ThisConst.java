@@ -7,21 +7,19 @@ class Shape
     Shape() 
     {
         System.out.println("hello i am default shape");
-        shapeType = "2D";
+        shapeType = "any dimension shape";
     }
     Shape(int height, int width)// local variable
     {
         this();
         System.out.println("hello i am 2 parameterized shape");
-        // height=height;// here this statement is ambigious due to it's name
         this.height = height;// this means current class object
         this.width = width;// here left value is global and right value is local
     }
     Shape(int height, int width, String name) 
     {
-        this(height,width);// calling 2 parameterized constructor
-        // this.height = height;
-        // this.width = width;
+        // this(height, width);
+        this();
         this.name = name;
         System.out.println("hello i am 3 parameterized constructor");
     }

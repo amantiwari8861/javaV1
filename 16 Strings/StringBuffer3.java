@@ -1,6 +1,7 @@
 class StringBuffer3
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         StringBuffer str=new StringBuffer();
         str.append("Aman");
         // str.insert(1,"N");

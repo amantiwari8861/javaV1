@@ -16,16 +16,16 @@ class MyException
 {
     public static void main(String[] args) {
         
-        String name="Aman";
+        String name="naman";
         try{
-        if(name.equals("nAman"))
+        if(name.equals("Aman"))
         {
             System.out.println("Welcome  "+name);
         }
         else
         {
             // throw (new NumberFormatException("only Aman is applicable for this project "));
-            throw (new UserException("only Aman is applicable for this project\n"));
+            throw new UserException("only Aman is applicable for this project\n");
         }
     }
     catch(UserException u)

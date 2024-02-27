@@ -12,7 +12,7 @@ public class InputStreamDemo2 {
             while (true)
             {
                 int i = is.read();
-                if (i == -1)
+                if (i == -1) //here -1 means end of file
                     break;
                 System.out.print((char) i);
             }
@@ -24,7 +24,5 @@ public class InputStreamDemo2 {
         catch( IOException e){
             System.out.println("IO Exception");
         }
-
-
     }
 }

@@ -9,14 +9,20 @@ public class DeserializationDemo {
             // FileInputStream fis = new FileInputStream("animal.txt");
             FileInputStream fis = new FileInputStream("animal.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            animal = (Animal) ois.readObject();
-            ois.close();
-            fis.close();
+            // animal = (Animal) ois.readObject();
+
+            while (true) 
+            {
+                animal=(Animal)ois.readObject();
+                System.out.println( animal.getName() + " " +animal.getGender() );
+            }
+            
+            // ois.close();
+            // fis.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println( animal.getName() + " " +animal.getGender() );
     }
 }

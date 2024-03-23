@@ -87,9 +87,9 @@ and make fibonnaci series from them till n(the length of that number) term.
 12. reverse a number 1234 -> 4321
 13. check whether a no. is palindrome or not 
     i.e 12321 -> after reverse -> 12321
-14.Write a C program to print all the perfect numbers from 1 to 1000 eg. 28 => 1+2+4+7+14 =28
-15.Write a C program to find the greatest common divisor of two numbers.
-16.Write a C program to find the least common multiple of two numbers.
+14.Write a java program to print all the perfect numbers from 1 to 1000 eg. 28 => 1+2+4+7+14 =28
+15.Write a java program to find the greatest common divisor of two numbers.
+16.Write a java program to find the least common multiple of two numbers.
 17.Find and print all the factors of a given number using a for loop.
 18.Calculate the sum of the factors of a given number using a for loop.
 19.Implement prime factorization of a number using a for loop Print prime factors with exponents.

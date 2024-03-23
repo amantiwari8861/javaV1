@@ -1,5 +1,6 @@
 package csv;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -23,7 +24,13 @@ public class CsvReader {
                     .withFirstRecordAsHeader() // Treats the first record as header
                     .parse(reader);
             headers = getHeadersArr(csvParser);
-        } catch (IOException e) {
+        } 
+        catch (FileNotFoundException fe) 
+        {
+            System.out.println(fe.getLocalizedMessage());
+        } 
+        catch (IOException e) 
+        {
             e.printStackTrace();
         }
     }

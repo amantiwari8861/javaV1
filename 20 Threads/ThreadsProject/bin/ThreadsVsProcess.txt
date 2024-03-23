@@ -1,0 +1,2 @@
+Process :Process means any program is in execution.
+Thread : Thread means a segment of a process.

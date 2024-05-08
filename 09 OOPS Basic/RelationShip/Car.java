@@ -1,6 +1,6 @@
 class Car
 {
-    // Engine2 obj=new Engine2();//composition
+    Engine2 obj=new Engine2();//composition
     void Carfxn()
     {
         Engine2 obj=new Engine2();//uses-a

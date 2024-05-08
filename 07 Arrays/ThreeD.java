@@ -11,23 +11,26 @@ public class ThreeD {
         };
         String cityName[][][] = {
                 {
-                        { "Noida", "GZB" },
-                        { "Mithila", "Patna" },
-                        { "Rewa", "Maihar" }
+                    { "Noida", "GZB" },
+                    { "Mithila", "Patna" },
+                    { "Rewa", "Maihar" }
                 },
                 {
-                        { "new york", "W. DC" },
-                        { "san deigo", "san fransisco" },
-                        { "texas", "california" }
+                    { "new york", "W. DC" },
+                    { "san deigo", "san fransisco" },
+                    { "texas", "california" }
                 }
         };
         int covidCases[][][] = new int[2][3][2];
         System.out.println("Enter covid cases");
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 2; i++) 
+        {
             System.out.println(country[i]+":");
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3; j++) 
+            {
                 System.out.println("\t"+states[i][j]+":");
-                for (int k = 0; k < 2; k++) {
+                for (int k = 0; k < 2; k++) 
+                {
                     System.out.print("\t\t"+cityName[i][j][k]+": ");
                     covidCases[i][j][k] = sc.nextInt();
                 }

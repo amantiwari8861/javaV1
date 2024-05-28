@@ -1,0 +1,14 @@
+4
+abcd
+abdc
+abaa
+acbd
+abad
+
+5
+carpet
+cart
+car
+camera
+crate
+camera

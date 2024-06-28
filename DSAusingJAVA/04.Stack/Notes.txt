@@ -1,0 +1,98 @@
+Stacks are a fundamental data structure in computer science and are used in a variety of applications due to their Last-In-First-Out (LIFO) property. Here are some common applications of stacks:
+
+1. Function Call Management (Recursion)
+Stacks are used to manage function calls in programming languages. Each time a function is called, a new stack frame is created on the call stack to store information about the function call, including parameters, local variables, and the return address. When the function returns, its stack frame is popped off the call stack.
+
+2. Expression Evaluation and Syntax Parsing
+Infix to Postfix Conversion: Converting an infix expression (like A + B) to a postfix expression (like AB+) can be efficiently done using a stack.
+Postfix Evaluation: Evaluating postfix expressions is another common use of stacks. Operands are pushed onto the stack, and when an operator is encountered, operands are popped from the stack, the operation is performed, and the result is pushed back onto the stack.
+Syntax Parsing: Compilers use stacks to parse expressions, especially in context-free grammars and expression evaluation.
+3. Undo Mechanism in Text Editors
+Stacks are used to implement the undo mechanism in text editors. Each edit operation is pushed onto a stack. When the undo command is issued, the most recent operation is popped from the stack and undone.
+
+4. Depth-First Search (DFS)
+Stacks are used to implement the Depth-First Search (DFS) algorithm for traversing or searching tree or graph data structures. The stack is used to keep track of the nodes that need to be explored.
+
+5. Backtracking Algorithms
+Many backtracking algorithms, such as solving puzzles (like Sudoku) or generating permutations, use stacks to keep track of choices made so far. If a certain choice leads to a dead end, the algorithm backtracks by popping from the stack and tries the next option.
+
+6. Balancing Symbols
+Stacks are used to check for balanced symbols in expressions, such as parentheses (), brackets [], and braces {}. Each opening symbol is pushed onto the stack, and each closing symbol checks if it matches the symbol on top of the stack.
+
+
+public boolean isBalanced(String expression) {
+    Stack<Character> stack = new Stack<>();
+    for (char ch : expression.toCharArray()) {
+        if (ch == '(' || ch == '{' || ch == '[') {
+            stack.push(ch);
+        } else if (ch == ')' || ch == '}' || ch == ']') {
+            if (stack.isEmpty()) return false;
+            char top = stack.pop();
+            if (!isMatchingPair(top, ch)) return false;
+        }
+    }
+    return stack.isEmpty();
+}
+
+private boolean isMatchingPair(char open, char close) {
+    return (open == '(' && close == ')') ||
+           (open == '{' && close == '}') ||
+           (open == '[' && close == ']');
+}
+7. Browser History Navigation
+Stacks are used to implement the back and forward navigation in web browsers. Each visited page is pushed onto a stack. When the back button is pressed, the current page is popped from the stack, and the browser navigates to the page now on top of the stack.
+
+8. Memory Management
+Stacks are used in memory management for handling function calls, local variables, and temporary variables. The stack frame concept is crucial for keeping track of active subroutines and their states.
+
+9. Expression Parsing
+Stacks are used in parsers for programming languages to help manage the order of operations and ensure the correct application of operators and operands.
+
+10. Reverse a Data Structure
+Stacks can be used to reverse the contents of a data structure like a linked list or array. By pushing all elements onto the stack and then popping them off, the order of elements is reversed.
+
+11. Implementing Other Data Structures
+Certain data structures and algorithms can be implemented using stacks. For example, the Tower of Hanoi problem can be solved using three stacks to represent the three rods.
+
+Example Code for Expression Evaluation
+Here's a simple Java program to evaluate a postfix expression using a stack:
+
+
+import java.util.Stack;
+
+public class PostfixEvaluator {
+    public static int evaluate(String expression) {
+        Stack<Integer> stack = new Stack<>();
+
+        for (String token : expression.split(" ")) {
+            if (token.matches("\\d+")) { // If the token is a number
+                stack.push(Integer.parseInt(token));
+            } else { // The token is an operator (+, -, *, /)
+                int operand2 = stack.pop();
+                int operand1 = stack.pop();
+                switch (token) {
+                    case "+":
+                        stack.push(operand1 + operand2);
+                        break;
+                    case "-":
+                        stack.push(operand1 - operand2);
+                        break;
+                    case "*":
+                        stack.push(operand1 * operand2);
+                        break;
+                    case "/":
+                        stack.push(operand1 / operand2);
+                        break;
+                }
+            }
+        }
+        return stack.pop();
+    }
+
+    public static void main(String[] args) {
+        String expression = "3 4 + 2 * 7 /";
+        int result = evaluate(expression);
+        System.out.println("The result of the postfix expression is: " + result); // Output: 2
+    }
+}
+In this example, the evaluate method processes a postfix expression and uses a stack to store operands and intermediate results, performing operations as they are encountered in the expression.

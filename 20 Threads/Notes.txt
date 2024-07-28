@@ -1,2 +1,0 @@
-every thread has it's own registors and cache memory
-every thread in a same process shares a common memory 

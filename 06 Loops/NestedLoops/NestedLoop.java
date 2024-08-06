@@ -4,11 +4,11 @@ public class NestedLoop {
     {
         // for (int i = 1; i <= 5; i++) // read 5 chapters (Task)
         // {
-        //     System.out.println("Task "+i);
+        //     System.out.println("Chapter "+i);
         //     for (int j = 1; j <= 4; j++) 
         //     {
         //         // Thread.sleep(3000);
-        //         System.out.print("\tSubtask "+j+"   ");
+        //         System.out.print("\tSection "+j+"   ");
         //     }
         //     System.out.println();
         // }
@@ -19,15 +19,15 @@ public class NestedLoop {
             ******
         */
 
-        for (int i = 0; i < 3; i++) 
-        {
-            for (int j = 0; j < 6; j++) 
-            {
-                System.out.print("*");
-                Thread.sleep(2000);
-            }
-            System.out.println();
-        }
+        // for (int i = 0; i < 3; i++) 
+        // {
+        //     for (int j = 0; j < 6; j++) 
+        //     {
+        //         System.out.print("*");
+        //     }
+        //     Thread.sleep(2000);
+        //     System.out.println();
+        // }
 
         // for (int i = 0; i < 6; i++) 
         // {
@@ -44,21 +44,20 @@ public class NestedLoop {
         ###*** 
         ##**** 
         #***** 
-        ******
 
         */
-        // for (int i = 0; i < 6; i++) 
-        // {
-        //     for (int space = 6-1; space > i; space--)
-        //     {
-        //         System.out.print(" ");
-        //     }
-        //     for (int j = 0; j <= i; j++) 
-        //     {
-        //         System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
+        for (int i = 0; i < 5; i++) 
+        {
+            for (int space = 6-1; space > i; space--)
+            {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) 
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
 /* 
          1
         121

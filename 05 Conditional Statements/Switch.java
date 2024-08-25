@@ -118,13 +118,15 @@ public class Switch {
         //         yield 2;
         //     default: yield -1;
         // };
+
+
         // int problemLevel= switch (errCode) 
         // {
         //     case 100,201,501,600 -> 1;
         //     case 301,801,605 -> 2;
         //     default -> -1;
         // };
-        // int problemLevel= switch (errCode) 
+        // int problemLevel2= switch (errCode) 
         // {
         //     case 100,201,501,600 -> 1;
         //     case 301,801,605 -> {

@@ -22,9 +22,7 @@ public class BufferedReaderDemo {
                 System.out.println(s);
 
             System.out.println("Program terminated");
-            char ch=(char)br.read();
-            System.out.println(ch);
-            br.close();
+            
         } 
         catch (IOException e) 
         {

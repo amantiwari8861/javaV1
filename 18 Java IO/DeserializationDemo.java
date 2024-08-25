@@ -1,4 +1,3 @@
-import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -10,20 +9,20 @@ public class DeserializationDemo {
             // FileInputStream fis = new FileInputStream("animal.txt");
             FileInputStream fis = new FileInputStream("animal.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            // animal = (Animal) ois.readObject();
-            // System.out.println( animal.getName() + " " +animal.getGender() );
+            animal = (Animal) ois.readObject();
+            System.out.println( animal.getName() + " " +animal.getGender() +" "+animal.getAnimalWeight() );
 
-            while (true) 
-            {
-                try {
-                    animal=(Animal)ois.readObject();
-                    System.out.println( animal.getName() + " " +animal.getGender()+" "+animal.getAnimalWeight() );
-                } 
-                catch (EOFException e) 
-                {
-                    break;
-                }
-            }
+            // while (true) 
+            // {
+            //     try {
+            //         animal=(Animal)ois.readObject();
+            //         System.out.println( animal.getName() + " " +animal.getGender()+" "+animal.getAnimalWeight() );
+            //     } 
+            //     catch (EOFException e) 
+            //     {
+            //         break;
+            //     }
+            // }
             ois.close();
             fis.close();
         } catch (IOException e) {

@@ -13,8 +13,8 @@ public class SerializationDemo  {
         // animal.setName("Liala");
         
         try {
+            // FileOutputStream fos = new FileOutputStream("animal.ser");
             FileOutputStream fos = new FileOutputStream("animal.ser",true);
-            // FileOutputStream fos = new FileOutputStream("animal.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(animal);
             // oos.writeObject(animal2);

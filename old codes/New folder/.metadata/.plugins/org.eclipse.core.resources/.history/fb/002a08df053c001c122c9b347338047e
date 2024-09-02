@@ -1,0 +1,26 @@
+package collections.basic;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+public class CollectionsInJava {
+
+	public static void main(String[] args) {
+
+//		Collection a=new ArrayList();
+		Collection<String> a=new ArrayList<>  ();
+		a.add("Hello");
+		a.addAll(Arrays.asList("hii","hello"));
+//		a.add(10);
+//		a.add(10L);
+		
+//		for (int i = 0; i < a.size(); i++) {
+//			System.out.println(a.getClass().getName());
+//		}
+		a.stream().forEach(e->System.out.println(e.getClass()+" "+e));
+		
+		
+	}
+
+}

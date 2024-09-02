@@ -1,0 +1,1 @@
+The Java Community Process (JCP), established in 1998, is a formalized mechanism that allows interested parties to develop standard technical specifications for Java technology. Anyone can become a JCP Member by filling a form available at the JCP website.

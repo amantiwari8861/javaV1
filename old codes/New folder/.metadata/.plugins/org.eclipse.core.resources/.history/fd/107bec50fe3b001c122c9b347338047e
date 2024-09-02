@@ -1,0 +1,12 @@
+package collections.basic;
+
+import java.util.Collections;
+
+public class CollectionsInJava {
+
+	public static void main(String[] args) {
+
+		Collections a=new Collections();
+	}
+
+}

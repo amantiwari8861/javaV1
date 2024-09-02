@@ -1,0 +1,21 @@
+package collections.basic;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class CollectionsInJava {
+
+	public static void main(String[] args) {
+
+		Collection a=new ArrayList();
+		a.add("Hello");
+		a.add(10);
+		a.add(10L);
+		
+		for (int i = 0; i < a.size(); i++) {
+			System.out.println();
+		}
+	}
+
+}

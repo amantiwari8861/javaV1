@@ -1,0 +1,16 @@
+package collections.basic;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class CollectionsInJava {
+
+	public static void main(String[] args) {
+
+		Collection a=new ArrayList();
+		a.add("Hello");
+		a.add(10);
+		a.add(10L);
+	}
+
+}

@@ -1,0 +1,71 @@
+What is SDLC?
+
+The software development life cycle (SDLC) is a framework defining tasks performed at each step in the software development process. SDLC is a structure followed by a development team within the software organization. It consists of a detailed plan describing how to develop, maintain and replace specific software.
+
+What are the stages of SDLC?
+
+There are following six phases in every Software development life cycle model:
+
+Requirement gathering and analysis.
+Design.
+Implementation or coding.
+Testing.
+Deployment.
+Maintenance.
+
+
+Requirement gathering and analysis?
+
+The Analysis Phase is also the part of the project where you identify the overall direction that the project will take through the creation of the project strategy documents. Gathering requirements is the main attraction of the Analysis Phase.
+
+A software requirements specification (SRS) is a description of a software system to be developed. It lays out functional and non-functional requirements, and may include a set of use cases that describe user interactions that the software must provide.
+
+Design ?
+
+Desiging phase need to devlpoed a GUI(Grapihical User Interface) when you Devloped Forms and Frame and Button,TextBox, Etc
+
+
+
+Implementation or coding.
+
+During implementation, the project team creates the actual product. Product implementation can be an exciting phase for the customer, because their idea for the project becomes something tangible. Project developers begin building and coding the software.
+
+For example, if a customer wants a new gaming application, the project developers must program the application to perform the customer's gaming requirements. As the team develops the code, the team must follow specific coding requirements. Customer requirements may call for specific computer programming languages or upgrades, and developers need to run the applications to ensure they function properly.
+
+
+
+
+ Testing: 
+ After the code is developed it is tested against the requirements to make sure that the product is actually solving the needs addressed and gathered during the requirements phase. During this phase all types of functional testing like unit testing, integration testing, system testing, acceptance testing are done as well as non-functional testing are also done.
+
+
+
+Deployment and delivery 
+
+
+Purpose of Deployment Phase. The deployment phase is the final phase of the software development life cycle (SDLC) and puts the product into production. After the project team tests the product and the product passes each testing phase, the product is ready to go live.
+
+
+Maintenance.
+ The Maintenance Phase occurs once the system is operational. It includes implementation of changes that software might undergo over a period of time, or implementation of new requirements after the software is deployed at the customer location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

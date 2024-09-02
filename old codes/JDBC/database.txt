@@ -1,0 +1,17 @@
+SELECT *
+FROM PUBLISHERS
+insert into publishers values('1001','pinki','9410662092','Agra','UP','INDIA','34526')
+
+
+create table publishers
+( 
+pid varchar(50),
+pname varchar(50),
+pphone varchar(50),
+padd varchar(50),
+pcity varchar(50),
+pstate varchar(50),
+pzip varchar(60)
+)
+
+drop table publishers

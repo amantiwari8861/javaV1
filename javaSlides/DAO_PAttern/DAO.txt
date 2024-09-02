@@ -1,0 +1,16 @@
+CREATE TABLE emil.Employee 
+(
+  Employee_Id number(10)primary key,
+  Name varchar2(10) not NULL,
+  Age number(10) not NULL
+ )
+ 
+ insert into emil.Employee values(104,'Shalini',30)
+ 
+ select * from emil.Employee
+ 
+
+
+create user emil identified by emil;
+
+grant all privileges to emil;

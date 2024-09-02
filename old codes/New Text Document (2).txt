@@ -1,0 +1,6 @@
+comparable
+same 0
+nearly same 1
+not same -1
+
+how can fetch inbuit prop. in java  by using property class.

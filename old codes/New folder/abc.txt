@@ -1,0 +1,11 @@
+                          What is Command-Line Argument:-
+
+                   Its used to implements user-input concept in java.
+
+                        What is Interface:-
+
+   Interface starts with interface keywords.
+   one interface inherits another interface by extends keywords.
+   class inherit the features of interface by implements keywords.
+   interface have undefined methods.
+   We can't' create the instance of interface.

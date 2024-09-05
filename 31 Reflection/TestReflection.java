@@ -7,11 +7,10 @@ public class TestReflection {
     public static void main(String[] s) {
 
         // Class c=String.class;
-
         // System.out.println(c);
         // c.getFields();
-        s=new String[5];
-        s[0]="java.lang.String";
+        s = new String[5];
+        s[0] = "java.lang.String";
         try {
             Class c = Class.forName(s[0]);
             Method min[] = c.getDeclaredMethods();

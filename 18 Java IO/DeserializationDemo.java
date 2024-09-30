@@ -12,6 +12,9 @@ public class DeserializationDemo {
             animal = (Animal) ois.readObject();
             System.out.println( animal.getName() + " " +animal.getGender() +" "+animal.getAnimalWeight() );
 
+            animal = (Animal) ois.readObject();
+            System.out.println( animal.getName() + " " +animal.getGender() +" "+animal.getAnimalWeight() );
+
             // while (true) 
             // {
             //     try {

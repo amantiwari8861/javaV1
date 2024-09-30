@@ -10,7 +10,7 @@ public class Client
     {
         try
         {
-            socket = new Socket("192.168.29.201",8081);
+            socket = new Socket("192.168.1.9",8081);
             din = new DataInputStream(socket.getInputStream());
             dout = new DataOutputStream(socket.getOutputStream());
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

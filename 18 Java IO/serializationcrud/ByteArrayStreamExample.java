@@ -24,6 +24,7 @@ public class ByteArrayStreamExample {
             }
             
             // Closing ByteArray streams is optional because they are memory streams.
+        //    System.out.println(byteOut.toString());
             byteOut.close();
             byteIn.close();
             

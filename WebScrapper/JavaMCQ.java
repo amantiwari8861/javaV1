@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class JavaMCQ {
     public static void main(String[] args) {
-        String output = getUrlContents("https://www.sanfoundry.com/java-questions-answers-freshers-experienced/");
+        String output = getUrlContents("");
         System.out.println(output);
 
         // output.matches("<h3>[]{,}</h3>");

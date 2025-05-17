@@ -61,16 +61,22 @@ public class ArrayListDemo
 
         List<Fruit> fruits=new ArrayList<>();
 
-        fruits.add(new Fruit("Mango", "Sweet"));
+        fruits.add(new Fruit("Ripen Mango", "Sweet"));
         fruits.add(new Fruit("Apple", "Sweet"));
+        fruits.add(new Fruit("raw Mango", "Sour"));
         fruits.add(new Fruit("Banana", "Sweet"));
 
-        System.out.println(fruits);
-        Collections.sort(fruits,(f1,f2)->f1.getName().compareTo(f2.getName()));
+        // System.out.println(fruits);
+        // System.out.println(fruits.get(1));
+        // Collections.sort(fruits);
+        Collections.sort(fruits,
+        (f1,f2)->f1.getName().compareTo(f2.getName())
+        );
 
         for (Fruit fruit : fruits) 
         {
-            System.out.println(fruit);
+            // System.out.println(fruit);
+            System.out.println(fruit.getName()+" : "+fruit.getTaste());
         }
 
 

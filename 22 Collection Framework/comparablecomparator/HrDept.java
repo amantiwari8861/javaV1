@@ -19,12 +19,13 @@ public class HrDept {
         // Collections.sort(employees,new SortByIdAscending());
         // Collections.sort(employees,new SortByIdDescending());
         // Collections.sort(employees,new SortByNameAscending());
-        // Collections.sort(employees,(o1,o2)->o2.getName().compareTo(o1.getName()));
-        Collections.sort(employees,(o1,o2)->o1.getEmail().compareTo(o2.getEmail()));
+        // Collections.sort(employees,(e1,e2)->e2.getName().compareTo(e1.getName()));
+        Collections.sort(employees,(e1,e2)->e1.getEmail().compareTo(e2.getEmail()));
         // Collections.sort(employees);
         // System.out.println(employees);
         System.out.println("All Employees Details:");
-        for (Employee employee : employees) {
+        for (Employee employee : employees) 
+        {
             System.out.println(employee);
         }
     }
@@ -32,24 +33,24 @@ public class HrDept {
 class SortByIdAscending implements Comparator<Employee>
 {
     @Override
-    public int compare(Employee o1, Employee o2) 
+    public int compare(Employee e1, Employee e2) 
     {
-        return o1.getId()-o2.getId();
+        return e1.getId()-e2.getId();
     }
 }
 class SortByIdDescending implements Comparator<Employee>
 {
     @Override
-    public int compare(Employee o1, Employee o2) 
+    public int compare(Employee e1, Employee e2) 
     {
-        return o2.getId()-o1.getId();
+        return e2.getId()-e1.getId();
     }
 }
 class SortByNameAscending implements Comparator<Employee>
 {
     @Override
-    public int compare(Employee o1, Employee o2) 
+    public int compare(Employee e1, Employee e2) 
     {
-        return o1.getName().compareTo(o2.getName());
+        return e1.getName().compareTo(e2.getName());
     }
 }

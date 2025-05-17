@@ -1,4 +1,5 @@
-public class ThreadLifeCycle extends Thread{
+public class ThreadLifeCycle extends Thread
+{
     @Override
     public void run() {
         System.out.println("RUNNING"); // RUNNING

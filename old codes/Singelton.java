@@ -20,6 +20,3 @@ public class Singelton
 		System.out.println(" ");
 	}
 }
-public class singeltonPatternDemo
-{
-	public static void main(S

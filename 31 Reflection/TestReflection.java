@@ -30,9 +30,7 @@ public class TestReflection {
             Constructor con[] = c.getDeclaredConstructors();
             System.out.println("****Constructors are*****");
             for (Constructor cc : con)
-                System.out.println(cc);
-
-                
+                System.out.println(cc);                
         } catch (Exception e) {
             System.out.println(e);
         }
